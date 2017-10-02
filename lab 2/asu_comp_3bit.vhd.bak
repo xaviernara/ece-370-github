@@ -1,0 +1,12 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity asu_comp_3bit is --start entity declaration statement
+
+port( signal arith: in std_logic;   --signal_name : signal_mode data_type 
+		signal sub: in std_logic; 		--signal_name : signal_mode data_type
+		signal x: in std_logic_vector;		   --signal name : std_logic_vector(highint downto lowint);
+		signal y: in std_logic_vector;			--signal name : std_logic_vector(highint downto lowint);
+		signal r: out std_logic_vector;		--signal name : std_logic_vector(highint downto lowint);
+		signal v: out std_logic);		--signal_name : signal_mode data_type
+
