@@ -1,0 +1,11 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/xarichar/Desktop/370 lab 1/xor2.vhd
+source_file = 1, c:/altera17/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+source_file = 1, c:/altera17/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+source_file = 1, c:/altera17/quartus/libraries/vhdl/ieee/timing_b.vhd
+source_file = 1, c:/altera17/quartus/libraries/vhdl/ieee/timing_p.vhd
+source_file = 1, C:/Users/xarichar/Desktop/370 lab 1/db/xor-2inputs.cbx.xml
+design_name = xor2
+instance = comp, \f~output\, f~output, xor2, 1
+instance = comp, \x~input\, x~input, xor2, 1
+instance = comp, \y~input\, y~input, xor2, 1

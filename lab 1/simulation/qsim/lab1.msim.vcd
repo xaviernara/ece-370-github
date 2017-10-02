@@ -1,0 +1,294 @@
+$comment
+	File created using the following command:
+		vcd file lab1.msim.vcd -direction
+$end
+$date
+	Wed Sep 20 10:37:59 2017
+$end
+$version
+	ModelSim Version 10.5b
+$end
+$timescale
+	1ps
+$end
+
+$scope module compare_2bit_vhd_vec_tst $end
+$var wire 1 ! a0 $end
+$var wire 1 " a1 $end
+$var wire 1 # b0 $end
+$var wire 1 $ b1 $end
+$var wire 1 % G $end
+$var wire 1 & L $end
+
+$scope module i1 $end
+$var wire 1 ' gnd $end
+$var wire 1 ( vcc $end
+$var wire 1 ) unknown $end
+$var wire 1 * devoe $end
+$var wire 1 + devclrn $end
+$var wire 1 , devpor $end
+$var wire 1 - ww_devoe $end
+$var wire 1 . ww_devclrn $end
+$var wire 1 / ww_devpor $end
+$var wire 1 0 ww_a1 $end
+$var wire 1 1 ww_a0 $end
+$var wire 1 2 ww_b1 $end
+$var wire 1 3 ww_b0 $end
+$var wire 1 4 ww_L $end
+$var wire 1 5 ww_G $end
+$var wire 1 6 \L~output_o\ $end
+$var wire 1 7 \G~output_o\ $end
+$var wire 1 8 \a1~input_o\ $end
+$var wire 1 9 \a0~input_o\ $end
+$var wire 1 : \b1~input_o\ $end
+$var wire 1 ; \b0~input_o\ $end
+$var wire 1 < \L~0_combout\ $end
+$var wire 1 = \G~0_combout\ $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+0"
+0#
+0$
+0%
+0&
+0'
+1(
+x)
+1*
+1+
+1,
+1-
+1.
+1/
+00
+01
+02
+03
+04
+05
+06
+07
+x8
+x9
+x:
+x;
+x<
+x=
+$end
+#806
+08
+09
+0:
+0;
+#4470
+0<
+#4596
+0=
+#6100
+x6
+x4
+x&
+#8166
+x7
+x5
+x%
+#10528
+06
+04
+0&
+#12582
+07
+05
+0%
+#62500
+1#
+13
+#63200
+1;
+#66128
+1<
+#72054
+16
+14
+1&
+#125000
+0#
+1$
+03
+12
+#125700
+1:
+#125806
+0;
+#187500
+1#
+13
+#188200
+1;
+#250000
+0#
+0$
+1!
+03
+02
+11
+#250700
+19
+#250806
+0:
+0;
+#254470
+0<
+#254474
+1=
+#260528
+06
+04
+0&
+#262640
+17
+15
+1%
+#312500
+1#
+13
+#313200
+1;
+#316112
+0=
+#324098
+07
+05
+0%
+#375000
+0#
+1$
+03
+12
+#375700
+1:
+#375806
+0;
+#378992
+1<
+#384918
+16
+14
+1&
+#437500
+1#
+13
+#438200
+1;
+#500000
+0#
+0$
+0!
+1"
+03
+02
+01
+10
+#500700
+18
+#500806
+09
+0:
+0;
+#503976
+0<
+#503992
+1=
+#510034
+06
+04
+0&
+#512158
+17
+15
+1%
+#562500
+1#
+13
+#563200
+1;
+#625000
+0#
+1$
+03
+12
+#625700
+1:
+#625806
+0;
+#628976
+0=
+#636962
+07
+05
+0%
+#687500
+1#
+13
+#688200
+1;
+#691128
+1<
+#697054
+16
+14
+1&
+#750000
+0#
+0$
+1!
+03
+02
+11
+#750700
+19
+#750806
+0:
+0;
+#753976
+0<
+#753992
+1=
+#760034
+06
+04
+0&
+#762158
+17
+15
+1%
+#812500
+1#
+13
+#813200
+1;
+#875000
+0#
+1$
+03
+12
+#875700
+1:
+#875806
+0;
+#937500
+1#
+13
+#938200
+1;
+#941112
+0=
+#949098
+07
+05
+0%
+#1000000

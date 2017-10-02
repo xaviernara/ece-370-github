@@ -1,0 +1,28 @@
+library ieee;    							--library clause
+use ieee.std_logic_1164.all;			--use clause
+
+entity xor-2inputs is  --start entity declaration statement
+
+	--start of port clause 
+	port(signal x: in std_logic;		--signal_name : signal_mode data_type
+		  signal y: in std_logic;		--signal_name : signal_mode data_type
+		  signal f: out std_logic
+		  );								--end of port clause 
+		  
+												--scaler NOT array
+
+end entity xor-2inputs;  --end entity declaration statement
+
+architecture dataflow of xor-2inputs is   --start of architecture declaration statement 
+														--describes what the entity does 
+														--declaration potion of the architecture
+
+begin
+														--implementation potion of the architecture
+														
+	f<= x xor y;  --signal assignment statement 
+						-- signal assignemnt operator (<=) and xor 
+				--variable assignment operator (;=) 
+	
+	
+end architecture dataflow; 					--end of architecture declaration statement 
