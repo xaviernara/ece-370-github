@@ -19,7 +19,7 @@
 #
 # Quartus Prime
 # Version 17.0.0 Build 595 04/25/2017 SJ Standard Edition
-# Date created = 19:37:40  October 02, 2017
+# Date created = 19:42:53  October 02, 2017
 #
 # -------------------------------------------------------------------------- #
 #
@@ -38,14 +38,9 @@
 
 
 set_global_assignment -name FAMILY "Cyclone IV E"
-set_global_assignment -name DEVICE EP4CE115F29C7
+set_global_assignment -name DEVICE AUTO
 set_global_assignment -name TOP_LEVEL_ENTITY asupkg_3bit
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 17.0.0
-set_global_assignment -name PROJECT_CREATION_TIME_DATE "19:37:39  OCTOBER 02, 2017"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "19:42:53  OCTOBER 02, 2017"
 set_global_assignment -name LAST_QUARTUS_VERSION "17.0.0 Standard Edition"
-set_global_assignment -name VHDL_FILE "full_adder(6).vhd"
-set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
-set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
-set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
-set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
-set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
+set_global_assignment -name VHDL_FILE asupkg_3bit.vhd
