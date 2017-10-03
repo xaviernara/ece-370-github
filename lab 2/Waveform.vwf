@@ -22,6 +22,7 @@ run -all
 quit -f
 
 
+
 </modelsim_script>
 <modelsim_script_timing>onerror {exit -code 1}
 vlib work
@@ -40,6 +41,7 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
+
 
 
 </modelsim_script_timing>
@@ -391,7 +393,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "x";
 	EXPAND_STATUS = EXPANDED;
-	RADIX = Binary;
+	RADIX = Unsigned;
 	TREE_INDEX = 2;
 	TREE_LEVEL = 0;
 	CHILDREN = 3, 4, 5;
@@ -401,7 +403,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "x[2]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Unsigned;
 	TREE_INDEX = 3;
 	TREE_LEVEL = 1;
 	PARENT = 2;
@@ -411,7 +413,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "x[1]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Unsigned;
 	TREE_INDEX = 4;
 	TREE_LEVEL = 1;
 	PARENT = 2;
@@ -421,7 +423,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "x[0]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Unsigned;
 	TREE_INDEX = 5;
 	TREE_LEVEL = 1;
 	PARENT = 2;
@@ -430,8 +432,8 @@ DISPLAY_LINE
 DISPLAY_LINE
 {
 	CHANNEL = "y";
-	EXPAND_STATUS = EXPANDED;
-	RADIX = Binary;
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
 	TREE_INDEX = 6;
 	TREE_LEVEL = 0;
 	CHILDREN = 7, 8, 9;
@@ -441,7 +443,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "y[2]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Unsigned;
 	TREE_INDEX = 7;
 	TREE_LEVEL = 1;
 	PARENT = 6;
@@ -451,7 +453,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "y[1]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Unsigned;
 	TREE_INDEX = 8;
 	TREE_LEVEL = 1;
 	PARENT = 6;
@@ -461,7 +463,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "y[0]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Unsigned;
 	TREE_INDEX = 9;
 	TREE_LEVEL = 1;
 	PARENT = 6;
@@ -471,7 +473,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "r";
 	EXPAND_STATUS = EXPANDED;
-	RADIX = Binary;
+	RADIX = Unsigned;
 	TREE_INDEX = 10;
 	TREE_LEVEL = 0;
 	CHILDREN = 11, 12, 13;
@@ -481,7 +483,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "r[2]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Unsigned;
 	TREE_INDEX = 11;
 	TREE_LEVEL = 1;
 	PARENT = 10;
@@ -491,7 +493,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "r[1]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Unsigned;
 	TREE_INDEX = 12;
 	TREE_LEVEL = 1;
 	PARENT = 10;
@@ -501,7 +503,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "r[0]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Unsigned;
 	TREE_INDEX = 13;
 	TREE_LEVEL = 1;
 	PARENT = 10;

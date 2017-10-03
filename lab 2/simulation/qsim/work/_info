@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dH:/ece 370/ece 370 github/lab 2/simulation/qsim
 Easu_comp_3bit
-Z1 w1507063835
+Z1 w1507065461
 Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
 Z3 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 e`^h93R^CdmMEVe0e1VU_3
 Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
@@ -25,9 +25,9 @@ VoZhUi[cYRM;fQCRSE;k8c1
 !s100 `0G<lPNUM@:ec?BPFkclg3
 Z10 OV;C;10.5b;63
 32
-Z11 !s110 1507063837
+Z11 !s110 1507065468
 !i10b 1
-Z12 !s108 1507063836.000000
+Z12 !s108 1507065467.000000
 Z13 !s90 -work|work|asu_comp_3bit.vho|
 Z14 !s107 asu_comp_3bit.vho|
 !i113 1
@@ -56,7 +56,7 @@ R14
 R15
 R16
 Easu_comp_3bit_vhd_vec_tst
-Z17 w1507063834
+Z17 w1507065456
 R5
 R6
 R0
@@ -68,29 +68,29 @@ VdABZ@>gCS;K>8IP5TUnA]3
 !s100 Z<KOe4Z[Z@n2TCzlU2WWb1
 R10
 32
-R11
+Z20 !s110 1507065469
 !i10b 1
-Z20 !s108 1507063837.000000
-Z21 !s90 -work|work|Waveform.vwf.vht|
-Z22 !s107 Waveform.vwf.vht|
+Z21 !s108 1507065468.000000
+Z22 !s90 -work|work|Waveform.vwf.vht|
+Z23 !s107 Waveform.vwf.vht|
 !i113 1
 R15
 R16
 Aasu_comp_3bit_arch
 R5
 R6
-Z23 DEx4 work 25 asu_comp_3bit_vhd_vec_tst 0 22 dABZ@>gCS;K>8IP5TUnA]3
+Z24 DEx4 work 25 asu_comp_3bit_vhd_vec_tst 0 22 dABZ@>gCS;K>8IP5TUnA]3
 l53
 L34
-Z24 VXHf=B2a3LG7XLB4IbbGKT0
-Z25 !s100 jiaIc0FY;^aoZ=P`YSR:H1
+Z25 VXHf=B2a3LG7XLB4IbbGKT0
+Z26 !s100 jiaIc0FY;^aoZ=P`YSR:H1
 R10
 32
-R11
-!i10b 1
 R20
+!i10b 1
 R21
 R22
+R23
 !i113 1
 R15
 R16
@@ -111,7 +111,7 @@ VB]0;STalBkCB1_B4BXQDW2
 !s100 >mXi5[`cD`bFC`UBKA<om3
 R10
 32
-Z26 !s110 1507063836
+R11
 !i10b 1
 R12
 R13
@@ -133,7 +133,7 @@ Via>5o7W??azG@W@@eFOTF0
 !s100 [5;Wd8QGQ>@2NGoJ1I]Y43
 R10
 32
-R26
+R11
 !i10b 1
 R12
 R13

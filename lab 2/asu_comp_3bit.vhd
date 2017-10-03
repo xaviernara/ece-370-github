@@ -15,7 +15,7 @@ port( signal arith: in std_logic;   --signal_name : signal_mode data_type
 
 end entity asu_comp_3bit;	--end entity declaration statement
 
-architecture dataflow of asu_comp_3bit is 		--start of architecture declaration statement 
+architecture mixed of asu_comp_3bit is 		--start of architecture declaration statement 
 																--describes what the entity does 
 																--declaration potion of the architecture
 
@@ -85,5 +85,5 @@ architecture dataflow of asu_comp_3bit is 		--start of architecture declaration 
 		
 	
 	
-	end architecture dataflow;	--end of architecture declaration statement
+	end architecture mixed;	--end of architecture declaration statement
  

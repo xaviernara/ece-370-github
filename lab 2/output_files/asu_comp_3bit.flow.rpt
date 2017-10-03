@@ -1,5 +1,5 @@
 Flow report for asu_comp_3bit
-Tue Oct 03 15:50:35 2017
+Tue Oct 03 16:17:41 2017
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Standard Edition
 
 
@@ -41,7 +41,7 @@ agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Tue Oct 03 15:50:35 2017           ;
+; Flow Status                        ; Successful - Tue Oct 03 16:17:41 2017           ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Standard Edition ;
 ; Revision Name                      ; asu_comp_3bit                                   ;
 ; Top-level Entity Name              ; asu_comp_3bit                                   ;
@@ -103,7 +103,9 @@ agreement for further details.
 ; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 735 MB              ; 00:00:02                           ;
 ; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 524 MB              ; 00:00:01                           ;
 ; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 533 MB              ; 00:00:01                           ;
-; Total                     ; 00:00:35     ; --                      ; --                  ; 00:00:49                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 495 MB              ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 507 MB              ; 00:00:01                           ;
+; Total                     ; 00:00:39     ; --                      ; --                  ; 00:00:51                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -118,6 +120,8 @@ agreement for further details.
 ; TimeQuest Timing Analyzer ; SUL262R4S2       ; Windows 10 ; 10.0       ; x86_64         ;
 ; EDA Netlist Writer        ; SUL262R4S2       ; Windows 10 ; 10.0       ; x86_64         ;
 ; EDA Netlist Writer        ; SUL262R4S2       ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer        ; P308-01          ; Windows 7  ; 6.1        ; x86_64         ;
+; EDA Netlist Writer        ; P308-01          ; Windows 7  ; 6.1        ; x86_64         ;
 +---------------------------+------------------+------------+------------+----------------+
 
 
@@ -128,6 +132,8 @@ quartus_map --read_settings_files=on --write_settings_files=off lab2_task1 -c as
 quartus_fit --read_settings_files=off --write_settings_files=off lab2_task1 -c asu_comp_3bit
 quartus_asm --read_settings_files=off --write_settings_files=off lab2_task1 -c asu_comp_3bit
 quartus_sta lab2_task1 -c asu_comp_3bit
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off lab2_task1 -c asu_comp_3bit --vector_source="H:/ece 370/ece 370 github/lab 2/Waveform.vwf" --testbench_file="H:/ece 370/ece 370 github/lab 2/simulation/qsim/Waveform.vwf.vht"
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="H:/ece 370/ece 370 github/lab 2/simulation/qsim/" lab2_task1 -c asu_comp_3bit
 quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off lab2_task1 -c asu_comp_3bit --vector_source="H:/ece 370/ece 370 github/lab 2/Waveform.vwf" --testbench_file="H:/ece 370/ece 370 github/lab 2/simulation/qsim/Waveform.vwf.vht"
 quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="H:/ece 370/ece 370 github/lab 2/simulation/qsim/" lab2_task1 -c asu_comp_3bit
 
