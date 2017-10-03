@@ -48,7 +48,7 @@ architecture dataflow of asu_comp_3bit is 		--start of architecture declaration 
 --declare internal signal OR_SIG
 --represents output(s) of any OR gates	
 	
-	signal or_sig: std_logic;
+	--signal or_sig: std_logic;
 	
 	
 	begin		--implementation potion of the architecture
@@ -61,19 +61,25 @@ architecture dataflow of asu_comp_3bit is 		--start of architecture declaration 
 		xor_sig1 <= y(1) xor sub;
 		xor_sig2 <= y(2) xor sub;
 		
-		AND_sig1<= and arith;
-		not_sig_arith<= not arith;
 		
-		v <= (not_sig_arith and ( carries(0) xor carries(1) xor carries(2) xor sub) or ( arith and ( carries(0) xor carries(1) xor carries(2) xor carries(3))); 
+		not_sig_arith <= not arith;
+		AND_sig1 <=  not_sig_arith and (sub xor carries(3));
+		AND_sig2 <= arith and (carries(3) xor carries(2));
+		
+		
+		
+		--v <= (not_sig_arith and ( carries(0) xor carries(1) xor carries(2) xor sub)) or ( arith and ( carries(0) xor carries(1) xor carries(2) xor carries(3))); 
+		v <= AND_sig1 or AND_sig2;
+		--v <= ((not_sig_arith and ( carries(2) xor sub))  or ( arith and ( carries(2) xor carries(3) )));
 		
 		FA2: entity work.full_adder(dataflow)		--Entity Instantiation w/Positional Association
 		port map (carries(2), x(2), xor_sig2, carries(3), r(2)); --Positional Association( i.e place the inputs in the same order in the port map as the way they were created)
 		
 		FA1: entity work.full_adder(dataflow)		--Entity Instantiation w/Named Association
-		port map (carries(1)<= cin, x(1)<=x, xor_sig1<=y, carries(2)<=cout, r(1)<= sum);
+		port map (cin => carries(1) , x=>x(1) , y=>xor_sig1 ,  cout=> carries(2), sum => r(1) );
 		
 		FA0: entity work.full_adder(dataflow)		--Entity Instantiation w/Named Association
-		port map (carries(0)<= cin, x(0)<=x, xor_sig0<=y, carries(1)<=cout, r(0)<= sum );
+		port map (cin=>sub , x=>x(0), y => xor_sig0, cout => carries(1), sum=>r(0));
 		
 		
 		

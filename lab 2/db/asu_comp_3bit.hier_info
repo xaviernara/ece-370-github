@@ -1,0 +1,53 @@
+|asu_comp_3bit
+arith => AND_sig2.IN1
+arith => AND_sig1.IN1
+sub => xor_sig0.IN0
+sub => xor_sig1.IN0
+sub => xor_sig2.IN0
+sub => AND_sig1.IN1
+sub => full_adder:FA0.cin
+x[0] => full_adder:FA0.x
+x[1] => full_adder:FA1.x
+x[2] => full_adder:FA2.x
+y[0] => xor_sig0.IN1
+y[1] => xor_sig1.IN1
+y[2] => xor_sig2.IN1
+r[0] <= full_adder:FA0.sum
+r[1] <= full_adder:FA1.sum
+r[2] <= full_adder:FA2.sum
+v <= v.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|asu_comp_3bit|full_adder:FA2
+cin => sum.IN1
+cin => cout.IN1
+x => g.IN0
+x => p.IN0
+y => g.IN1
+y => p.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|asu_comp_3bit|full_adder:FA1
+cin => sum.IN1
+cin => cout.IN1
+x => g.IN0
+x => p.IN0
+y => g.IN1
+y => p.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|asu_comp_3bit|full_adder:FA0
+cin => sum.IN1
+cin => cout.IN1
+x => g.IN0
+x => p.IN0
+y => g.IN1
+y => p.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for asu_comp_3bit
-Mon Oct 02 19:29:17 2017
+Tue Oct 03 15:49:43 2017
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Standard Edition
 
 
@@ -10,7 +10,13 @@ Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Standard Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Post-Synthesis Netlist Statistics for Top Partition
+ 10. Elapsed Time Per Partition
+ 11. Analysis & Synthesis Messages
 
 
 
@@ -37,20 +43,20 @@ agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Mon Oct 02 19:29:17 2017               ;
+; Analysis & Synthesis Status        ; Successful - Tue Oct 03 15:49:43 2017           ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Standard Edition ;
 ; Revision Name                      ; asu_comp_3bit                                   ;
 ; Top-level Entity Name              ; asu_comp_3bit                                   ;
 ; Family                             ; Cyclone IV E                                    ;
-; Total logic elements               ; N/A until Partition Merge                       ;
-;     Total combinational functions  ; N/A until Partition Merge                       ;
-;     Dedicated logic registers      ; N/A until Partition Merge                       ;
-; Total registers                    ; N/A until Partition Merge                       ;
-; Total pins                         ; N/A until Partition Merge                       ;
-; Total virtual pins                 ; N/A until Partition Merge                       ;
-; Total memory bits                  ; N/A until Partition Merge                       ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                       ;
-; Total PLLs                         ; N/A until Partition Merge                       ;
+; Total logic elements               ; 9                                               ;
+;     Total combinational functions  ; 9                                               ;
+;     Dedicated logic registers      ; 0                                               ;
+; Total registers                    ; 0                                               ;
+; Total pins                         ; 12                                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
 +------------------------------------+-------------------------------------------------+
 
 
@@ -59,7 +65,7 @@ agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
-; Device                                                                     ; EP4CE40F29C7       ;                    ;
+; Device                                                                     ; EP4CE115F29C7      ;                    ;
 ; Top-level entity name                                                      ; asu_comp_3bit      ; asu_comp_3bit      ;
 ; Family name                                                                ; Cyclone IV E       ; Cyclone V          ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
@@ -156,27 +162,131 @@ agreement for further details.
 +----------------------------+-------------+
 
 
++------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                             ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                      ; Library ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------+---------+
+; full_adder(6).vhd                ; yes             ; User VHDL File  ; H:/ece 370/ece 370 github/lab 2/full_adder(6).vhd ;         ;
+; asu_comp_3bit.vhd                ; yes             ; User VHDL File  ; H:/ece 370/ece 370 github/lab 2/asu_comp_3bit.vhd ;         ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 9         ;
+;                                             ;           ;
+; Total combinational functions               ; 9         ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 5         ;
+;     -- 3 input functions                    ; 2         ;
+;     -- <=2 input functions                  ; 2         ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 9         ;
+;     -- arithmetic mode                      ; 0         ;
+;                                             ;           ;
+; Total registers                             ; 0         ;
+;     -- Dedicated logic registers            ; 0         ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 12        ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; sub~input ;
+; Maximum fan-out                             ; 6         ;
+; Total fan-out                               ; 46        ;
+; Average fan-out                             ; 1.39      ;
++---------------------------------------------+-----------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                  ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------+---------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name           ; Entity Name   ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------+---------------+--------------+
+; |asu_comp_3bit             ; 9 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 12   ; 0            ; |asu_comp_3bit                ; asu_comp_3bit ; work         ;
+;    |full_adder:FA0|        ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |asu_comp_3bit|full_adder:FA0 ; full_adder    ; work         ;
+;    |full_adder:FA1|        ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |asu_comp_3bit|full_adder:FA1 ; full_adder    ; work         ;
+;    |full_adder:FA2|        ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |asu_comp_3bit|full_adder:FA2 ; full_adder    ; work         ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------+---------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 12                          ;
+; cycloneiii_lcell_comb ; 9                           ;
+;     normal            ; 9                           ;
+;         2 data inputs ; 2                           ;
+;         3 data inputs ; 2                           ;
+;         4 data inputs ; 5                           ;
+;                       ;                             ;
+; Max LUT depth         ; 4.00                        ;
+; Average LUT depth     ; 3.18                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Standard Edition
-    Info: Processing started: Mon Oct 02 19:29:02 2017
+    Info: Processing started: Tue Oct 03 15:49:29 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lab2_task1 -c asu_comp_3bit
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Info (12021): Found 2 design units, including 1 entities, in source file c:/users/xarichar/pictures/full_adder(6).vhd
-    Info (12022): Found design unit 1: full_adder-dataflow File: C:/Users/xarichar/Pictures/full_adder(6).vhd Line: 9
-    Info (12023): Found entity 1: full_adder File: C:/Users/xarichar/Pictures/full_adder(6).vhd Line: 4
-Error (10500): VHDL syntax error at asu_comp_3bit.vhd(64) near text "and";  expecting "(", or an identifier ("and" is a reserved keyword), or  unary operator File: H:/ece 370/ece 370 github/lab 2/asu_comp_3bit.vhd Line: 64
-Error (10500): VHDL syntax error at asu_comp_3bit.vhd(67) near text "or";  expecting ")", or "," File: H:/ece 370/ece 370 github/lab 2/asu_comp_3bit.vhd Line: 67
-Error (10500): VHDL syntax error at asu_comp_3bit.vhd(67) near text ")";  expecting ";" File: H:/ece 370/ece 370 github/lab 2/asu_comp_3bit.vhd Line: 67
-Info (12021): Found 0 design units, including 0 entities, in source file asu_comp_3bit.vhd
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 3 errors, 1 warning
-    Error: Peak virtual memory: 671 megabytes
-    Error: Processing ended: Mon Oct 02 19:29:17 2017
-    Error: Elapsed time: 00:00:15
-    Error: Total CPU time (on all processors): 00:00:27
+Info (12021): Found 2 design units, including 1 entities, in source file full_adder(6).vhd
+    Info (12022): Found design unit 1: full_adder-dataflow File: H:/ece 370/ece 370 github/lab 2/full_adder(6).vhd Line: 9
+    Info (12023): Found entity 1: full_adder File: H:/ece 370/ece 370 github/lab 2/full_adder(6).vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file asu_comp_3bit.vhd
+    Info (12022): Found design unit 1: asu_comp_3bit-dataflow File: H:/ece 370/ece 370 github/lab 2/asu_comp_3bit.vhd Line: 18
+    Info (12023): Found entity 1: asu_comp_3bit File: H:/ece 370/ece 370 github/lab 2/asu_comp_3bit.vhd Line: 4
+Info (12127): Elaborating entity "asu_comp_3bit" for the top level hierarchy
+Info (12129): Elaborating entity "full_adder" using architecture "A:dataflow" for hierarchy "full_adder:FA2" File: H:/ece 370/ece 370 github/lab 2/asu_comp_3bit.vhd Line: 75
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 21 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 8 input pins
+    Info (21059): Implemented 4 output pins
+    Info (21061): Implemented 9 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 685 megabytes
+    Info: Processing ended: Tue Oct 03 15:49:43 2017
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:26
 
 
