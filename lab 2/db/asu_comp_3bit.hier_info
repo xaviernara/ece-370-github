@@ -12,10 +12,10 @@ x[2] => full_adder:FA2.x
 y[0] => xor_sig0.IN1
 y[1] => xor_sig1.IN1
 y[2] => xor_sig2.IN1
-r[0] <= full_adder:FA0.sum
-r[1] <= full_adder:FA1.sum
-r[2] <= full_adder:FA2.sum
-v <= v.DB_MAX_OUTPUT_PORT_TYPE
+r[0] << full_adder:FA0.sum
+r[1] << full_adder:FA1.sum
+r[2] << full_adder:FA2.sum
+v << v.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |asu_comp_3bit|full_adder:FA2

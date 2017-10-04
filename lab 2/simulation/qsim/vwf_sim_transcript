@@ -7,7 +7,7 @@ Note: if both ModelSim-Altera and ModelSim executables are available, ModelSim-A
 
 **** Generating the ModelSim Testbench ****
 
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off lab2_task1 -c asu_comp_3bit --vector_source="H:/ece 370/ece 370 github/lab 2/Waveform.vwf" --testbench_file="H:/ece 370/ece 370 github/lab 2/simulation/qsim/Waveform.vwf.vht"
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off lab2_task2 -c asupkg_3bit --vector_source="H:/ece 370/ece 370 github/lab 2/Waveform1.vwf" --testbench_file="H:/ece 370/ece 370 github/lab 2/simulation/qsim/Waveform1.vwf.vht"
 
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
@@ -26,15 +26,16 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: devices manufactured by Intel and sold by Intel or its 
     Info: authorized distributors.  Please refer to the applicable 
     Info: agreement for further details.
-    Info: Processing started: Tue Oct 03 16:17:34 2017
-Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off lab2_task1 -c asu_comp_3bit --vector_source="H:/ece 370/ece 370 github/lab 2/Waveform.vwf" --testbench_file="H:/ece 370/ece 370 github/lab 2/simulation/qsim/Waveform.vwf.vht"
+    Info: Processing started: Wed Oct 04 09:51:42 2017
+Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off lab2_task2 -c asupkg_3bit --vector_source="H:/ece 370/ece 370 github/lab 2/Waveform1.vwf" --testbench_file="H:/ece 370/ece 370 github/lab 2/simulation/qsim/Waveform1.vwf.vht"
+Info (119004): Automatically selected device EP4CE6E22C6 for design asupkg_3bit
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 
 Completed successfully. 
 
 **** Generating the functional simulation netlist ****
 
-quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="H:/ece 370/ece 370 github/lab 2/simulation/qsim/" lab2_task1 -c asu_comp_3bit
+quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="H:/ece 370/ece 370 github/lab 2/simulation/qsim/" lab2_task2 -c asupkg_3bit
 
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
@@ -53,13 +54,14 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: devices manufactured by Intel and sold by Intel or its 
     Info: authorized distributors.  Please refer to the applicable 
     Info: agreement for further details.
-    Info: Processing started: Tue Oct 03 16:17:39 2017
-Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="H:/ece 370/ece 370 github/lab 2/simulation/qsim/" lab2_task1 -c asu_comp_3bit
+    Info: Processing started: Wed Oct 04 09:51:49 2017
+Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="H:/ece 370/ece 370 github/lab 2/simulation/qsim/" lab2_task2 -c asupkg_3bit
+Info (119004): Automatically selected device EP4CE6E22C6 for design asupkg_3bit
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (204019): Generated file asu_comp_3bit.vho in folder "H:/ece 370/ece 370 github/lab 2/simulation/qsim//" for EDA simulation tool
+Info (204019): Generated file asupkg_3bit.vho in folder "H:/ece 370/ece 370 github/lab 2/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 507 megabytes
-    Info: Processing ended: Tue Oct 03 16:17:41 2017
+    Info: Processing ended: Wed Oct 04 09:51:51 2017
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
 
@@ -67,13 +69,13 @@ Completed successfully.
 
 **** Generating the ModelSim .do script ****
 
-H:/ece 370/ece 370 github/lab 2/simulation/qsim/lab2_task1.do generated.
+H:/ece 370/ece 370 github/lab 2/simulation/qsim/lab2_task2.do generated.
 
 Completed successfully. 
 
 **** Running the ModelSim simulation ****
 
-c:/altera17/modelsim_ase/win32aloem//vsim -c -do lab2_task1.do
+c:/altera17/modelsim_ase/win32aloem//vsim -c -do lab2_task2.do
 
 Reading C:/altera17/modelsim_ase/tcl/vsim/pref.tcl
 
@@ -81,13 +83,13 @@ Reading C:/altera17/modelsim_ase/tcl/vsim/pref.tcl
 # 10.5b
 
 
-# do lab2_task1.do
+# do lab2_task2.do
 
 # ** Warning: (vlib-34) Library already exists at "work".
 
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:17:47 on Oct 03,2017
-# vcom -work work asu_comp_3bit.vho 
+# Start time: 09:51:57 on Oct 04,2017
+# vcom -work work asupkg_3bit.vho 
 
 # -- Loading package STANDARD
 
@@ -97,61 +99,57 @@ Reading C:/altera17/modelsim_ase/tcl/vsim/pref.tcl
 # -- Loading package VITAL_Primitives
 # -- Loading package cycloneive_atom_pack
 # -- Loading package cycloneive_components
+# -- Compiling entity asupkg_3bit
+# -- Compiling architecture structure of asupkg_3bit
 
-# -- Compiling entity hard_block
-# -- Compiling architecture structure of hard_block
-# -- Compiling entity asu_comp_3bit
-# -- Compiling architecture structure of asu_comp_3bit
-
-# End time: 16:17:48 on Oct 03,2017, Elapsed time: 0:00:01
+# End time: 09:51:58 on Oct 04,2017, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:17:48 on Oct 03,2017
-# vcom -work work Waveform.vwf.vht 
+# Start time: 09:51:58 on Oct 04,2017
+# vcom -work work Waveform1.vwf.vht 
 
 # -- Loading package STANDARD
 
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity asu_comp_3bit_vhd_vec_tst
-# -- Compiling architecture asu_comp_3bit_arch of asu_comp_3bit_vhd_vec_tst
+# -- Compiling entity asupkg_3bit_vhd_vec_tst
+# -- Compiling architecture asupkg_3bit_arch of asupkg_3bit_vhd_vec_tst
 
-# End time: 16:17:49 on Oct 03,2017, Elapsed time: 0:00:01
+# End time: 09:51:59 on Oct 04,2017, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 
-# vsim -novopt -c -t 1ps -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.asu_comp_3bit_vhd_vec_tst 
-# Start time: 16:17:50 on Oct 03,2017
+# vsim -novopt -c -t 1ps -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.asupkg_3bit_vhd_vec_tst 
+# Start time: 09:52:00 on Oct 04,2017
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
-# Loading work.asu_comp_3bit_vhd_vec_tst(asu_comp_3bit_arch)
+# Loading work.asupkg_3bit_vhd_vec_tst(asupkg_3bit_arch)
 # Loading ieee.vital_timing(body)
 # Loading ieee.vital_primitives(body)
 # Loading cycloneive.cycloneive_atom_pack(body)
 # Loading cycloneive.cycloneive_components
-# Loading work.asu_comp_3bit(structure)
-# Loading work.hard_block(structure)
+# Loading work.asupkg_3bit(structure)
 # Loading ieee.std_logic_arith(body)
 # Loading cycloneive.cycloneive_io_obuf(arch)
 # Loading cycloneive.cycloneive_io_ibuf(arch)
 # Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)
-# after#33
+# after#31
 
-# End time: 16:17:51 on Oct 03,2017, Elapsed time: 0:00:01
+# End time: 09:52:01 on Oct 04,2017, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 
 Completed successfully. 
 
 **** Converting ModelSim VCD to vector waveform ****
 
-Reading H:/ece 370/ece 370 github/lab 2/Waveform.vwf...
+Reading H:/ece 370/ece 370 github/lab 2/Waveform1.vwf...
 
-Reading H:/ece 370/ece 370 github/lab 2/simulation/qsim/lab2_task1.msim.vcd...
+Reading H:/ece 370/ece 370 github/lab 2/simulation/qsim/lab2_task2.msim.vcd...
 
 Processing channel transitions... 
 
-Writing the resulting VWF to H:/ece 370/ece 370 github/lab 2/simulation/qsim/lab2_task1_20171003161752.sim.vwf
+Writing the resulting VWF to H:/ece 370/ece 370 github/lab 2/simulation/qsim/lab2_task2_20171004095202.sim.vwf
 
 Finished VCD to VWF conversion.
 

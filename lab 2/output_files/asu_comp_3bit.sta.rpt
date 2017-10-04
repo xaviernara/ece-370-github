@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for asu_comp_3bit
-Tue Oct 03 15:50:09 2017
+Tue Oct 03 19:36:17 2017
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Standard Edition
 
 
@@ -96,7 +96,7 @@ agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.1%      ;
+;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -411,7 +411,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime TimeQuest Timing Analyzer
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Standard Edition
-    Info: Processing started: Tue Oct 03 15:50:05 2017
+    Info: Processing started: Tue Oct 03 19:36:13 2017
 Info: Command: quartus_sta lab2_task1 -c asu_comp_3bit
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -460,7 +460,7 @@ Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
     Info: Peak virtual memory: 735 megabytes
-    Info: Processing ended: Tue Oct 03 15:50:09 2017
+    Info: Processing ended: Tue Oct 03 19:36:17 2017
     Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:02
 
