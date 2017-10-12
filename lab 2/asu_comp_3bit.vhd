@@ -80,10 +80,7 @@ architecture mixed of asu_comp_3bit is 		--start of architecture declaration sta
 		
 		FA0: entity work.full_adder(dataflow)		--Entity Instantiation w/Named Association
 		port map (cin=>sub , x=>x(0), y => xor_sig0, cout => carries(1), sum=>r(0));
-		
-		
-		
-	
+
 	
 	end architecture mixed;	--end of architecture declaration statement
  
