@@ -1,5 +1,5 @@
 Flow report for compare_signed_2bit_pkg
-Mon Oct 16 09:25:22 2017
+Mon Oct 16 13:22:45 2017
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Standard Edition
 
 
@@ -41,22 +41,22 @@ agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Mon Oct 16 09:25:22 2017           ;
+; Flow Status                        ; Successful - Mon Oct 16 13:22:39 2017           ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Standard Edition ;
 ; Revision Name                      ; compare_signed_2bit_pkg                         ;
 ; Top-level Entity Name              ; compare_signed_2bit_pkg                         ;
 ; Family                             ; Cyclone IV E                                    ;
 ; Device                             ; EP4CE115F29C7                                   ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 3                                               ;
-;     Total combinational functions  ; 3                                               ;
-;     Dedicated logic registers      ; 0                                               ;
+; Total logic elements               ; 3 / 114,480 ( < 1 % )                           ;
+;     Total combinational functions  ; 3 / 114,480 ( < 1 % )                           ;
+;     Dedicated logic registers      ; 0 / 114,480 ( 0 % )                             ;
 ; Total registers                    ; 0                                               ;
-; Total pins                         ; 7                                               ;
+; Total pins                         ; 7 / 529 ( 1 % )                                 ;
 ; Total virtual pins                 ; 0                                               ;
-; Total memory bits                  ; 0                                               ;
-; Embedded Multiplier 9-bit elements ; 0                                               ;
-; Total PLLs                         ; 0                                               ;
+; Total memory bits                  ; 0 / 3,981,312 ( 0 % )                           ;
+; Embedded Multiplier 9-bit elements ; 0 / 532 ( 0 % )                                 ;
+; Total PLLs                         ; 0 / 4 ( 0 % )                                   ;
 +------------------------------------+-------------------------------------------------+
 
 
@@ -65,7 +65,7 @@ agreement for further details.
 +-------------------+-------------------------+
 ; Option            ; Setting                 ;
 +-------------------+-------------------------+
-; Start date & time ; 10/16/2017 09:25:08     ;
+; Start date & time ; 10/16/2017 13:22:03     ;
 ; Main task         ; Compilation             ;
 ; Revision Name     ; compare_signed_2bit_pkg ;
 +-------------------+-------------------------+
@@ -76,7 +76,7 @@ agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 260248567037948.150816390809404        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 233916160001400.150817812300136        ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                                   ; --            ; --          ; --         ;
@@ -87,29 +87,38 @@ agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------+
-; Flow Elapsed Time                                                                                                        ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:14     ; 1.0                     ; 686 MB              ; 00:00:27                           ;
-; Total                ; 00:00:14     ; --                      ; --                  ; 00:00:27                           ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                             ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis      ; 00:00:14     ; 1.0                     ; 658 MB              ; 00:00:26                           ;
+; Fitter                    ; 00:00:12     ; 1.0                     ; 1551 MB             ; 00:00:14                           ;
+; Assembler                 ; 00:00:05     ; 1.0                     ; 545 MB              ; 00:00:04                           ;
+; TimeQuest Timing Analyzer ; 00:00:04     ; 1.0                     ; 699 MB              ; 00:00:02                           ;
+; Total                     ; 00:00:35     ; --                      ; --                  ; 00:00:46                           ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                    ;
-+----------------------+------------------+------------+------------+----------------+
-; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
-+----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; SUL200R2S1       ; Windows 10 ; 10.0       ; x86_64         ;
-+----------------------+------------------+------------+------------+----------------+
++----------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                        ;
++---------------------------+------------------+-----------+------------+----------------+
+; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
++---------------------------+------------------+-----------+------------+----------------+
+; Analysis & Synthesis      ; P204-04067       ; Windows 7 ; 6.1        ; x86_64         ;
+; Fitter                    ; P204-04067       ; Windows 7 ; 6.1        ; x86_64         ;
+; Assembler                 ; P204-04067       ; Windows 7 ; 6.1        ; x86_64         ;
+; TimeQuest Timing Analyzer ; P204-04067       ; Windows 7 ; 6.1        ; x86_64         ;
++---------------------------+------------------+-----------+------------+----------------+
 
 
 ------------
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off lab3_task2 -c compare_signed_2bit_pkg
+quartus_fit --read_settings_files=off --write_settings_files=off lab3_task2 -c compare_signed_2bit_pkg
+quartus_asm --read_settings_files=off --write_settings_files=off lab3_task2 -c compare_signed_2bit_pkg
+quartus_sta lab3_task2 -c compare_signed_2bit_pkg
 
 
 
