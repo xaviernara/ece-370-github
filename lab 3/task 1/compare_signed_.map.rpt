@@ -1,5 +1,5 @@
 Analysis & Synthesis report for compare_signed_
-Thu Oct 12 17:07:57 2017
+Mon Oct 16 09:26:45 2017
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Standard Edition
 
 
@@ -45,7 +45,7 @@ agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Oct 12 17:07:57 2017           ;
+; Analysis & Synthesis Status        ; Successful - Mon Oct 16 09:26:45 2017           ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Standard Edition ;
 ; Revision Name                      ; compare_signed_                                 ;
 ; Top-level Entity Name              ; compare_signed_2bit                             ;
@@ -281,7 +281,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Standard Edition
-    Info: Processing started: Thu Oct 12 17:07:44 2017
+    Info: Processing started: Mon Oct 16 09:26:27 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lab3_tassk1 -c compare_signed_
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -302,8 +302,8 @@ Info (21057): Implemented 10 device resources after synthesis - the final resour
     Info (21061): Implemented 3 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 683 megabytes
-    Info: Processing ended: Thu Oct 12 17:07:57 2017
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:23
+    Info: Processing ended: Mon Oct 16 09:26:45 2017
+    Info: Elapsed time: 00:00:18
+    Info: Total CPU time (on all processors): 00:00:31
 
 
