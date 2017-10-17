@@ -19,7 +19,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "10/17/2017 15:53:07"
+-- Generated on "10/17/2017 16:50:14"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          compare_signed_2bit
 -- 
@@ -43,9 +43,9 @@ COMPONENT compare_signed_2bit
 	PORT (
 	A : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
 	B : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
-	E : BUFFER STD_LOGIC;
-	G : BUFFER STD_LOGIC;
-	L : BUFFER STD_LOGIC
+	E : OUT STD_LOGIC;
+	G : OUT STD_LOGIC;
+	L : OUT STD_LOGIC
 	);
 END COMPONENT;
 BEGIN
@@ -61,48 +61,45 @@ BEGIN
 -- A[1]
 t_prcs_A_1: PROCESS
 BEGIN
-	A(1) <= '1';
-	WAIT FOR 999000 ps;
+LOOP
 	A(1) <= '0';
-WAIT;
+	WAIT FOR 1000000 ps;
+	A(1) <= '1';
+	WAIT FOR 1000000 ps;
+	IF (NOW >= 2000000 ps) THEN WAIT; END IF;
+END LOOP;
 END PROCESS t_prcs_A_1;
 -- A[0]
 t_prcs_A_0: PROCESS
 BEGIN
+LOOP
+	A(0) <= '0';
+	WAIT FOR 500000 ps;
 	A(0) <= '1';
 	WAIT FOR 500000 ps;
-	A(0) <= '0';
-WAIT;
+	IF (NOW >= 2000000 ps) THEN WAIT; END IF;
+END LOOP;
 END PROCESS t_prcs_A_0;
 -- B[1]
 t_prcs_B_1: PROCESS
 BEGIN
+LOOP
 	B(1) <= '0';
 	WAIT FOR 250000 ps;
 	B(1) <= '1';
 	WAIT FOR 250000 ps;
-	B(1) <= '0';
-	WAIT FOR 250000 ps;
-	B(1) <= '1';
-	WAIT FOR 249000 ps;
-	B(1) <= '0';
-WAIT;
+	IF (NOW >= 2000000 ps) THEN WAIT; END IF;
+END LOOP;
 END PROCESS t_prcs_B_1;
 -- B[0]
 t_prcs_B_0: PROCESS
 BEGIN
-	FOR i IN 1 TO 3
-	LOOP
-		B(0) <= '0';
-		WAIT FOR 125000 ps;
-		B(0) <= '1';
-		WAIT FOR 125000 ps;
-	END LOOP;
+LOOP
 	B(0) <= '0';
 	WAIT FOR 125000 ps;
 	B(0) <= '1';
-	WAIT FOR 124000 ps;
-	B(0) <= '0';
-WAIT;
+	WAIT FOR 125000 ps;
+	IF (NOW >= 2000000 ps) THEN WAIT; END IF;
+END LOOP;
 END PROCESS t_prcs_B_0;
 END compare_signed_2bit_arch;

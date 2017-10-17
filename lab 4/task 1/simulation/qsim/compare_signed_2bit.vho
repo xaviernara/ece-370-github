@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 17.0.0 Build 595 04/25/2017 SJ Standard Edition"
 
--- DATE "10/17/2017 15:53:10"
+-- DATE "10/17/2017 16:50:19"
 
 -- 
 -- Device: Altera EP4CE115F29C7 Package FBGA780
@@ -36,9 +36,9 @@ ENTITY 	compare_signed_2bit IS
     PORT (
 	A : IN std_logic_vector(1 DOWNTO 0);
 	B : IN std_logic_vector(1 DOWNTO 0);
-	L : BUFFER std_logic;
-	E : BUFFER std_logic;
-	G : BUFFER std_logic
+	L : OUT std_logic;
+	E : OUT std_logic;
+	G : OUT std_logic
 	);
 END compare_signed_2bit;
 
@@ -65,9 +65,8 @@ SIGNAL \B[0]~input_o\ : std_logic;
 SIGNAL \A[0]~input_o\ : std_logic;
 SIGNAL \B[1]~input_o\ : std_logic;
 SIGNAL \L~0_combout\ : std_logic;
-SIGNAL \EG[1]~0_combout\ : std_logic;
-SIGNAL \EG[0]~1_combout\ : std_logic;
-SIGNAL \ALT_INV_EG[1]~0_combout\ : std_logic;
+SIGNAL \EG~0_combout\ : std_logic;
+SIGNAL \EG~1_combout\ : std_logic;
 
 BEGIN
 
@@ -79,7 +78,6 @@ G <= ww_G;
 ww_devoe <= devoe;
 ww_devclrn <= devclrn;
 ww_devpor <= devpor;
-\ALT_INV_EG[1]~0_combout\ <= NOT \EG[1]~0_combout\;
 
 \L~output\ : cycloneive_io_obuf
 -- pragma translate_off
@@ -99,7 +97,7 @@ GENERIC MAP (
 	open_drain_output => "false")
 -- pragma translate_on
 PORT MAP (
-	i => \ALT_INV_EG[1]~0_combout\,
+	i => \EG~0_combout\,
 	devoe => ww_devoe,
 	o => \E~output_o\);
 
@@ -110,7 +108,7 @@ GENERIC MAP (
 	open_drain_output => "false")
 -- pragma translate_on
 PORT MAP (
-	i => \EG[0]~1_combout\,
+	i => \EG~1_combout\,
 	devoe => ww_devoe,
 	o => \G~output_o\);
 
@@ -170,25 +168,25 @@ PORT MAP (
 	datad => \B[1]~input_o\,
 	combout => \L~0_combout\);
 
-\EG[1]~0\ : cycloneive_lcell_comb
+\EG~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \EG[1]~0_combout\ = (\A[1]~input_o\ & ((\A[0]~input_o\ $ (\B[0]~input_o\)) # (!\B[1]~input_o\))) # (!\A[1]~input_o\ & ((\B[1]~input_o\) # (\A[0]~input_o\ $ (\B[0]~input_o\))))
+-- \EG~0_combout\ = (\A[1]~input_o\ & (!\A[0]~input_o\ & (!\B[0]~input_o\ & \B[1]~input_o\))) # (!\A[1]~input_o\ & (!\B[1]~input_o\ & (\A[0]~input_o\ $ (!\B[0]~input_o\))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0110111111110110",
+	lut_mask => "0000001001000001",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
 	dataa => \A[1]~input_o\,
-	datab => \B[1]~input_o\,
-	datac => \A[0]~input_o\,
-	datad => \B[0]~input_o\,
-	combout => \EG[1]~0_combout\);
+	datab => \A[0]~input_o\,
+	datac => \B[0]~input_o\,
+	datad => \B[1]~input_o\,
+	combout => \EG~0_combout\);
 
-\EG[0]~1\ : cycloneive_lcell_comb
+\EG~1\ : cycloneive_lcell_comb
 -- Equation(s):
--- \EG[0]~1_combout\ = (\B[1]~input_o\ & (((\A[0]~input_o\ & !\B[0]~input_o\)) # (!\A[1]~input_o\))) # (!\B[1]~input_o\ & (\A[0]~input_o\ & (!\B[0]~input_o\ & !\A[1]~input_o\)))
+-- \EG~1_combout\ = (\B[1]~input_o\ & (((\A[0]~input_o\ & !\B[0]~input_o\)) # (!\A[1]~input_o\))) # (!\B[1]~input_o\ & (\A[0]~input_o\ & (!\B[0]~input_o\ & !\A[1]~input_o\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -200,7 +198,7 @@ PORT MAP (
 	datab => \A[0]~input_o\,
 	datac => \B[0]~input_o\,
 	datad => \A[1]~input_o\,
-	combout => \EG[0]~1_combout\);
+	combout => \EG~1_combout\);
 
 ww_L <= \L~output_o\;
 

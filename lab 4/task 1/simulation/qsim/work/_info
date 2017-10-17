@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dH:/ece 370/ece 370 github/lab 4/task 1/simulation/qsim
 Ecompare_signed_2bit
-Z1 w1508273590
+Z1 w1508277019
 Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
 Z3 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 e`^h93R^CdmMEVe0e1VU_3
 Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
@@ -21,13 +21,13 @@ Z8 8compare_signed_2bit.vho
 Z9 Fcompare_signed_2bit.vho
 l0
 L35
-V@PH1kWzh@PU7?`BN1<m<^3
-!s100 <iP_^kZ;U=1k[C?mA;7DI1
+V`oUj^@0AZhYZ1z?6T;=QL1
+!s100 =S3RBT0n4@4`d7n`[LB6Y3
 Z10 OV;C;10.5b;63
 32
-Z11 !s110 1508273598
+Z11 !s110 1508277025
 !i10b 1
-Z12 !s108 1508273597.000000
+Z12 !s108 1508277024.000000
 Z13 !s90 -work|work|compare_signed_2bit.vho|
 Z14 !s107 compare_signed_2bit.vho|
 !i113 1
@@ -40,11 +40,11 @@ R4
 R5
 R6
 R7
-DEx4 work 19 compare_signed_2bit 0 22 @PH1kWzh@PU7?`BN1<m<^3
-l72
+DEx4 work 19 compare_signed_2bit 0 22 `oUj^@0AZhYZ1z?6T;=QL1
+l71
 L45
-Vh0>Me[^VMVAJ<HB2oO:cZ1
-!s100 ?=hUa0JDBPiVekm8E7AOh1
+V_0:5g;AKbU2fU8IZ7G>PE2
+!s100 0eZfRY<XFQ<NMJhmAaj>M2
 R10
 32
 R11
@@ -56,7 +56,7 @@ R14
 R15
 R16
 Ecompare_signed_2bit_vhd_vec_tst
-Z17 w1508273587
+Z17 w1508277014
 R5
 R6
 R0
@@ -68,9 +68,9 @@ Vh<5oi<R7zG2`VEhklem2a0
 !s100 mzOCZ=MMf<SiRBbUzbeAU2
 R10
 32
-Z20 !s110 1508273599
+Z20 !s110 1508277026
 !i10b 1
-Z21 !s108 1508273598.000000
+Z21 !s108 1508277025.000000
 Z22 !s90 -work|work|Waveform.vwf.vht|
 Z23 !s107 Waveform.vwf.vht|
 !i113 1
@@ -79,11 +79,11 @@ R16
 Acompare_signed_2bit_arch
 R5
 R6
-DEx4 work 31 compare_signed_2bit_vhd_vec_tst 0 22 h<5oi<R7zG2`VEhklem2a0
+Z24 DEx4 work 31 compare_signed_2bit_vhd_vec_tst 0 22 h<5oi<R7zG2`VEhklem2a0
 l51
 L34
-VO6FU5HAQeNj]dCX61J[4B2
-!s100 @HBX<c>Ul8A[?WYYLoWm:0
+Z25 V=MGfPcFhT@QdY2GFcQnch1
+Z26 !s100 R6k27ja`=V8Xo=fSRUna;1
 R10
 32
 R20
