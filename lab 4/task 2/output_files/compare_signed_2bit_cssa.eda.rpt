@@ -1,5 +1,5 @@
 EDA Netlist Writer report for compare_signed_2bit_cssa
-Tue Oct 17 19:28:27 2017
+Wed Oct 18 09:00:32 2017
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Standard Edition
 
 
@@ -37,7 +37,7 @@ agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Tue Oct 17 19:28:27 2017 ;
+; EDA Netlist Writer Status ; Successful - Wed Oct 18 09:00:32 2017 ;
 ; Revision Name             ; compare_signed_2bit_cssa              ;
 ; Top-level Entity Name     ; compare_signed_2bit_cssa              ;
 ; Family                    ; Cyclone IV E                          ;
@@ -51,8 +51,7 @@ agreement for further details.
 ; Option                                                                                            ; Setting                ;
 +---------------------------------------------------------------------------------------------------+------------------------+
 ; Tool Name                                                                                         ; ModelSim-Altera (VHDL) ;
-; Generate functional simulation netlist                                                            ; Off                    ;
-; Time scale                                                                                        ; 1 ps                   ;
+; Generate functional simulation netlist                                                            ; On                     ;
 ; Truncate long hierarchy paths                                                                     ; Off                    ;
 ; Map illegal HDL characters                                                                        ; Off                    ;
 ; Flatten buses into individual nodes                                                               ; Off                    ;
@@ -67,20 +66,13 @@ agreement for further details.
 +---------------------------------------------------------------------------------------------------+------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------+
-; Simulation Generated Files                                                                                  ;
-+-------------------------------------------------------------------------------------------------------------+
-; Generated Files                                                                                             ;
-+-------------------------------------------------------------------------------------------------------------+
-; H:/ece 370/ece 370 github/lab 4/task 2/simulation/qsim//compare_signed_2bit_cssa_7_1200mv_85c_slow.vho      ;
-; H:/ece 370/ece 370 github/lab 4/task 2/simulation/qsim//compare_signed_2bit_cssa_7_1200mv_0c_slow.vho       ;
-; H:/ece 370/ece 370 github/lab 4/task 2/simulation/qsim//compare_signed_2bit_cssa_min_1200mv_0c_fast.vho     ;
-; H:/ece 370/ece 370 github/lab 4/task 2/simulation/qsim//compare_signed_2bit_cssa.vho                        ;
-; H:/ece 370/ece 370 github/lab 4/task 2/simulation/qsim//compare_signed_2bit_cssa_7_1200mv_85c_vhd_slow.sdo  ;
-; H:/ece 370/ece 370 github/lab 4/task 2/simulation/qsim//compare_signed_2bit_cssa_7_1200mv_0c_vhd_slow.sdo   ;
-; H:/ece 370/ece 370 github/lab 4/task 2/simulation/qsim//compare_signed_2bit_cssa_min_1200mv_0c_vhd_fast.sdo ;
-; H:/ece 370/ece 370 github/lab 4/task 2/simulation/qsim//compare_signed_2bit_cssa_vhd.sdo                    ;
-+-------------------------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                           ;
++--------------------------------------------------------------------------------------+
+; Generated Files                                                                      ;
++--------------------------------------------------------------------------------------+
+; H:/ece 370/ece 370 github/lab 4/task 2/simulation/qsim//compare_signed_2bit_cssa.vho ;
++--------------------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -103,21 +95,14 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: devices manufactured by Intel and sold by Intel or its 
     Info: authorized distributors.  Please refer to the applicable 
     Info: agreement for further details.
-    Info: Processing started: Tue Oct 17 19:28:26 2017
-Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=vhdl --output_directory="H:/ece 370/ece 370 github/lab 4/task 2/simulation/qsim/" lab4_task2 -c compare_signed_2bit_cssa
+    Info: Processing started: Wed Oct 18 09:00:30 2017
+Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="H:/ece 370/ece 370 github/lab 4/task 2/simulation/qsim/" lab4_task2 -c compare_signed_2bit_cssa
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (204019): Generated file compare_signed_2bit_cssa_7_1200mv_85c_slow.vho in folder "H:/ece 370/ece 370 github/lab 4/task 2/simulation/qsim//" for EDA simulation tool
-Info (204019): Generated file compare_signed_2bit_cssa_7_1200mv_0c_slow.vho in folder "H:/ece 370/ece 370 github/lab 4/task 2/simulation/qsim//" for EDA simulation tool
-Info (204019): Generated file compare_signed_2bit_cssa_min_1200mv_0c_fast.vho in folder "H:/ece 370/ece 370 github/lab 4/task 2/simulation/qsim//" for EDA simulation tool
 Info (204019): Generated file compare_signed_2bit_cssa.vho in folder "H:/ece 370/ece 370 github/lab 4/task 2/simulation/qsim//" for EDA simulation tool
-Info (204019): Generated file compare_signed_2bit_cssa_7_1200mv_85c_vhd_slow.sdo in folder "H:/ece 370/ece 370 github/lab 4/task 2/simulation/qsim//" for EDA simulation tool
-Info (204019): Generated file compare_signed_2bit_cssa_7_1200mv_0c_vhd_slow.sdo in folder "H:/ece 370/ece 370 github/lab 4/task 2/simulation/qsim//" for EDA simulation tool
-Info (204019): Generated file compare_signed_2bit_cssa_min_1200mv_0c_vhd_fast.sdo in folder "H:/ece 370/ece 370 github/lab 4/task 2/simulation/qsim//" for EDA simulation tool
-Info (204019): Generated file compare_signed_2bit_cssa_vhd.sdo in folder "H:/ece 370/ece 370 github/lab 4/task 2/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 543 megabytes
-    Info: Processing ended: Tue Oct 17 19:28:27 2017
-    Info: Elapsed time: 00:00:01
+    Info: Peak virtual memory: 506 megabytes
+    Info: Processing ended: Wed Oct 18 09:00:32 2017
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
 
 

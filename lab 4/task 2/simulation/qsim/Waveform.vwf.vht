@@ -19,7 +19,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "10/17/2017 19:28:25"
+-- Generated on "10/18/2017 09:00:26"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          compare_signed_2bit_cssa
 -- 
@@ -43,9 +43,9 @@ COMPONENT compare_signed_2bit_cssa
 	PORT (
 	A : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
 	B : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
-	E : BUFFER STD_LOGIC;
-	G : BUFFER STD_LOGIC;
-	L : BUFFER STD_LOGIC
+	E : OUT STD_LOGIC;
+	G : OUT STD_LOGIC;
+	L : OUT STD_LOGIC
 	);
 END COMPONENT;
 BEGIN

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for compare_signed_2bit_cssa
-Tue Oct 17 19:24:06 2017
+Wed Oct 18 09:01:35 2017
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Standard Edition
 
 
@@ -43,7 +43,7 @@ agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Oct 17 19:24:06 2017           ;
+; Analysis & Synthesis Status        ; Successful - Wed Oct 18 09:01:35 2017           ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Standard Edition ;
 ; Revision Name                      ; compare_signed_2bit_cssa                        ;
 ; Top-level Entity Name              ; compare_signed_2bit_cssa                        ;
@@ -151,7 +151,7 @@ agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 4           ;
+; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
@@ -249,7 +249,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -259,12 +259,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Standard Edition
-    Info: Processing started: Tue Oct 17 19:23:49 2017
+    Info: Processing started: Wed Oct 18 09:01:08 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lab4_task2 -c compare_signed_2bit_cssa
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file compare_signed_2bit_cssa.vhd
-    Info (12022): Found design unit 1: compare_signed_2bit_cssa-behavior_ccsa File: H:/ece 370/ece 370 github/lab 4/task 2/compare_signed_2bit_cssa.vhd Line: 16
+    Info (12022): Found design unit 1: compare_signed_2bit_cssa-behavior_cssa File: H:/ece 370/ece 370 github/lab 4/task 2/compare_signed_2bit_cssa.vhd Line: 16
     Info (12023): Found entity 1: compare_signed_2bit_cssa File: H:/ece 370/ece 370 github/lab 4/task 2/compare_signed_2bit_cssa.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file /ece 370/ece 370 github/lab 4/task 1/compare_signed_2bit.vhd
     Info (12022): Found design unit 1: compare_signed_2bit-behavior_ccsa File: H:/ece 370/ece 370 github/lab 4/task 1/compare_signed_2bit.vhd Line: 16
@@ -278,9 +278,9 @@ Info (21057): Implemented 10 device resources after synthesis - the final resour
     Info (21059): Implemented 3 output pins
     Info (21061): Implemented 3 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 684 megabytes
-    Info: Processing ended: Tue Oct 17 19:24:06 2017
-    Info: Elapsed time: 00:00:17
-    Info: Total CPU time (on all processors): 00:00:28
+    Info: Peak virtual memory: 657 megabytes
+    Info: Processing ended: Wed Oct 18 09:01:35 2017
+    Info: Elapsed time: 00:00:27
+    Info: Total CPU time (on all processors): 00:00:22
 
 

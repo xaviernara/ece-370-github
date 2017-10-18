@@ -27,8 +27,7 @@ architecture behavior_cssa of compare_signed_2bit_cssa is
 	
 			L <= LGE(2); --Assign the individual output port signals of the 2-bit signed comparator by
                       --appropriately slicing intermediate signal slicing intermediate signal
-							 
-							 
+							 							 
 			G <= LGE(1); --slicing intermediate signal			
 			E <= LGE(0); --slicing intermediate signal
 	

@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dH:/ece 370/ece 370 github/lab 4/task 2/simulation/qsim
 Ecompare_signed_2bit_cssa
-Z1 w1508286507
+Z1 w1508335232
 Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
 Z3 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 e`^h93R^CdmMEVe0e1VU_3
 Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
@@ -20,14 +20,14 @@ R0
 Z8 8compare_signed_2bit_cssa.vho
 Z9 Fcompare_signed_2bit_cssa.vho
 l0
-L78
-V><J`0mETQ]1@U5zl_1=JB0
-!s100 zNDMQaWGciI11M;i;55Bz2
+L35
+Vj5:n0Hg@J8^i2n9=ZBN[90
+!s100 U7OU=76<ZjCYD1bo6Tk`[2
 Z10 OV;C;10.5b;63
 32
-Z11 !s110 1508286509
+Z11 !s110 1508335239
 !i10b 1
-Z12 !s108 1508286509.000000
+Z12 !s108 1508335238.000000
 Z13 !s90 -work|work|compare_signed_2bit_cssa.vho|
 Z14 !s107 compare_signed_2bit_cssa.vho|
 !i113 1
@@ -40,11 +40,11 @@ R4
 R5
 R6
 R7
-DEx4 work 24 compare_signed_2bit_cssa 0 22 ><J`0mETQ]1@U5zl_1=JB0
-l132
-L98
-VhbKaY5;1;BIhJjliQF8:G0
-!s100 Lm3?c7XHXeP?9<6@_XO321
+DEx4 work 24 compare_signed_2bit_cssa 0 22 j5:n0Hg@J8^i2n9=ZBN[90
+l90
+L55
+V0@9oE3J?iL^ORniE3UcM13
+!s100 >LU0ei6<fSO6YVNeAP4GK0
 R10
 32
 R11
@@ -56,7 +56,7 @@ R14
 R15
 R16
 Ecompare_signed_2bit_cssa_vhd_vec_tst
-Z17 w1508286505
+Z17 w1508335226
 R5
 R6
 R0
@@ -68,34 +68,34 @@ ViDa=3OIcNkFQj?K0<2AA41
 !s100 EG7e^MkjKI?BhTV?7:bc?1
 R10
 32
-R11
+Z20 !s110 1508335240
 !i10b 1
-R12
-Z20 !s90 -work|work|Waveform.vwf.vht|
-Z21 !s107 Waveform.vwf.vht|
+Z21 !s108 1508335239.000000
+Z22 !s90 -work|work|Waveform.vwf.vht|
+Z23 !s107 Waveform.vwf.vht|
 !i113 1
 R15
 R16
 Acompare_signed_2bit_cssa_arch
 R5
 R6
-Z22 DEx4 work 36 compare_signed_2bit_cssa_vhd_vec_tst 0 22 iDa=3OIcNkFQj?K0<2AA41
+Z24 DEx4 work 36 compare_signed_2bit_cssa_vhd_vec_tst 0 22 iDa=3OIcNkFQj?K0<2AA41
 l51
 L34
-VAgoIaNF=PS[5X<8oOHlfb3
-!s100 1hJdIoTNPaLKd7ID>IZSM3
+V>o27zQP<d3c]:hVDCZA:22
+!s100 AC3@g=@aa=fnLi_T5RkGg0
 R10
 32
-R11
-!i10b 1
-R12
 R20
+!i10b 1
 R21
+R22
+R23
 !i113 1
 R15
 R16
 Ehard_block
-R1
+Z25 w1508286507
 R2
 R3
 R4
@@ -111,9 +111,9 @@ VB]0;STalBkCB1_B4BXQDW2
 !s100 >mXi5[`cD`bFC`UBKA<om3
 R10
 32
-R11
+Z26 !s110 1508286509
 !i10b 1
-R12
+Z27 !s108 1508286509.000000
 R13
 R14
 !i113 1
@@ -133,9 +133,9 @@ Via>5o7W??azG@W@@eFOTF0
 !s100 [5;Wd8QGQ>@2NGoJ1I]Y43
 R10
 32
-R11
+R26
 !i10b 1
-R12
+R27
 R13
 R14
 !i113 1
