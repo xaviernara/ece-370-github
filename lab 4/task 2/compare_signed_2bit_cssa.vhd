@@ -13,49 +13,31 @@ entity compare_signed_2bit_cssa is --start entity declaration statement
 	
 end entity; --end entity declaration statement
 
-architecture behavior_ccsa of compare_signed_2bit_cssa is
+architecture behavior_cssa of compare_signed_2bit_cssa is
 	
 	signal AB: std_logic_vector(3 downto 0);
-	signal EG: std_logic_vector(1 downto 0);
+	--signal EG: std_logic_vector(1 downto 0);
 	signal LGE: std_logic_vector(2 downto 0);
 	
 	begin 
-	AB <= A & B;
+			AB <= A & B; -- the concatenation operator (&) to concatenate port signal A and port signal B
+						    --and assign the result to intermediate signal AB
 	
 	--EG <= E & G;
 	
-	--
-		L <= '1' when (A = "00" and B = "01") else
-			  '1' when (A = "10" and B = "00") else
-		     '1' when (A = "10" and B = "01") else
-		     '1' when (A = "10" and B = "11") else
-			  '1' when (A = "11" and B = "00") else
-			  '1' when (A = "11" and B = "01") else
-			  '0'; 
+			L <= LGE(2); --Assign the individual output port signals of the 2-bit signed comparator by
+                      --appropriately slicing intermediate signal slicing intermediate signal
+							 
+							 
+			G <= LGE(1); --slicing intermediate signal			
+			E <= LGE(0); --slicing intermediate signal
+	
+
+		--concurrent selected signal assignment (CCSA)
+		with AB SELECT 
 		
-		EG <= "10" when (AB = "0000") else
-				--"00" when (AB = "0001") else
-				"01" when (AB = "0010") else
-				"01" when (AB = "0011") else
-				"01" when (AB = "0100") else
-				"10" when (AB = "0101") else
-				"01" when (AB = "0110") else
-				"01" when (AB = "0111") else
-				--"00" when (AB = "1000") else
-				--"00" when (AB = "1001") else
-				"10" when (AB = "1010") else
-				--"00" when (AB = "1011") else
-				--"00" when (AB = "1100") else
-				--"00" when (AB = "1101") else
-				"01" when (AB = "1110") else
-				"00";
-				--"10" when (AB = "1111");
-				
-				
-			E <= EG(1);
-			G <= EG(0);		
-	
-	
-		
-	
-end architecture behavior_ccsa;
+	LGE <= "100" WHEN "0001" | "1000" | "1001"| "1011" | "1100" | "1101",
+			 "001" WHEN "0000" | "0101" | "1010"| "1111",
+			 "010" WHEN OTHERS;
+					
+end architecture behavior_cssa;

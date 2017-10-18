@@ -1,0 +1,18 @@
+|compare_signed_2bit_cssa
+A[0] => Mux0.IN17
+A[0] => Mux1.IN17
+A[0] => Mux2.IN17
+A[1] => Mux0.IN16
+A[1] => Mux1.IN16
+A[1] => Mux2.IN16
+B[0] => Mux0.IN19
+B[0] => Mux1.IN19
+B[0] => Mux2.IN19
+B[1] => Mux0.IN18
+B[1] => Mux1.IN18
+B[1] => Mux2.IN18
+L << Mux0.DB_MAX_OUTPUT_PORT_TYPE
+E << Mux2.DB_MAX_OUTPUT_PORT_TYPE
+G << Mux1.DB_MAX_OUTPUT_PORT_TYPE
+
+
