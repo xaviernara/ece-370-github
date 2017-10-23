@@ -2,6 +2,7 @@ library ieee;
 use ieee.std_logic_1164.all
 
 entity binary_encoder_8to3 is 
+begin
 
 		port (
 			signal W: in std_logic_vector(7 downto 0); --Encoder inputs encoded as a 1 of-k code
@@ -11,5 +12,8 @@ entity binary_encoder_8to3 is
 
 end entity;
 
-architecture behavior of binary_encoder_8to3 is 
+architecture behavior of binary_encoder_8to3 is begin 
+
+encoder: process (w) is begin
+	case(w) is 
 	
