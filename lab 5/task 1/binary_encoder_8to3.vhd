@@ -14,6 +14,16 @@ end entity;
 
 architecture behavior of binary_encoder_8to3 is begin 
 
-encoder: process (w) is begin
-	case(w) is 
+B.encoder: process (w) is begin
+	encode case(w) is 
 	
+		 if w(7) = '1' then y<="000";
+		 elsif w(6) = '1' then y<="001";
+		 elsif w(5) = '1' then y<="010";
+		 elsif w(4) = '1' then y<="011";
+		 elsif w(3) = '1' then y<="100";
+		 elsif w(2) = '1' then y<="110";
+		 else  					  y<="111";
+		 end if;
+	 end case encode;
+end process B.encoder;
