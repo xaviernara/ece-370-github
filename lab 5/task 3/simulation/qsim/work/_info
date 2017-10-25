@@ -1,0 +1,143 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dH:/ece 370/ece 370 github/lab 5/task 3/simulation/qsim
+Edecoder_3to7seg
+Z1 w1508973285
+Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z3 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 e`^h93R^CdmMEVe0e1VU_3
+Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z6 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z7 DPx10 cycloneive 21 cycloneive_components 0 22 Q;lLU[K?fTJPSa^YaZf>B3
+R0
+Z8 8decoder_3to7seg.vho
+Z9 Fdecoder_3to7seg.vho
+l0
+L78
+VRzT@DUk[i=Vi?9WV2m<8<1
+!s100 =[N0M>7:_[JNnL79QCk^I3
+Z10 OV;C;10.5b;63
+32
+Z11 !s110 1508973286
+!i10b 1
+Z12 !s108 1508973286.000000
+Z13 !s90 -work|work|decoder_3to7seg.vho|
+Z14 !s107 decoder_3to7seg.vho|
+!i113 1
+Z15 o-work work
+Z16 tExplicit 1 CvgOpt 0
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 15 decoder_3to7seg 0 22 RzT@DUk[i=Vi?9WV2m<8<1
+l159
+L108
+VK;BY??8=HRab=0TQ]1ZMM2
+!s100 m=Sg32NkE[T?^Km91EfLf1
+R10
+32
+R11
+!i10b 1
+R12
+R13
+R14
+!i113 1
+R15
+R16
+Edecoder_3to7seg_vhd_vec_tst
+Z17 w1508973283
+R5
+R6
+R0
+Z18 8Waveform.vwf.vht
+Z19 FWaveform.vwf.vht
+l0
+L32
+VKJFD2l_[efB=jVMoF]j;H0
+!s100 BN[558lFleO0e:<l?QYgg2
+R10
+32
+Z20 !s110 1508973287
+!i10b 1
+R12
+Z21 !s90 -work|work|Waveform.vwf.vht|
+Z22 !s107 Waveform.vwf.vht|
+!i113 1
+R15
+R16
+Adecoder_3to7seg_arch
+R5
+R6
+Z23 DEx4 work 27 decoder_3to7seg_vhd_vec_tst 0 22 KJFD2l_[efB=jVMoF]j;H0
+l49
+L34
+Z24 VLB8nloInYQ4LgoP:ciV<n2
+Z25 !s100 clh1eFm4O?=lgIe5FLImL3
+R10
+32
+R20
+!i10b 1
+R12
+R21
+R22
+!i113 1
+R15
+R16
+Ehard_block
+R1
+R2
+R3
+R4
+R5
+R6
+R7
+R0
+R8
+R9
+l0
+L35
+VB]0;STalBkCB1_B4BXQDW2
+!s100 >mXi5[`cD`bFC`UBKA<om3
+R10
+32
+R11
+!i10b 1
+R12
+R13
+R14
+!i113 1
+R15
+R16
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 10 hard_block 0 22 B]0;STalBkCB1_B4BXQDW2
+l65
+L51
+Via>5o7W??azG@W@@eFOTF0
+!s100 [5;Wd8QGQ>@2NGoJ1I]Y43
+R10
+32
+R11
+!i10b 1
+R12
+R13
+R14
+!i113 1
+R15
+R16
