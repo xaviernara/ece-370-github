@@ -19,13 +19,15 @@
 #
 # Quartus Prime
 # Version 17.0.0 Build 595 04/25/2017 SJ Standard Edition
-# Date created = 17:48:32  October 24, 2017
+# Date created = 08:59:33  October 25, 2017
 #
 # -------------------------------------------------------------------------- #
 
 QUARTUS_VERSION = "17.0"
-DATE = "17:48:32  October 24, 2017"
+DATE = "08:59:33  October 25, 2017"
 
 # Revisions
 
-PROJECT_REVISION = "combo_arbiter_msb_8bit"
+PROJECT_REVISION = "combo_arbiter
+_
+msb_8bit"

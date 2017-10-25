@@ -1,0 +1,27 @@
+|binary_encoder_8to3
+W[0] => Mux3.IN263
+W[1] => Mux2.IN19
+W[1] => Mux3.IN262
+W[2] => Mux1.IN19
+W[2] => Mux3.IN261
+W[3] => Mux1.IN18
+W[3] => Mux2.IN18
+W[3] => Mux3.IN260
+W[4] => Mux0.IN19
+W[4] => Mux3.IN259
+W[5] => Mux0.IN18
+W[5] => Mux2.IN17
+W[5] => Mux3.IN258
+W[6] => Mux0.IN17
+W[6] => Mux1.IN17
+W[6] => Mux3.IN257
+W[7] => Mux0.IN16
+W[7] => Mux1.IN16
+W[7] => Mux2.IN16
+W[7] => Mux3.IN256
+Y[0] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+any <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+
+

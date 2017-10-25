@@ -1,0 +1,77 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "grant[0]",
+					"strict" : false
+				},
+				{
+					"name" : "grant[1]",
+					"strict" : false
+				},
+				{
+					"name" : "grant[2]",
+					"strict" : false
+				},
+				{
+					"name" : "grant[3]",
+					"strict" : false
+				},
+				{
+					"name" : "grant[4]",
+					"strict" : false
+				},
+				{
+					"name" : "grant[5]",
+					"strict" : false
+				},
+				{
+					"name" : "grant[6]",
+					"strict" : false
+				},
+				{
+					"name" : "grant[7]",
+					"strict" : false
+				},
+				{
+					"name" : "zero",
+					"strict" : false
+				},
+				{
+					"name" : "req[0]",
+					"strict" : false
+				},
+				{
+					"name" : "req[4]",
+					"strict" : false
+				},
+				{
+					"name" : "req[5]",
+					"strict" : false
+				},
+				{
+					"name" : "req[6]",
+					"strict" : false
+				},
+				{
+					"name" : "req[7]",
+					"strict" : false
+				},
+				{
+					"name" : "req[1]",
+					"strict" : false
+				},
+				{
+					"name" : "req[2]",
+					"strict" : false
+				},
+				{
+					"name" : "req[3]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

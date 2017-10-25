@@ -1,0 +1,96 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dH:/ece 370/ece 370 github/lab 5/task 2/simulation/qsim
+Ecombo_arbiter_msb_8bit
+Z1 w1508946897
+Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z3 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 e`^h93R^CdmMEVe0e1VU_3
+Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z6 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z7 DPx10 cycloneive 21 cycloneive_components 0 22 Q;lLU[K?fTJPSa^YaZf>B3
+R0
+Z8 8combo_arbite.vho
+Z9 Fcombo_arbite.vho
+l0
+L35
+V:z]0TTE?9_l0URTgBH@gH0
+!s100 `ikBa7BJBhVZVjO=j8NGm0
+Z10 OV;C;10.5b;63
+32
+Z11 !s110 1508946904
+!i10b 1
+Z12 !s108 1508946903.000000
+Z13 !s90 -work|work|combo_arbite.vho|
+Z14 !s107 combo_arbite.vho|
+!i113 1
+Z15 o-work work
+Z16 tExplicit 1 CvgOpt 0
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 22 combo_arbiter_msb_8bit 0 22 :z]0TTE?9_l0URTgBH@gH0
+l84
+L43
+V<:g]QA4;9VY30OACFcXmd3
+!s100 O?Y9XMJ[D_@0J41EjdbC21
+R10
+32
+R11
+!i10b 1
+R12
+R13
+R14
+!i113 1
+R15
+R16
+Ecombo_arbiter_msb_8bit_vhd_vec_tst
+Z17 w1508946892
+R5
+R6
+R0
+Z18 8Waveform.vwf.vht
+Z19 FWaveform.vwf.vht
+l0
+L32
+V<`edG[hmo0NW1L0h@P1]40
+!s100 H:Z2P<I;V0fO8:RVg22L62
+R10
+32
+Z20 !s110 1508946905
+!i10b 1
+Z21 !s108 1508946904.000000
+Z22 !s90 -work|work|Waveform.vwf.vht|
+Z23 !s107 Waveform.vwf.vht|
+!i113 1
+R15
+R16
+Acombo_arbiter_msb_8bit_arch
+R5
+R6
+Z24 DEx4 work 34 combo_arbiter_msb_8bit_vhd_vec_tst 0 22 <`edG[hmo0NW1L0h@P1]40
+l47
+L34
+V=bRVfNfaC>7XdMP@7Tb023
+!s100 d53[Z<FN1E^b>GYNAh9YS1
+R10
+32
+R20
+!i10b 1
+R21
+R22
+R23
+!i113 1
+R15
+R16

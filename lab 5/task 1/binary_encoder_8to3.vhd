@@ -37,7 +37,7 @@ end process B_encoder;
 
 with w SELECT 
 
-any<= '0' WHEN "000" 
+any<= '0' WHEN "00000000",
 		'1' WHEN OTHERS;
 		
 end architecture behavior;
