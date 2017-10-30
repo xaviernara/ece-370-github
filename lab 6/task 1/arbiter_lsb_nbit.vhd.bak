@@ -1,0 +1,25 @@
+
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity arbiter_lsb_nbit is
+	port 
+	(
+		N : in std_logic; --Bit-width 
+		req : in std_logic_vector; --Request inputs
+		grant : out std_logic_vector(downto);--Grant outputs
+
+		z: out std_logic_vector --Status bit indicating absence of requests
+	);
+	
+end arbiter_lsb_nbit;
+
+
+
+architecture dataflow of arbiter_lsb_nbit is
+begin
+	signal zero : std_logic_vector(downto)
+	o1 <= i1 AND i2;
+end and_gate;
+
+
