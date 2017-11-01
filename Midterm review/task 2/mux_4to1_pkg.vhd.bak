@@ -1,0 +1,16 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+package mux_4to1_pkg is
+
+	-- Type Declaration (optional)
+
+	-- Subtype Declaration (optional)
+
+	-- Constant Declaration (optional)
+
+	-- Signal Declaration (optional)
+
+	-- Component Declaration (optional)
+
+end <package_name>;
