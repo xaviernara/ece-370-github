@@ -1,5 +1,5 @@
 Analysis & Synthesis report for arbiter_lsb_nbit
-Mon Oct 30 10:17:41 2017
+Wed Nov 01 10:48:38 2017
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Standard Edition
 
 
@@ -37,7 +37,7 @@ agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Mon Oct 30 10:17:41 2017               ;
+; Analysis & Synthesis Status        ; Failed - Wed Nov 01 10:48:38 2017               ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Standard Edition ;
 ; Revision Name                      ; arbiter_lsb_nbit                                ;
 ; Top-level Entity Name              ; arbiter_lsb_nbit                                ;
@@ -146,7 +146,7 @@ agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 4           ;
+; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
@@ -163,16 +163,18 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Standard Edition
-    Info: Processing started: Mon Oct 30 10:17:29 2017
+    Info: Processing started: Wed Nov 01 10:48:15 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lab6_task1 -c arbiter_lsb_nbit
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Error (10500): VHDL syntax error at arbiter_lsb_nbit.vhd(28) near text "not";  expecting ")", or "," File: H:/ece 370/ece 370 github/lab 6/task 1/arbiter_lsb_nbit.vhd Line: 28
-Info (12021): Found 0 design units, including 0 entities, in source file arbiter_lsb_nbit.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file arbiter_lsb_nbit.vhd
+    Info (12022): Found design unit 1: arbiter_lsb_nbit-dataflow File: H:/ece 370/ece 370 github/lab 6/task 1/arbiter_lsb_nbit.vhd Line: 18
+    Info (12023): Found entity 1: arbiter_lsb_nbit File: H:/ece 370/ece 370 github/lab 6/task 1/arbiter_lsb_nbit.vhd Line: 5
+Error (10381): VHDL Type Mismatch error at arbiter_lsb_nbit.vhd(47): indexed name returns a value whose type does not match "std_logic_vector", the type of the target expression File: H:/ece 370/ece 370 github/lab 6/task 1/arbiter_lsb_nbit.vhd Line: 47
 Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 1 warning
-    Error: Peak virtual memory: 671 megabytes
-    Error: Processing ended: Mon Oct 30 10:17:41 2017
-    Error: Elapsed time: 00:00:12
-    Error: Total CPU time (on all processors): 00:00:25
+    Error: Peak virtual memory: 641 megabytes
+    Error: Processing ended: Wed Nov 01 10:48:38 2017
+    Error: Elapsed time: 00:00:23
+    Error: Total CPU time (on all processors): 00:00:21
 
 
