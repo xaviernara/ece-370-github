@@ -1,0 +1,40 @@
+|combo_network
+X[0] => a[0].IN0
+X[0] => a[2].IN0
+X[0] => b[2].IN0
+X[0] => mux_4to1:mux1.w1
+X[0] => mux_4to1:mux0.w3
+X[0] => mux_4to1:mux1.w0
+X[1] => a[0].IN1
+X[1] => a[2].IN1
+X[1] => b[2].IN1
+X[1] => mux_4to1:mux0.w1
+X[1] => mux_4to1:mux1.w3
+Y[0] => mux_4to1:mux0.s[0]
+Y[0] => mux_4to1:mux1.s[0]
+Y[1] => mux_4to1:mux0.s[1]
+Y[1] => mux_4to1:mux1.s[1]
+G << mux_4to1:mux0.f
+H << mux_4to1:mux1.f
+
+
+|combo_network|mux_4to1:mux0
+s[0] => Mux0.IN1
+s[1] => Mux0.IN0
+w0 => Mux0.IN2
+w1 => Mux0.IN3
+w2 => Mux0.IN4
+w3 => Mux0.IN5
+f <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|combo_network|mux_4to1:mux1
+s[0] => Mux0.IN1
+s[1] => Mux0.IN0
+w0 => Mux0.IN2
+w1 => Mux0.IN3
+w2 => Mux0.IN4
+w3 => Mux0.IN5
+f <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+

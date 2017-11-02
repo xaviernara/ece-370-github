@@ -1,0 +1,17 @@
+vendor_name = ModelSim
+source_file = 1, H:/ece 370/ece 370 github/Midterm review/task 1/mux_4to1.vhd
+source_file = 1, c:/altera17/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+source_file = 1, c:/altera17/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+source_file = 1, c:/altera17/quartus/libraries/vhdl/ieee/timing_b.vhd
+source_file = 1, c:/altera17/quartus/libraries/vhdl/ieee/timing_p.vhd
+source_file = 1, H:/ece 370/ece 370 github/Midterm review/task 1/db/mux_4to1.cbx.xml
+design_name = mux_4to1
+instance = comp, \f~output\, f~output, mux_4to1, 1
+instance = comp, \w2~input\, w2~input, mux_4to1, 1
+instance = comp, \w0~input\, w0~input, mux_4to1, 1
+instance = comp, \s[0]~input\, s[0]~input, mux_4to1, 1
+instance = comp, \s[1]~input\, s[1]~input, mux_4to1, 1
+instance = comp, \w3~input\, w3~input, mux_4to1, 1
+instance = comp, \w1~input\, w1~input, mux_4to1, 1
+instance = comp, \f~0\, f~0, mux_4to1, 1
+instance = comp, \f~1\, f~1, mux_4to1, 1

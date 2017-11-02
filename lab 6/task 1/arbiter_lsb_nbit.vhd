@@ -47,6 +47,7 @@ begin
 	
 	Z<= zero(N-1); 
 	
-end dataflow;
+
+end architecture dataflow;
 
 

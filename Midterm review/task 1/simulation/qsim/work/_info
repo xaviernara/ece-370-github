@@ -1,0 +1,96 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dH:/ece 370/ece 370 github/Midterm review/task 1/simulation/qsim
+Emux_4to1
+Z1 w1509647310
+Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z3 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 e`^h93R^CdmMEVe0e1VU_3
+Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z6 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z7 DPx10 cycloneive 21 cycloneive_components 0 22 Q;lLU[K?fTJPSa^YaZf>B3
+R0
+Z8 8mux_4to1.vho
+Z9 Fmux_4to1.vho
+l0
+L35
+VbYa<CPAL@^48i=1O:Uiz13
+!s100 S>Z43:>PD0IBSEUcIP>Oh2
+Z10 OV;C;10.5b;63
+32
+Z11 !s110 1509647322
+!i10b 1
+Z12 !s108 1509647322.000000
+Z13 !s90 -work|work|mux_4to1.vho|
+Z14 !s107 mux_4to1.vho|
+!i113 1
+Z15 o-work work
+Z16 tExplicit 1 CvgOpt 0
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 8 mux_4to1 0 22 bYa<CPAL@^48i=1O:Uiz13
+l72
+L46
+V8LN4W3gkaR54M9R_HneTd3
+!s100 7_zYS<Pf43<NBZf6jb2L^0
+R10
+32
+R11
+!i10b 1
+R12
+R13
+R14
+!i113 1
+R15
+R16
+Emux_4to1_vhd_vec_tst
+Z17 w1509647308
+R5
+R6
+R0
+Z18 8Waveform.vwf.vht
+Z19 FWaveform.vwf.vht
+l0
+L32
+VE;R9@?3VW9e7OA;91EDkG0
+!s100 O9_[GA@oZ_T_L`9R`jmO_1
+R10
+32
+Z20 !s110 1509647323
+!i10b 1
+R12
+Z21 !s90 -work|work|Waveform.vwf.vht|
+Z22 !s107 Waveform.vwf.vht|
+!i113 1
+R15
+R16
+Amux_4to1_arch
+R5
+R6
+DEx4 work 20 mux_4to1_vhd_vec_tst 0 22 E;R9@?3VW9e7OA;91EDkG0
+l53
+L34
+V0`EGL<BUZW;b]OP0YCJJM3
+!s100 8^nkQU47jz?H9A`<hBTPC1
+R10
+32
+R20
+!i10b 1
+R12
+R21
+R22
+!i113 1
+R15
+R16
