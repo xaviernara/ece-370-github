@@ -1,0 +1,17 @@
+vendor_name = ModelSim
+source_file = 1, H:/ece 370/ece 370 github/lab 7/task 1/jk_flop.vhd
+source_file = 1, c:/altera17/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+source_file = 1, c:/altera17/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+source_file = 1, c:/altera17/quartus/libraries/vhdl/ieee/timing_b.vhd
+source_file = 1, c:/altera17/quartus/libraries/vhdl/ieee/timing_p.vhd
+source_file = 1, H:/ece 370/ece 370 github/lab 7/task 1/db/jk_flop.cbx.xml
+design_name = jk_flop
+instance = comp, \Q~output\, Q~output, jk_flop, 1
+instance = comp, \Qbar~output\, Qbar~output, jk_flop, 1
+instance = comp, \clk~input\, clk~input, jk_flop, 1
+instance = comp, \EN~input\, EN~input, jk_flop, 1
+instance = comp, \K~input\, K~input, jk_flop, 1
+instance = comp, \J~input\, J~input, jk_flop, 1
+instance = comp, \rst~input\, rst~input, jk_flop, 1
+instance = comp, \Qtemp~0\, Qtemp~0, jk_flop, 1
+instance = comp, \Qtemp~1\, Qtemp~1, jk_flop, 1
