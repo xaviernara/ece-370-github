@@ -1,0 +1,96 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dH:/ece 370/ece 370 github/lab 7/TASK 3/simulation/qsim
+Etoggle_reg_nbit
+Z1 w1510185715
+Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z3 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 e`^h93R^CdmMEVe0e1VU_3
+Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z6 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z7 DPx10 cycloneive 21 cycloneive_components 0 22 Q;lLU[K?fTJPSa^YaZf>B3
+R0
+Z8 8lab7_task3.vho
+Z9 Flab7_task3.vho
+l0
+L35
+V_kUU[iXoA5ODKI?3>2QG;0
+!s100 [T7CU9[J>TaV6W:lKhL:J2
+Z10 OV;C;10.5b;63
+32
+Z11 !s110 1510185716
+!i10b 1
+Z12 !s108 1510185716.000000
+Z13 !s90 -work|work|lab7_task3.vho|
+Z14 !s107 lab7_task3.vho|
+!i113 1
+Z15 o-work work
+Z16 tExplicit 1 CvgOpt 0
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 15 toggle_reg_nbit 0 22 _kUU[iXoA5ODKI?3>2QG;0
+l75
+L46
+VfD?2<mZ4PY>W@EMV:05952
+!s100 QBhao[1?f;iU]mG[Kn21?0
+R10
+32
+R11
+!i10b 1
+R12
+R13
+R14
+!i113 1
+R15
+R16
+Etoggle_reg_nbit_vhd_vec_tst
+Z17 w1510185712
+R5
+R6
+R0
+Z18 8Waveform.vwf.vht
+Z19 FWaveform.vwf.vht
+l0
+L32
+Vkl<WO>PkR3LYDSFOF60ei0
+!s100 aMP[kU8S[1TQh2Kibef5z1
+R10
+32
+R11
+!i10b 1
+R12
+Z20 !s90 -work|work|Waveform.vwf.vht|
+Z21 !s107 Waveform.vwf.vht|
+!i113 1
+R15
+R16
+Atoggle_reg_nbit_arch
+R5
+R6
+Z22 DEx4 work 27 toggle_reg_nbit_vhd_vec_tst 0 22 kl<WO>PkR3LYDSFOF60ei0
+l53
+L34
+Z23 Vk6ngXXdLm0O4OG?UKE]:31
+Z24 !s100 k>:<<oHc8EzD_>QFbDG1e3
+R10
+32
+R11
+!i10b 1
+R12
+R20
+R21
+!i113 1
+R15
+R16

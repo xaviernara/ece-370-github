@@ -1,0 +1,21 @@
+|data_reg_nbit
+clk => jk_flop:JKFF_stages:0:JKFF.clk
+rst => jk_flop:JKFF_stages:0:JKFF.rst
+EN => jk_flop:JKFF_stages:0:JKFF.EN
+D[0] => jk_flop:JKFF_stages:0:JKFF.J
+D[0] => jk_flop:JKFF_stages:0:JKFF.K
+D[1] => ~NO_FANOUT~
+Q[0] <= jk_flop:JKFF_stages:0:JKFF.Q
+Q[1] <= <GND>
+
+
+|data_reg_nbit|jk_flop:\JKFF_stages:0:JKFF
+clk => Qtemp.CLK
+rst => Qtemp.OUTPUTSELECT
+EN => Mux0.IN8
+J => Mux0.IN9
+K => Mux0.IN10
+Q <= Qtemp.DB_MAX_OUTPUT_PORT_TYPE
+Qbar <= Qtemp.DB_MAX_OUTPUT_PORT_TYPE
+
+
