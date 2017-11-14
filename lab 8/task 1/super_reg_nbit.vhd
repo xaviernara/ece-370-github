@@ -36,21 +36,25 @@ architecture behavior of super_reg_nbit is
 
 begin
 
-	registar:process (clk, rst)
+	registers:process (clk, rst)
 	begin
 		if (rising_edge(clk)) then
-			if (rst = '1') then Qtemp <= '0';
+			if(rst = '1') then Qtemp <= '0';
+			   if (en= '0') then Qtemp<='0';  
+					if (load = '1') then Qtemp <= unsigned(D);
+			   
 			 
 			
-				if (en= '0') then Qtemp<='0'; 
+			 else 
+				Qtemp<= (N-1=>'0', N-2=>'0' ,others =>D  
+			
+				
 			
 			
-			sr <= (others=>'0');
-		elsif (rising_edge(clk)) then
+			--sr <= (others=>'0');
+		--elsif (rising_edge(clk)) then
 
-			if (load = '1') then
-			 Qtemp <= unsigned(D);
-			 
+			
 			else 
 			Qtemp <= Qtemp - 1;
 			
@@ -66,10 +70,12 @@ begin
 		end if;
 		
 		
-	end process registar;
+	end process registers;
 
-	-- Capture the data from the last stage, before it is lost
-	sr_out <= sr(NUM_STAGES-1);
+	
+	SLout <= Q(N-1);
+	SRout <= Q(0);
+	
 	
 	Q<=
 
