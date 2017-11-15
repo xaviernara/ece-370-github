@@ -4,8 +4,7 @@ use ieee.numeric_std.all;
 
 entity  super_reg_nbit is
 
-	generic
-	(N : (POSITIVE := 3));
+	generic (N : POSITIVE := 5);
 	port 
 	(
 		clk	    : in std_logic; --Clock signal
@@ -18,65 +17,46 @@ entity  super_reg_nbit is
 		SLout		: out std_logic; --Shift left out when shifting left
 		SRout    : out std_logic; --Shift right out when shifting right
 		TC       : out std_logic --Terminal count when counting
-
 	);
 
 end entity;
 
 architecture behavior of super_reg_nbit is
-	
 	signal Qtemp: unsigned (N-1 downto 0); -- present state of the N-bit super register
-	
-	-- Build an array type for the shift register
-	type sr_length is array ((NUM_STAGES-1) downto 0) of std_logic;
-
-	-- Declare the shift register signal
-	signal sr: sr_length;
-	
+	constant max : unsigned (N-1 downto 0):= (others=>'1');
+	constant min : unsigned (N-1 downto 0):= (others=>'0');	
 
 begin
-
 	registers:process (clk, rst)
 	begin
-		if (rising_edge(clk)) then
-			if(rst = '1') then Qtemp <= '0';
-			   if (en= '0') then Qtemp<='0';  
-					if (load = '1') then Qtemp <= unsigned(D);
-			   
-			 
-			
-			 else 
-				Qtemp<= (N-1=>'0', N-2=>'0' ,others =>D  
-			
-				
-			
-			
-			--sr <= (others=>'0');
-		--elsif (rising_edge(clk)) then
-
-			
+		--if (rising_edge(clk)) then
+			if(rst = '1') then Qtemp <=(others=> '0');
+				elsif(rising_edge(clk)) then		
+			if (en = '0') then Qtemp<=Qtemp;  
+				elsif (load = '1') then Qtemp <= unsigned(D);
 			else 
-			Qtemp <= Qtemp - 1;
+				case op is 
+					when "000" => Qtemp <= (Qtemp(N-2 downto 0) & '0');
+					when "001" => Qtemp <= (Qtemp(N-2 downto 0) & '1');
+					when "010" => Qtemp <= ('0' & Qtemp(N-2 downto 0));
+					when "011" => Qtemp <= ('1' & Qtemp(N-2 downto 0));
+					when "100" => Qtemp <= (Qtemp(N-2 downto 0) & Qtemp(N-1));
+					when "101" => Qtemp <= (Qtemp(0) & Qtemp(N-1 downto 1));
+					when "110" => Qtemp <= (Qtemp+1);
+					when "111" => Qtemp <= (Qtemp-1);
+					when others => Qtemp <=Qtemp;
+				end case;
 			
-			if(
-
-				-- Shift data by one stage; data from last stage is lost
-				sr((NUM_STAGES-1) downto 1) <= sr((NUM_STAGES-2) downto 0);
-
-				-- Load new data into the first stage
-				sr(0) <= sr_in;
-
-			end if;
-		end if;
-		
-		
+			end if; 
+		end if;		
 	end process registers;
-
+		
+TC<= '1' WHEN op ="110" and Qtemp = max else
+	  '1' WHEN op ="111" and Qtemp = min else
+	  '0';
 	
-	SLout <= Q(N-1);
-	SRout <= Q(0);
-	
-	
-	Q<=
+	SLout <= Qtemp(N-1);
+	SRout <= Qtemp(0);	
+	Q<=std_logic_vector(Qtemp);
 
 end architecture behavior;

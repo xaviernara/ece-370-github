@@ -24,6 +24,9 @@ begin
  ring_counter: PROCESS(clk,rst)
 		BEGIN
 			IF		rst = '1' THEN
+	   --Utilize aggregate vector assignmentin combination with anothers clause 
+		-- to initialize the N-bit ring counter to the proper initial count state		
+			
 					Qtemp	<=	((N - 1) => '1', OTHERS =>'0');
 			
 			ELSIF rising_edge(clk) THEN
