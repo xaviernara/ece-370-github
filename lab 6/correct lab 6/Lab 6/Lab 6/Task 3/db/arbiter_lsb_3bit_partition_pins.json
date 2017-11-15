@@ -1,0 +1,37 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "grant[0]",
+					"strict" : false
+				},
+				{
+					"name" : "grant[1]",
+					"strict" : false
+				},
+				{
+					"name" : "grant[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Z",
+					"strict" : false
+				},
+				{
+					"name" : "req[0]",
+					"strict" : false
+				},
+				{
+					"name" : "req[1]",
+					"strict" : false
+				},
+				{
+					"name" : "req[2]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

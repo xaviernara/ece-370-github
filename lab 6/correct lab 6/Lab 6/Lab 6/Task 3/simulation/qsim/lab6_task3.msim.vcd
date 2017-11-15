@@ -1,0 +1,275 @@
+$comment
+	File created using the following command:
+		vcd file lab6_task3.msim.vcd -direction
+$end
+$date
+	Tue Nov 07 19:07:53 2017
+$end
+$version
+	ModelSim Version 10.5b
+$end
+$timescale
+	1ps
+$end
+
+$scope module arbiter_lsb_3bit_vhd_vec_tst $end
+$var wire 1 ! grant [2] $end
+$var wire 1 " grant [1] $end
+$var wire 1 # grant [0] $end
+$var wire 1 $ req [2] $end
+$var wire 1 % req [1] $end
+$var wire 1 & req [0] $end
+$var wire 1 ' Z $end
+
+$scope module i1 $end
+$var wire 1 ( gnd $end
+$var wire 1 ) vcc $end
+$var wire 1 * unknown $end
+$var wire 1 + devoe $end
+$var wire 1 , devclrn $end
+$var wire 1 - devpor $end
+$var wire 1 . ww_devoe $end
+$var wire 1 / ww_devclrn $end
+$var wire 1 0 ww_devpor $end
+$var wire 1 1 ww_req [2] $end
+$var wire 1 2 ww_req [1] $end
+$var wire 1 3 ww_req [0] $end
+$var wire 1 4 ww_grant [2] $end
+$var wire 1 5 ww_grant [1] $end
+$var wire 1 6 ww_grant [0] $end
+$var wire 1 7 ww_Z $end
+$var wire 1 8 \grant[0]~output_o\ $end
+$var wire 1 9 \grant[1]~output_o\ $end
+$var wire 1 : \grant[2]~output_o\ $end
+$var wire 1 ; \Z~output_o\ $end
+$var wire 1 < \req[0]~input_o\ $end
+$var wire 1 = \req[1]~input_o\ $end
+$var wire 1 > \req[2]~input_o\ $end
+$var wire 1 ? \combo_arb_lsb_3bit|grant[2]~0_combout\ $end
+$var wire 1 @ \combo_arb_lsb_3bit|Z~combout\ $end
+$var wire 1 A \combo_arb_lsb_3bit|grant\ [2] $end
+$var wire 1 B \combo_arb_lsb_3bit|grant\ [1] $end
+$var wire 1 C \combo_arb_lsb_3bit|grant\ [0] $end
+$var wire 1 D \combo_arb_lsb_3bit|ALT_INV_Z~combout\ $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0'
+0(
+1)
+x*
+1+
+1,
+1-
+1.
+1/
+10
+07
+08
+09
+0:
+0;
+x<
+x=
+x>
+x?
+x@
+xD
+0$
+0%
+0&
+0!
+0"
+0#
+01
+02
+03
+04
+05
+06
+xA
+xB
+xC
+$end
+#735
+0<
+#775
+0=
+#785
+0>
+#3388
+x:
+x4
+x!
+#3408
+x9
+x5
+x"
+#3628
+x;
+x7
+x'
+#4324
+0?
+#4533
+0@
+1D
+#4562
+0B
+#6422
+x8
+x6
+x#
+#7115
+08
+06
+0#
+#7630
+0:
+04
+0!
+#7881
+09
+05
+0"
+#8097
+1;
+17
+1'
+#250000
+1&
+13
+#250629
+1<
+#254128
+1@
+0D
+#256874
+18
+16
+1#
+#257798
+0;
+07
+0'
+#500000
+0&
+1%
+03
+12
+#500669
+1=
+#500735
+0<
+#504334
+1B
+#507115
+08
+06
+0#
+#507742
+19
+15
+1"
+#750000
+1&
+13
+#750629
+1<
+#753951
+0B
+#756874
+18
+16
+1#
+#757270
+09
+05
+0"
+#1000000
+0&
+0%
+1$
+03
+02
+11
+#1000679
+1>
+#1000735
+0<
+#1000775
+0=
+#1004334
+1B
+#1004528
+1?
+#1004562
+0B
+#1007115
+08
+06
+0#
+#1007742
+19
+15
+1"
+#1007881
+09
+05
+0"
+#1007916
+1:
+14
+1!
+#1250000
+1&
+13
+#1250629
+1<
+#1254115
+0?
+#1256874
+18
+16
+1#
+#1257421
+0:
+04
+0!
+#1500000
+0&
+1%
+03
+12
+#1500669
+1=
+#1500735
+0<
+#1504334
+1B
+#1507115
+08
+06
+0#
+#1507742
+19
+15
+1"
+#1750000
+1&
+13
+#1750629
+1<
+#1753951
+0B
+#1756874
+18
+16
+1#
+#1757270
+09
+05
+0"
+#2000000

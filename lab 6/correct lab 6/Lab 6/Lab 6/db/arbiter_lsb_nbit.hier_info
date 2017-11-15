@@ -1,0 +1,7 @@
+|arbiter_lsb_nbit
+req[0] => Z.DATAIN
+req[0] => grant[0].DATAIN
+grant[0] <= req[0].DB_MAX_OUTPUT_PORT_TYPE
+Z <= req[0].DB_MAX_OUTPUT_PORT_TYPE
+
+

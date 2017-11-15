@@ -1,0 +1,24 @@
+|arbiter_lsb_3bit
+req[0] => arbiter_lsb_nbit:combo_arb_lsb_3bit.req[0]
+req[1] => arbiter_lsb_nbit:combo_arb_lsb_3bit.req[1]
+req[2] => arbiter_lsb_nbit:combo_arb_lsb_3bit.req[2]
+grant[0] << arbiter_lsb_nbit:combo_arb_lsb_3bit.grant[0]
+grant[1] << arbiter_lsb_nbit:combo_arb_lsb_3bit.grant[1]
+grant[2] << arbiter_lsb_nbit:combo_arb_lsb_3bit.grant[2]
+Z << arbiter_lsb_nbit:combo_arb_lsb_3bit.Z
+
+
+|arbiter_lsb_3bit|arbiter_lsb_nbit:combo_arb_lsb_3bit
+req[0] => zero[2].IN0
+req[0] => grant.IN0
+req[0] => grant[0].DATAIN
+req[1] => grant.IN1
+req[1] => zero[2].IN1
+req[2] => grant.IN1
+req[2] => zero.IN1
+grant[0] <= req[0].DB_MAX_OUTPUT_PORT_TYPE
+grant[1] <= grant.DB_MAX_OUTPUT_PORT_TYPE
+grant[2] <= grant.DB_MAX_OUTPUT_PORT_TYPE
+Z <= zero.DB_MAX_OUTPUT_PORT_TYPE
+
+

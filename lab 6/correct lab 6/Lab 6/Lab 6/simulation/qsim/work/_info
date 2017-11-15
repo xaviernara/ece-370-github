@@ -1,0 +1,99 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dH:/Lab 6/simulation/qsim
+Earbiter_lsb_nbit
+Z1 w1510701959
+Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z3 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 e`^h93R^CdmMEVe0e1VU_3
+Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z6 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z7 DPx10 cycloneive 21 cycloneive_components 0 22 Q;lLU[K?fTJPSa^YaZf>B3
+Z8 dH:/ece 370/ece 370 github/lab 6/correct lab 6/Lab 6/Lab 6/simulation/qsim
+Z9 8arbiter_lsb_nbit.vho
+Z10 Farbiter_lsb_nbit.vho
+l0
+L35
+VjdoRcBNen0^6f4GH1eT3i2
+!s100 SK4=nb=`@5IizWKWaf7F10
+Z11 OV;C;10.5b;63
+32
+Z12 !s110 1510701967
+!i10b 1
+Z13 !s108 1510701966.000000
+Z14 !s90 -work|work|arbiter_lsb_nbit.vho|
+Z15 !s107 arbiter_lsb_nbit.vho|
+!i113 1
+Z16 o-work work
+Z17 tExplicit 1 CvgOpt 0
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 16 arbiter_lsb_nbit 0 22 jdoRcBNen0^6f4GH1eT3i2
+l61
+L43
+VNT_m?L=M^D@8QMTYlM;F^3
+!s100 b[6eA;T863Xo_f6Y`O]Xc1
+R11
+32
+R12
+!i10b 1
+R13
+R14
+R15
+!i113 1
+R16
+R17
+Earbiter_lsb_nbit_vhd_vec_tst
+Z18 w1510701957
+R5
+R6
+R8
+8Waveform1.vwf.vht
+FWaveform1.vwf.vht
+l0
+L32
+V^6a;ngd=XFH@4UAW5GCdE2
+!s100 j[_ff7zHQQC1G@XaTY3zk0
+R11
+32
+R12
+!i10b 1
+!s108 1510701967.000000
+!s90 -work|work|Waveform1.vwf.vht|
+!s107 Waveform1.vwf.vht|
+!i113 1
+R16
+R17
+Aarbiter_lsb_nbit_arch
+R5
+R6
+DEx4 work 28 arbiter_lsb_nbit_vhd_vec_tst 0 22 ^6a;ngd=XFH@4UAW5GCdE2
+l47
+L34
+VKl86Majz_jlifKB>R[WWE3
+!s100 B;Y]QAaRNaf_]]NIYF?l?0
+R11
+32
+!s110 1510084453
+!i10b 1
+!s108 1510084452.000000
+!s90 -work|work|Waveform.vwf.vht|
+!s107 Waveform.vwf.vht|
+!i113 1
+R16
+R17
+R0
+FWaveform.vwf.vht
+8Waveform.vwf.vht

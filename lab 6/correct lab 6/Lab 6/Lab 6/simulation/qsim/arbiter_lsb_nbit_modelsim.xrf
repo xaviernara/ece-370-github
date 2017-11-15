@@ -1,0 +1,13 @@
+vendor_name = ModelSim
+source_file = 1, H:/ece 370/ece 370 github/lab 6/correct lab 6/Lab 6/Lab 6/arbiter_lsb_nbit.vhd
+source_file = 1, H:/ece 370/ece 370 github/lab 6/correct lab 6/Lab 6/Lab 6/Waveform.vwf
+source_file = 1, H:/ece 370/ece 370 github/lab 6/task 1/Waveform.vwf
+source_file = 1, c:/altera17/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+source_file = 1, c:/altera17/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+source_file = 1, c:/altera17/quartus/libraries/vhdl/ieee/timing_b.vhd
+source_file = 1, c:/altera17/quartus/libraries/vhdl/ieee/timing_p.vhd
+source_file = 1, H:/ece 370/ece 370 github/lab 6/correct lab 6/Lab 6/Lab 6/db/arbiter_lsb_nbit.cbx.xml
+design_name = arbiter_lsb_nbit
+instance = comp, \grant[0]~output\, grant[0]~output, arbiter_lsb_nbit, 1
+instance = comp, \Z~output\, Z~output, arbiter_lsb_nbit, 1
+instance = comp, \req[0]~input\, req[0]~input, arbiter_lsb_nbit, 1
