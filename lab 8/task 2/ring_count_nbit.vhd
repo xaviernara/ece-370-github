@@ -11,7 +11,7 @@ entity ring_count_nbit is
 		clk		: in std_logic;--Clock signal
 		en    	: in std_logic;--Synch. enable
 		rst	   : in std_logic;--Asynch. reset
-		Q     	: out std_logic_vector(N downto 0) --Present ring count
+		Q     	: out std_logic_vector(N-1 downto 0) --Present ring count
 	);
 
 end entity;
@@ -23,11 +23,13 @@ begin
  
  ring_counter: PROCESS(clk,rst)
 		BEGIN
-			IF		rst = '1' THEN
+			IF	(rst = '1') THEN
 	   --Utilize aggregate vector assignmentin combination with anothers clause 
 		-- to initialize the N-bit ring counter to the proper initial count state		
 			
 					Qtemp	<=	((N - 1) => '1', OTHERS =>'0');
+					
+			if (en = '1') then Qtemp <= ((N-1) => '1', others=> '0');
 			
 			ELSIF rising_edge(clk) THEN
 					
@@ -37,8 +39,8 @@ begin
 						Qtemp(i) <= Qtemp(i+1);
 						
 					end loop;
-					END IF;
 					
+			END IF;			
 		END PROCESS ring_counter;
 		
 		Q <= Qtemp;

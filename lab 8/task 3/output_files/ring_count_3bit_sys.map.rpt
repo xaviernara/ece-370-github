@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ring_count_3bit_sys
-Wed Nov 15 17:09:26 2017
+Mon Nov 20 14:16:30 2017
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Standard Edition
 
 
@@ -37,7 +37,7 @@ agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Wed Nov 15 17:09:26 2017               ;
+; Analysis & Synthesis Status        ; Failed - Mon Nov 20 14:16:30 2017               ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Standard Edition ;
 ; Revision Name                      ; ring_count_3bit_sys                             ;
 ; Top-level Entity Name              ; ring_count_3bit_sys                             ;
@@ -145,7 +145,7 @@ agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 4           ;
+; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
@@ -162,24 +162,29 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Standard Edition
-    Info: Processing started: Wed Nov 15 17:09:14 2017
+    Info: Processing started: Mon Nov 20 14:16:07 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lab3_task3 -c ring_count_3bit_sys
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Warning (12019): Can't analyze file -- file G:/ECE 370/Clock Divider/divide_by_50_counter.vhd is missing
-Warning (12019): Can't analyze file -- file G:/ECE 370/Clock Divider/divide_by_10_counter.vhd is missing
-Warning (12019): Can't analyze file -- file G:/ECE 370/Clock Divider/clock_divider.vhd is missing
-Info (12021): Found 2 design units, including 1 entities, in source file /ece 370/ece 370 github/lab 8/task 2/ring_count_nbit.vhd
-    Info (12022): Found design unit 1: ring_count_nbit-behavior File: H:/ece 370/ece 370 github/lab 8/task 2/ring_count_nbit.vhd Line: 19
-    Info (12023): Found entity 1: ring_count_nbit File: H:/ece 370/ece 370 github/lab 8/task 2/ring_count_nbit.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file g:/ece 370/clock divider/divide_by_50_counter.vhd
+    Info (12022): Found design unit 1: divide_by_50_counter-behavior File: G:/ECE 370/Clock Divider/divide_by_50_counter.vhd Line: 10
+    Info (12023): Found entity 1: divide_by_50_counter File: G:/ECE 370/Clock Divider/divide_by_50_counter.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file g:/ece 370/clock divider/divide_by_10_counter.vhd
+    Info (12022): Found design unit 1: divide_by_10_counter-behavior File: G:/ECE 370/Clock Divider/divide_by_10_counter.vhd Line: 10
+    Info (12023): Found entity 1: divide_by_10_counter File: G:/ECE 370/Clock Divider/divide_by_10_counter.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file g:/ece 370/clock divider/clock_divider.vhd
+    Info (12022): Found design unit 1: clock_divider-behavior File: G:/ECE 370/Clock Divider/clock_divider.vhd Line: 9
+    Info (12023): Found entity 1: clock_divider File: G:/ECE 370/Clock Divider/clock_divider.vhd Line: 4
+Error (10500): VHDL syntax error at ring_count_nbit.vhd(44) near text "PROCESS";  expecting "if" File: H:/ece 370/ece 370 github/lab 8/task 2/ring_count_nbit.vhd Line: 44
+Error (10500): VHDL syntax error at ring_count_nbit.vhd(48) near text "ARCHITECTURE";  expecting "if" File: H:/ece 370/ece 370 github/lab 8/task 2/ring_count_nbit.vhd Line: 48
+Info (12021): Found 0 design units, including 0 entities, in source file /ece 370/ece 370 github/lab 8/task 2/ring_count_nbit.vhd
 Info (12021): Found 2 design units, including 1 entities, in source file ring_count_3bit_sys.vhd
-    Info (12022): Found design unit 1: ring_count_3bit_sys-structure File: H:/ece 370/ece 370 github/lab 8/task 3/ring_count_3bit_sys.vhd Line: 15
+    Info (12022): Found design unit 1: ring_count_3bit_sys-structure File: H:/ece 370/ece 370 github/lab 8/task 3/ring_count_3bit_sys.vhd Line: 16
     Info (12023): Found entity 1: ring_count_3bit_sys File: H:/ece 370/ece 370 github/lab 8/task 3/ring_count_3bit_sys.vhd Line: 4
-Error (10482): VHDL error at ring_count_3bit_sys.vhd(29): object "ring_count_nbit" is used but not declared File: H:/ece 370/ece 370 github/lab 8/task 3/ring_count_3bit_sys.vhd Line: 29
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 4 warnings
-    Error: Peak virtual memory: 671 megabytes
-    Error: Processing ended: Wed Nov 15 17:09:26 2017
-    Error: Elapsed time: 00:00:12
-    Error: Total CPU time (on all processors): 00:00:24
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 2 errors, 1 warning
+    Error: Peak virtual memory: 641 megabytes
+    Error: Processing ended: Mon Nov 20 14:16:30 2017
+    Error: Elapsed time: 00:00:23
+    Error: Total CPU time (on all processors): 00:00:20
 
 
