@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ring_count_3bit_sys
-Mon Nov 20 14:16:30 2017
+Tue Nov 21 16:51:14 2017
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Standard Edition
 
 
@@ -10,7 +10,15 @@ Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Standard Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Inverted Register Statistics
+ 10. Parameter Settings for User Entity Instance: ring_count_nbit:ring3
+ 11. Post-Synthesis Netlist Statistics for Top Partition
+ 12. Elapsed Time Per Partition
+ 13. Analysis & Synthesis Messages
 
 
 
@@ -37,20 +45,20 @@ agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Mon Nov 20 14:16:30 2017               ;
+; Analysis & Synthesis Status        ; Successful - Tue Nov 21 16:51:13 2017           ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Standard Edition ;
 ; Revision Name                      ; ring_count_3bit_sys                             ;
 ; Top-level Entity Name              ; ring_count_3bit_sys                             ;
 ; Family                             ; Cyclone IV E                                    ;
-; Total logic elements               ; N/A until Partition Merge                       ;
-;     Total combinational functions  ; N/A until Partition Merge                       ;
-;     Dedicated logic registers      ; N/A until Partition Merge                       ;
-; Total registers                    ; N/A until Partition Merge                       ;
-; Total pins                         ; N/A until Partition Merge                       ;
-; Total virtual pins                 ; N/A until Partition Merge                       ;
-; Total memory bits                  ; N/A until Partition Merge                       ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                       ;
-; Total PLLs                         ; N/A until Partition Merge                       ;
+; Total logic elements               ; 34                                              ;
+;     Total combinational functions  ; 33                                              ;
+;     Dedicated logic registers      ; 33                                              ;
+; Total registers                    ; 33                                              ;
+; Total pins                         ; 6                                               ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
 +------------------------------------+-------------------------------------------------+
 
 
@@ -149,11 +157,144 @@ agreement for further details.
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-4         ;   0.0%      ;
 +----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                           ;
++---------------------------------------------------+-----------------+-----------------+----------------------------------------------------------------+---------+
+; File Name with User-Entered Path                  ; Used in Netlist ; File Type       ; File Name with Absolute Path                                   ; Library ;
++---------------------------------------------------+-----------------+-----------------+----------------------------------------------------------------+---------+
+; G:/ECE 370/Clock Divider/divide_by_50_counter.vhd ; yes             ; User VHDL File  ; G:/ECE 370/Clock Divider/divide_by_50_counter.vhd              ;         ;
+; G:/ECE 370/Clock Divider/divide_by_10_counter.vhd ; yes             ; User VHDL File  ; G:/ECE 370/Clock Divider/divide_by_10_counter.vhd              ;         ;
+; G:/ECE 370/Clock Divider/clock_divider.vhd        ; yes             ; User VHDL File  ; G:/ECE 370/Clock Divider/clock_divider.vhd                     ;         ;
+; ../task 2/ring_count_nbit.vhd                     ; yes             ; User VHDL File  ; H:/ece 370/ece 370 github/lab 8/task 2/ring_count_nbit.vhd     ;         ;
+; ring_count_3bit_sys.vhd                           ; yes             ; User VHDL File  ; H:/ece 370/ece 370 github/lab 8/task 3/ring_count_3bit_sys.vhd ;         ;
++---------------------------------------------------+-----------------+-----------------+----------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 34        ;
+;                                             ;           ;
+; Total combinational functions               ; 33        ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 0         ;
+;     -- 3 input functions                    ; 13        ;
+;     -- <=2 input functions                  ; 20        ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 29        ;
+;     -- arithmetic mode                      ; 4         ;
+;                                             ;           ;
+; Total registers                             ; 33        ;
+;     -- Dedicated logic registers            ; 33        ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 6         ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; rst~input ;
+; Maximum fan-out                             ; 33        ;
+; Total fan-out                               ; 192       ;
+; Average fan-out                             ; 2.46      ;
++---------------------------------------------+-----------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                       ;
++-----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------+----------------------+--------------+
+; Compilation Hierarchy Node        ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                  ; Entity Name          ; Library Name ;
++-----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------+----------------------+--------------+
+; |ring_count_3bit_sys              ; 33 (0)              ; 33 (0)                    ; 0           ; 0            ; 0       ; 0         ; 6    ; 0            ; |ring_count_3bit_sys                                                 ; ring_count_3bit_sys  ; work         ;
+;    |clock_divider:clk_div|        ; 31 (0)              ; 30 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ring_count_3bit_sys|clock_divider:clk_div                           ; clock_divider        ; work         ;
+;       |divide_by_10_counter:cnt0| ; 4 (4)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ring_count_3bit_sys|clock_divider:clk_div|divide_by_10_counter:cnt0 ; divide_by_10_counter ; work         ;
+;       |divide_by_10_counter:cnt1| ; 4 (4)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ring_count_3bit_sys|clock_divider:clk_div|divide_by_10_counter:cnt1 ; divide_by_10_counter ; work         ;
+;       |divide_by_10_counter:cnt2| ; 4 (4)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ring_count_3bit_sys|clock_divider:clk_div|divide_by_10_counter:cnt2 ; divide_by_10_counter ; work         ;
+;       |divide_by_10_counter:cnt3| ; 4 (4)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ring_count_3bit_sys|clock_divider:clk_div|divide_by_10_counter:cnt3 ; divide_by_10_counter ; work         ;
+;       |divide_by_10_counter:cnt4| ; 4 (4)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ring_count_3bit_sys|clock_divider:clk_div|divide_by_10_counter:cnt4 ; divide_by_10_counter ; work         ;
+;       |divide_by_10_counter:cnt5| ; 4 (4)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ring_count_3bit_sys|clock_divider:clk_div|divide_by_10_counter:cnt5 ; divide_by_10_counter ; work         ;
+;       |divide_by_50_counter:cnt6| ; 7 (7)               ; 6 (6)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ring_count_3bit_sys|clock_divider:clk_div|divide_by_50_counter:cnt6 ; divide_by_50_counter ; work         ;
+;    |ring_count_nbit:ring3|        ; 2 (2)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ring_count_3bit_sys|ring_count_nbit:ring3                           ; ring_count_nbit      ; work         ;
++-----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------+----------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 33    ;
+; Number of registers using Synchronous Clear  ; 5     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 33    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 3     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; ring_count_nbit:ring3|Qtemp[2]         ; 2       ;
+; Total number of inverted registers = 1 ;         ;
++----------------------------------------+---------+
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ring_count_nbit:ring3 ;
++----------------+-------+-------------------------------------------+
+; Parameter Name ; Value ; Type                                      ;
++----------------+-------+-------------------------------------------+
+; n              ; 3     ; Signed Integer                            ;
++----------------+-------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 6                           ;
+; cycloneiii_ff         ; 33                          ;
+;     CLR               ; 25                          ;
+;     CLR SCLR          ; 5                           ;
+;     ENA CLR           ; 3                           ;
+; cycloneiii_lcell_comb ; 34                          ;
+;     arith             ; 4                           ;
+;         2 data inputs ; 4                           ;
+;     normal            ; 30                          ;
+;         1 data inputs ; 4                           ;
+;         2 data inputs ; 13                          ;
+;         3 data inputs ; 13                          ;
+;                       ;                             ;
+; Max LUT depth         ; 1.40                        ;
+; Average LUT depth     ; 0.99                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
 
 
 +-------------------------------+
@@ -162,7 +303,7 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Standard Edition
-    Info: Processing started: Mon Nov 20 14:16:07 2017
+    Info: Processing started: Tue Nov 21 16:50:43 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lab3_task3 -c ring_count_3bit_sys
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -175,16 +316,30 @@ Info (12021): Found 2 design units, including 1 entities, in source file g:/ece 
 Info (12021): Found 2 design units, including 1 entities, in source file g:/ece 370/clock divider/clock_divider.vhd
     Info (12022): Found design unit 1: clock_divider-behavior File: G:/ECE 370/Clock Divider/clock_divider.vhd Line: 9
     Info (12023): Found entity 1: clock_divider File: G:/ECE 370/Clock Divider/clock_divider.vhd Line: 4
-Error (10500): VHDL syntax error at ring_count_nbit.vhd(44) near text "PROCESS";  expecting "if" File: H:/ece 370/ece 370 github/lab 8/task 2/ring_count_nbit.vhd Line: 44
-Error (10500): VHDL syntax error at ring_count_nbit.vhd(48) near text "ARCHITECTURE";  expecting "if" File: H:/ece 370/ece 370 github/lab 8/task 2/ring_count_nbit.vhd Line: 48
-Info (12021): Found 0 design units, including 0 entities, in source file /ece 370/ece 370 github/lab 8/task 2/ring_count_nbit.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /ece 370/ece 370 github/lab 8/task 2/ring_count_nbit.vhd
+    Info (12022): Found design unit 1: ring_count_nbit-behavior File: H:/ece 370/ece 370 github/lab 8/task 2/ring_count_nbit.vhd Line: 17
+    Info (12023): Found entity 1: ring_count_nbit File: H:/ece 370/ece 370 github/lab 8/task 2/ring_count_nbit.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file ring_count_3bit_sys.vhd
     Info (12022): Found design unit 1: ring_count_3bit_sys-structure File: H:/ece 370/ece 370 github/lab 8/task 3/ring_count_3bit_sys.vhd Line: 16
     Info (12023): Found entity 1: ring_count_3bit_sys File: H:/ece 370/ece 370 github/lab 8/task 3/ring_count_3bit_sys.vhd Line: 4
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 2 errors, 1 warning
-    Error: Peak virtual memory: 641 megabytes
-    Error: Processing ended: Mon Nov 20 14:16:30 2017
-    Error: Elapsed time: 00:00:23
-    Error: Total CPU time (on all processors): 00:00:20
+Info (12127): Elaborating entity "ring_count_3bit_sys" for the top level hierarchy
+Info (12129): Elaborating entity "ring_count_nbit" using architecture "A:behavior" for hierarchy "ring_count_nbit:ring3" File: H:/ece 370/ece 370 github/lab 8/task 3/ring_count_3bit_sys.vhd Line: 33
+Info (12129): Elaborating entity "clock_divider" using architecture "A:behavior" for hierarchy "clock_divider:clk_div" File: H:/ece 370/ece 370 github/lab 8/task 3/ring_count_3bit_sys.vhd Line: 40
+Info (12129): Elaborating entity "divide_by_50_counter" using architecture "A:behavior" for hierarchy "clock_divider:clk_div|divide_by_50_counter:cnt6" File: G:/ECE 370/Clock Divider/clock_divider.vhd Line: 17
+Info (12129): Elaborating entity "divide_by_10_counter" using architecture "A:behavior" for hierarchy "clock_divider:clk_div|divide_by_10_counter:cnt5" File: G:/ECE 370/Clock Divider/clock_divider.vhd Line: 19
+Info (13000): Registers with preset signals will power-up high File: H:/ece 370/ece 370 github/lab 8/task 2/ring_count_nbit.vhd Line: 22
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 40 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 3 input pins
+    Info (21059): Implemented 3 output pins
+    Info (21061): Implemented 34 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 672 megabytes
+    Info: Processing ended: Tue Nov 21 16:51:14 2017
+    Info: Elapsed time: 00:00:31
+    Info: Total CPU time (on all processors): 00:00:25
 
 

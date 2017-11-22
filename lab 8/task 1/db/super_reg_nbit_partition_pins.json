@@ -16,14 +16,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "Q[3]",
-					"strict" : false
-				},
-				{
-					"name" : "Q[4]",
-					"strict" : false
-				},
-				{
 					"name" : "SLout",
 					"strict" : false
 				},
@@ -36,11 +28,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "op[1]",
+					"name" : "op[0]",
 					"strict" : false
 				},
 				{
-					"name" : "op[0]",
+					"name" : "op[1]",
 					"strict" : false
 				},
 				{
@@ -48,11 +40,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "D[0]",
+					"name" : "load",
 					"strict" : false
 				},
 				{
-					"name" : "load",
+					"name" : "D[0]",
 					"strict" : false
 				},
 				{
@@ -73,14 +65,6 @@
 				},
 				{
 					"name" : "D[2]",
-					"strict" : false
-				},
-				{
-					"name" : "D[3]",
-					"strict" : false
-				},
-				{
-					"name" : "D[4]",
 					"strict" : false
 				}
 			]

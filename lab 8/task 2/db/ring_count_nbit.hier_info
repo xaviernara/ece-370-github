@@ -7,7 +7,14 @@ clk => Qtemp[4].CLK
 clk => Qtemp[5].CLK
 clk => Qtemp[6].CLK
 clk => Qtemp[7].CLK
-en => ~NO_FANOUT~
+en => Qtemp[7].ENA
+en => Qtemp[6].ENA
+en => Qtemp[5].ENA
+en => Qtemp[4].ENA
+en => Qtemp[3].ENA
+en => Qtemp[2].ENA
+en => Qtemp[1].ENA
+en => Qtemp[0].ENA
 rst => Qtemp[0].ACLR
 rst => Qtemp[1].ACLR
 rst => Qtemp[2].ACLR
@@ -24,6 +31,5 @@ Q[4] <= Qtemp[4].DB_MAX_OUTPUT_PORT_TYPE
 Q[5] <= Qtemp[5].DB_MAX_OUTPUT_PORT_TYPE
 Q[6] <= Qtemp[6].DB_MAX_OUTPUT_PORT_TYPE
 Q[7] <= Qtemp[7].DB_MAX_OUTPUT_PORT_TYPE
-Q[8] <= <GND>
 
 

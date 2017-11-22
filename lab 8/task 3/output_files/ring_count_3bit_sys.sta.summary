@@ -1,0 +1,293 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'clk'
+Slack : -1.994
+TNS   : -6.126
+
+Type  : Slow 1200mV 85C Model Setup 'clock_divider:clk_div|divide_by_10_counter:cnt5|qint'
+Slack : -1.270
+TNS   : -1.669
+
+Type  : Slow 1200mV 85C Model Setup 'clock_divider:clk_div|divide_by_10_counter:cnt4|qint'
+Slack : -1.263
+TNS   : -1.854
+
+Type  : Slow 1200mV 85C Model Setup 'clock_divider:clk_div|divide_by_10_counter:cnt2|qint'
+Slack : -1.239
+TNS   : -1.641
+
+Type  : Slow 1200mV 85C Model Setup 'clock_divider:clk_div|divide_by_10_counter:cnt3|qint'
+Slack : -1.220
+TNS   : -1.661
+
+Type  : Slow 1200mV 85C Model Setup 'clock_divider:clk_div|divide_by_10_counter:cnt1|qint'
+Slack : -1.217
+TNS   : -1.800
+
+Type  : Slow 1200mV 85C Model Setup 'clock_divider:clk_div|divide_by_50_counter:cnt6|qint'
+Slack : -1.147
+TNS   : -1.545
+
+Type  : Slow 1200mV 85C Model Setup 'clock_divider:clk_div|divide_by_10_counter:cnt0|qint'
+Slack : 0.095
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clock_divider:clk_div|divide_by_10_counter:cnt1|qint'
+Slack : 0.402
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clock_divider:clk_div|divide_by_10_counter:cnt2|qint'
+Slack : 0.402
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clock_divider:clk_div|divide_by_10_counter:cnt3|qint'
+Slack : 0.402
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clock_divider:clk_div|divide_by_10_counter:cnt4|qint'
+Slack : 0.402
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clock_divider:clk_div|divide_by_10_counter:cnt5|qint'
+Slack : 0.402
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clock_divider:clk_div|divide_by_50_counter:cnt6|qint'
+Slack : 0.402
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clock_divider:clk_div|divide_by_10_counter:cnt0|qint'
+Slack : 0.441
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : 0.637
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -10.710
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clock_divider:clk_div|divide_by_10_counter:cnt1|qint'
+Slack : -1.285
+TNS   : -5.140
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clock_divider:clk_div|divide_by_10_counter:cnt2|qint'
+Slack : -1.285
+TNS   : -5.140
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clock_divider:clk_div|divide_by_10_counter:cnt3|qint'
+Slack : -1.285
+TNS   : -5.140
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clock_divider:clk_div|divide_by_10_counter:cnt4|qint'
+Slack : -1.285
+TNS   : -5.140
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clock_divider:clk_div|divide_by_10_counter:cnt5|qint'
+Slack : -1.285
+TNS   : -5.140
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clock_divider:clk_div|divide_by_50_counter:cnt6|qint'
+Slack : -1.285
+TNS   : -5.140
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clock_divider:clk_div|divide_by_10_counter:cnt0|qint'
+Slack : -1.285
+TNS   : -3.855
+
+Type  : Slow 1200mV 0C Model Setup 'clk'
+Slack : -1.764
+TNS   : -5.022
+
+Type  : Slow 1200mV 0C Model Setup 'clock_divider:clk_div|divide_by_10_counter:cnt5|qint'
+Slack : -1.099
+TNS   : -1.253
+
+Type  : Slow 1200mV 0C Model Setup 'clock_divider:clk_div|divide_by_10_counter:cnt2|qint'
+Slack : -1.081
+TNS   : -1.234
+
+Type  : Slow 1200mV 0C Model Setup 'clock_divider:clk_div|divide_by_10_counter:cnt4|qint'
+Slack : -1.077
+TNS   : -1.345
+
+Type  : Slow 1200mV 0C Model Setup 'clock_divider:clk_div|divide_by_10_counter:cnt1|qint'
+Slack : -1.054
+TNS   : -1.316
+
+Type  : Slow 1200mV 0C Model Setup 'clock_divider:clk_div|divide_by_10_counter:cnt3|qint'
+Slack : -1.053
+TNS   : -1.247
+
+Type  : Slow 1200mV 0C Model Setup 'clock_divider:clk_div|divide_by_50_counter:cnt6|qint'
+Slack : -0.988
+TNS   : -1.143
+
+Type  : Slow 1200mV 0C Model Setup 'clock_divider:clk_div|divide_by_10_counter:cnt0|qint'
+Slack : 0.179
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clock_divider:clk_div|divide_by_10_counter:cnt1|qint'
+Slack : 0.353
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clock_divider:clk_div|divide_by_50_counter:cnt6|qint'
+Slack : 0.353
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clock_divider:clk_div|divide_by_10_counter:cnt2|qint'
+Slack : 0.354
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clock_divider:clk_div|divide_by_10_counter:cnt3|qint'
+Slack : 0.354
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clock_divider:clk_div|divide_by_10_counter:cnt4|qint'
+Slack : 0.354
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clock_divider:clk_div|divide_by_10_counter:cnt5|qint'
+Slack : 0.354
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clock_divider:clk_div|divide_by_10_counter:cnt0|qint'
+Slack : 0.399
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : 0.583
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -10.710
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clock_divider:clk_div|divide_by_10_counter:cnt1|qint'
+Slack : -1.285
+TNS   : -5.140
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clock_divider:clk_div|divide_by_10_counter:cnt2|qint'
+Slack : -1.285
+TNS   : -5.140
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clock_divider:clk_div|divide_by_10_counter:cnt3|qint'
+Slack : -1.285
+TNS   : -5.140
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clock_divider:clk_div|divide_by_10_counter:cnt4|qint'
+Slack : -1.285
+TNS   : -5.140
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clock_divider:clk_div|divide_by_10_counter:cnt5|qint'
+Slack : -1.285
+TNS   : -5.140
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clock_divider:clk_div|divide_by_50_counter:cnt6|qint'
+Slack : -1.285
+TNS   : -5.140
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clock_divider:clk_div|divide_by_10_counter:cnt0|qint'
+Slack : -1.285
+TNS   : -3.855
+
+Type  : Fast 1200mV 0C Model Setup 'clk'
+Slack : -0.651
+TNS   : -0.651
+
+Type  : Fast 1200mV 0C Model Setup 'clock_divider:clk_div|divide_by_10_counter:cnt5|qint'
+Slack : -0.500
+TNS   : -0.500
+
+Type  : Fast 1200mV 0C Model Setup 'clock_divider:clk_div|divide_by_10_counter:cnt4|qint'
+Slack : -0.472
+TNS   : -0.472
+
+Type  : Fast 1200mV 0C Model Setup 'clock_divider:clk_div|divide_by_10_counter:cnt2|qint'
+Slack : -0.466
+TNS   : -0.466
+
+Type  : Fast 1200mV 0C Model Setup 'clock_divider:clk_div|divide_by_10_counter:cnt1|qint'
+Slack : -0.439
+TNS   : -0.439
+
+Type  : Fast 1200mV 0C Model Setup 'clock_divider:clk_div|divide_by_10_counter:cnt3|qint'
+Slack : -0.380
+TNS   : -0.380
+
+Type  : Fast 1200mV 0C Model Setup 'clock_divider:clk_div|divide_by_50_counter:cnt6|qint'
+Slack : -0.313
+TNS   : -0.313
+
+Type  : Fast 1200mV 0C Model Setup 'clock_divider:clk_div|divide_by_10_counter:cnt0|qint'
+Slack : 0.559
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clock_divider:clk_div|divide_by_10_counter:cnt4|qint'
+Slack : 0.180
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clock_divider:clk_div|divide_by_50_counter:cnt6|qint'
+Slack : 0.180
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clock_divider:clk_div|divide_by_10_counter:cnt1|qint'
+Slack : 0.181
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clock_divider:clk_div|divide_by_10_counter:cnt3|qint'
+Slack : 0.181
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clock_divider:clk_div|divide_by_10_counter:cnt5|qint'
+Slack : 0.181
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clock_divider:clk_div|divide_by_10_counter:cnt2|qint'
+Slack : 0.182
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clock_divider:clk_div|divide_by_10_counter:cnt0|qint'
+Slack : 0.202
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : 0.288
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -9.360
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clock_divider:clk_div|divide_by_10_counter:cnt1|qint'
+Slack : -1.000
+TNS   : -4.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clock_divider:clk_div|divide_by_10_counter:cnt2|qint'
+Slack : -1.000
+TNS   : -4.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clock_divider:clk_div|divide_by_10_counter:cnt3|qint'
+Slack : -1.000
+TNS   : -4.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clock_divider:clk_div|divide_by_10_counter:cnt4|qint'
+Slack : -1.000
+TNS   : -4.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clock_divider:clk_div|divide_by_10_counter:cnt5|qint'
+Slack : -1.000
+TNS   : -4.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clock_divider:clk_div|divide_by_50_counter:cnt6|qint'
+Slack : -1.000
+TNS   : -4.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clock_divider:clk_div|divide_by_10_counter:cnt0|qint'
+Slack : -1.000
+TNS   : -3.000
+
+------------------------------------------------------------

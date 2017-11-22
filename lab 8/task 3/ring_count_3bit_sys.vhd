@@ -23,7 +23,7 @@ architecture structure of ring_count_3bit_sys is
 
 begin
 
-	clk_1Hz <=clk;
+	--clk_1Hz <=clk;
 --Utilize a generic map clause to associate generic parameter N of ring3
 --to the constant SIZE using named association.
 

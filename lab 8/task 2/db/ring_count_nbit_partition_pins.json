@@ -42,6 +42,10 @@
 				{
 					"name" : "rst",
 					"strict" : false
+				},
+				{
+					"name" : "en",
+					"strict" : false
 				}
 			]
 		}

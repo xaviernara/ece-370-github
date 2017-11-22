@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ring_count_nbit
-Mon Nov 13 17:06:49 2017
+Tue Nov 21 14:50:34 2017
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Standard Edition
 
 
@@ -45,7 +45,7 @@ agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Nov 13 17:06:49 2017           ;
+; Analysis & Synthesis Status        ; Successful - Tue Nov 21 14:50:34 2017           ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Standard Edition ;
 ; Revision Name                      ; ring_count_nbit                                 ;
 ; Top-level Entity Name              ; ring_count_nbit                                 ;
@@ -54,7 +54,7 @@ agreement for further details.
 ;     Total combinational functions  ; 2                                               ;
 ;     Dedicated logic registers      ; 8                                               ;
 ; Total registers                    ; 8                                               ;
-; Total pins                         ; 12                                              ;
+; Total pins                         ; 11                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -153,7 +153,7 @@ agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 4           ;
+; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
@@ -195,14 +195,14 @@ agreement for further details.
 ;     -- Dedicated logic registers            ; 8         ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
-; I/O pins                                    ; 12        ;
+; I/O pins                                    ; 11        ;
 ;                                             ;           ;
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
 ; Maximum fan-out                             ; 8         ;
-; Total fan-out                               ; 46        ;
-; Average fan-out                             ; 1.35      ;
+; Total fan-out                               ; 53        ;
+; Average fan-out                             ; 1.66      ;
 +---------------------------------------------+-----------+
 
 
@@ -211,7 +211,7 @@ agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-----------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name     ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-----------------+--------------+
-; |ring_count_nbit           ; 2 (2)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 12   ; 0            ; |ring_count_nbit    ; ring_count_nbit ; work         ;
+; |ring_count_nbit           ; 2 (2)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 11   ; 0            ; |ring_count_nbit    ; ring_count_nbit ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -226,7 +226,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 8     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 8     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -256,12 +256,11 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 12                          ;
+; boundary_port         ; 11                          ;
 ; cycloneiii_ff         ; 8                           ;
-;     CLR               ; 8                           ;
-; cycloneiii_lcell_comb ; 4                           ;
-;     normal            ; 4                           ;
-;         0 data inputs ; 1                           ;
+;     ENA CLR           ; 8                           ;
+; cycloneiii_lcell_comb ; 3                           ;
+;     normal            ; 3                           ;
 ;         1 data inputs ; 3                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 1.00                        ;
@@ -274,7 +273,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -284,33 +283,27 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Standard Edition
-    Info: Processing started: Mon Nov 13 17:06:35 2017
+    Info: Processing started: Tue Nov 21 14:50:06 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lab8_task2 -c ring_count_nbit
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file ring_count_nbit.vhd
-    Info (12022): Found design unit 1: ring_count_nbit-behavior File: H:/ece 370/ece 370 github/lab 8/task 2/ring_count_nbit.vhd Line: 19
+    Info (12022): Found design unit 1: ring_count_nbit-behavior File: H:/ece 370/ece 370 github/lab 8/task 2/ring_count_nbit.vhd Line: 17
     Info (12023): Found entity 1: ring_count_nbit File: H:/ece 370/ece 370 github/lab 8/task 2/ring_count_nbit.vhd Line: 4
 Info (12127): Elaborating entity "ring_count_nbit" for the top level hierarchy
-Warning (10631): VHDL Process Statement warning at ring_count_nbit.vhd(24): inferring latch(es) for signal or variable "Qtemp", which holds its previous value in one or more paths through the process File: H:/ece 370/ece 370 github/lab 8/task 2/ring_count_nbit.vhd Line: 24
-Info (10041): Inferred latch for "Qtemp[8]" at ring_count_nbit.vhd(24) File: H:/ece 370/ece 370 github/lab 8/task 2/ring_count_nbit.vhd Line: 24
-Info (13000): Registers with preset signals will power-up high File: H:/ece 370/ece 370 github/lab 8/task 2/ring_count_nbit.vhd Line: 26
+Info (13000): Registers with preset signals will power-up high File: H:/ece 370/ece 370 github/lab 8/task 2/ring_count_nbit.vhd Line: 22
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "Q[8]" is stuck at GND File: H:/ece 370/ece 370 github/lab 8/task 2/ring_count_nbit.vhd Line: 14
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "en" File: H:/ece 370/ece 370 github/lab 8/task 2/ring_count_nbit.vhd Line: 12
-Info (21057): Implemented 20 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 19 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
-    Info (21059): Implemented 9 output pins
+    Info (21059): Implemented 8 output pins
     Info (21061): Implemented 8 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 684 megabytes
-    Info: Processing ended: Mon Nov 13 17:06:49 2017
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:25
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 656 megabytes
+    Info: Processing ended: Tue Nov 21 14:50:34 2017
+    Info: Elapsed time: 00:00:28
+    Info: Total CPU time (on all processors): 00:00:22
 
 

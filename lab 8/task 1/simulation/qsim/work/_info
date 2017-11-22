@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dH:/ece 370/ece 370 github/lab 8/task 1/simulation/qsim
 Esuper_reg_nbit
-Z1 w1510786083
+Z1 w1511306363
 Z2 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 e`^h93R^CdmMEVe0e1VU_3
 Z3 DPx10 cycloneive 21 cycloneive_components 0 22 Q;lLU[K?fTJPSa^YaZf>B3
 Z4 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
@@ -27,9 +27,9 @@ V4EnJzYdjEaCdFmnSHdl551
 !s100 3eo4c=@a60@aVAfU[S^^83
 Z12 OV;C;10.5b;63
 32
-Z13 !s110 1510786084
+Z13 !s110 1511306371
 !i10b 1
-Z14 !s108 1510786083.000000
+Z14 !s108 1511306370.000000
 Z15 !s90 -work|work|super_reg_nbit.vho|
 Z16 !s107 super_reg_nbit.vho|
 !i113 1
@@ -60,7 +60,7 @@ R16
 R17
 R18
 Esuper_reg_nbit_vhd_vec_tst
-Z19 w1510786080
+Z19 w1511306358
 R7
 R8
 R0
@@ -74,7 +74,7 @@ R12
 32
 R13
 !i10b 1
-Z22 !s108 1510786084.000000
+Z22 !s108 1511306371.000000
 Z23 !s90 -work|work|Waveform.vwf.vht|
 Z24 !s107 Waveform.vwf.vht|
 !i113 1
@@ -86,8 +86,8 @@ R8
 Z25 DEx4 work 26 super_reg_nbit_vhd_vec_tst 0 22 cJbXPf0NFY[=mS88_VMnG0
 l61
 L34
-Z26 VN]_R<V[9<XRaZ78n@Z=Sm3
-Z27 !s100 ]:Sh5zI@UJ=oS[gHMFmWf0
+VTej3:Z^5^LelOTMRgcXG90
+!s100 mG3;_TG3_afc^`PTQ7;O>2
 R12
 32
 R13

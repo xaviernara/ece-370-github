@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 17.0.0 Build 595 04/25/2017 SJ Standard Edition"
 
--- DATE "11/15/2017 16:48:02"
+-- DATE "11/21/2017 17:19:24"
 
 -- 
 -- Device: Altera EP4CE115F29C7 Package FBGA780

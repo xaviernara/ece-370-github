@@ -4,7 +4,7 @@ use ieee.numeric_std.all;
 
 entity  super_reg_nbit is
 
-	generic (N : POSITIVE := 5);
+	generic (N : POSITIVE := 3);
 	port 
 	(
 		clk	    : in std_logic; --Clock signal
@@ -27,6 +27,7 @@ architecture behavior of super_reg_nbit is
 	constant min : unsigned (N-1 downto 0):= (others=>'0');	
 
 begin
+
 	registers:process (clk, rst)
 	begin
 		--if (rising_edge(clk)) then

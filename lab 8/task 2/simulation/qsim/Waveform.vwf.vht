@@ -19,7 +19,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "11/13/2017 17:12:44"
+-- Generated on "11/21/2017 14:43:59"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          ring_count_nbit
 -- 
@@ -36,13 +36,13 @@ ARCHITECTURE ring_count_nbit_arch OF ring_count_nbit_vhd_vec_tst IS
 -- signals                                                   
 SIGNAL clk : STD_LOGIC;
 SIGNAL en : STD_LOGIC;
-SIGNAL Q : STD_LOGIC_VECTOR(8 DOWNTO 0);
+SIGNAL Q : STD_LOGIC_VECTOR(1 DOWNTO 0);
 SIGNAL rst : STD_LOGIC;
 COMPONENT ring_count_nbit
 	PORT (
 	clk : IN STD_LOGIC;
 	en : IN STD_LOGIC;
-	Q : OUT STD_LOGIC_VECTOR(8 DOWNTO 0);
+	Q : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
 	rst : IN STD_LOGIC
 	);
 END COMPONENT;

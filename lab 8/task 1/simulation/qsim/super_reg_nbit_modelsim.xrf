@@ -1,5 +1,6 @@
 vendor_name = ModelSim
 source_file = 1, H:/ece 370/ece 370 github/lab 8/task 1/super_reg_nbit.vhd
+source_file = 1, H:/ece 370/ece 370 github/lab 8/task 1/Waveform.vwf
 source_file = 1, c:/altera17/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
 source_file = 1, c:/altera17/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
 source_file = 1, c:/altera17/quartus/libraries/vhdl/ieee/timing_b.vhd

@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dH:/ece 370/ece 370 github/lab 8/task 2/simulation/qsim
 Ering_count_nbit
-Z1 w1510614767
+Z1 w1511297045
 Z2 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 e`^h93R^CdmMEVe0e1VU_3
 Z3 DPx10 cycloneive 21 cycloneive_components 0 22 Q;lLU[K?fTJPSa^YaZf>B3
 Z4 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
@@ -23,13 +23,13 @@ Z10 8ring_count_nbit.vho
 Z11 Fring_count_nbit.vho
 l0
 L37
-VoiC1G6nE2RJm85Q=z`7G32
-!s100 omYjgeeAi[3C=J?h0N?gY2
+VJSG49an?XXGD8?dQR6E0Z2
+!s100 [79UmOgeY49ShE?DHnZUf0
 Z12 OV;C;10.5b;63
 32
-Z13 !s110 1510614768
+Z13 !s110 1511297053
 !i10b 1
-Z14 !s108 1510614768.000000
+Z14 !s108 1511297052.000000
 Z15 !s90 -work|work|ring_count_nbit.vho|
 Z16 !s107 ring_count_nbit.vho|
 !i113 1
@@ -44,11 +44,11 @@ R6
 R7
 R8
 R9
-DEx4 work 15 ring_count_nbit 0 22 oiC1G6nE2RJm85Q=z`7G32
-l78
+DEx4 work 15 ring_count_nbit 0 22 JSG49an?XXGD8?dQR6E0Z2
+l71
 L46
-VPhXP_kI9aMeH]no:jj0<F2
-!s100 6ilBR5^^m`Xo1oB5`JDze1
+VKY<XR@zIndXBjIHJ9acdT1
+!s100 Rz7IPdzQgH8H@HD3UU`QK0
 R12
 32
 R13
@@ -60,7 +60,7 @@ R16
 R17
 R18
 Ering_count_nbit_vhd_vec_tst
-Z19 w1510614764
+Z19 w1511297039
 R7
 R8
 R0
@@ -72,29 +72,29 @@ Vj<e@aYmSbCXnocWfb25EZ3
 !s100 Z4SdSjilJZV2aE<ASFC1E0
 R12
 32
-Z22 !s110 1510614769
+Z22 !s110 1511297054
 !i10b 1
-R14
-Z23 !s90 -work|work|Waveform.vwf.vht|
-Z24 !s107 Waveform.vwf.vht|
+Z23 !s108 1511297053.000000
+Z24 !s90 -work|work|Waveform.vwf.vht|
+Z25 !s107 Waveform.vwf.vht|
 !i113 1
 R17
 R18
 Aring_count_nbit_arch
 R7
 R8
-Z25 DEx4 work 27 ring_count_nbit_vhd_vec_tst 0 22 j<e@aYmSbCXnocWfb25EZ3
+Z26 DEx4 work 27 ring_count_nbit_vhd_vec_tst 0 22 j<e@aYmSbCXnocWfb25EZ3
 l49
 L34
-VH4YHj@oYoPCB4le_C^D2[1
-!s100 <M6C2DSi6EZCz`TCL`K=50
+VkONWEb6;BAc;AC@Ihh^[M3
+!s100 aak[8DW]4n`j@z4ABJ=3I0
 R12
 32
 R22
 !i10b 1
-R14
 R23
 R24
+R25
 !i113 1
 R17
 R18

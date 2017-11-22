@@ -3,9 +3,7 @@ use ieee.std_logic_1164.all;
 
 entity ring_count_nbit is
 
-	generic
-	(N : positive := 8);
-
+	generic(N : positive := 8);
 	port 
 	(
 		clk		: in std_logic;--Clock signal
@@ -17,32 +15,30 @@ entity ring_count_nbit is
 end entity;
 
 ARCHITECTURE behavior of ring_count_nbit IS
-		SIGNAL	Qtemp :	STD_LOGIC_VECTOR(N DOWNTO 0);
-
+		SIGNAL	Qtemp :	STD_LOGIC_VECTOR(N-1 DOWNTO 0);
 begin
- 
  ring_counter: PROCESS(clk,rst)
 		BEGIN
-			IF	(rst = '1') THEN
+			IF	(rst = '1') THEN Qtemp <=((N - 1) => '1', OTHERS =>'0');
+				
+			elsif (rising_edge(clk)) then 
+				
 	   --Utilize aggregate vector assignmentin combination with anothers clause 
 		-- to initialize the N-bit ring counter to the proper initial count state		
+		
+			if (en = '1') then Qtemp(N-1) <= Qtemp(0);
 			
-					Qtemp	<=	((N - 1) => '1', OTHERS =>'0');
-					
-			if (en = '1') then Qtemp <= ((N-1) => '1', others=> '0');
-			
-			ELSIF rising_edge(clk) THEN
-					
-					Qtemp(N-1) <= Qtemp(0);
+			--ELSIF rising_edge(clk) THEN
+					--Qtemp(N-1) <= Qtemp(0);
 					for i IN (N-2) DOWNTO 0 loop
 					
 						Qtemp(i) <= Qtemp(i+1);
 						
 					end loop;
 					
-			END IF;			
+			END IF;	
+		end if;
 		END PROCESS ring_counter;
-		
-		Q <= Qtemp;
+	Q <= Qtemp;
 		
 END ARCHITECTURE behavior;

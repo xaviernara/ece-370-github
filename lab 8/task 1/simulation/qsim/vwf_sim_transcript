@@ -26,7 +26,7 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: devices manufactured by Intel and sold by Intel or its 
     Info: authorized distributors.  Please refer to the applicable 
     Info: agreement for further details.
-    Info: Processing started: Wed Nov 15 16:47:58 2017
+    Info: Processing started: Tue Nov 21 17:19:16 2017
 Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off lab8_task1 -c super_reg_nbit --vector_source="H:/ece 370/ece 370 github/lab 8/task 1/Waveform.vwf" --testbench_file="H:/ece 370/ece 370 github/lab 8/task 1/simulation/qsim/Waveform.vwf.vht"
 Info (119006): Selected device EP4CE115F29C7 for design "super_reg_nbit"
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -54,14 +54,14 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: devices manufactured by Intel and sold by Intel or its 
     Info: authorized distributors.  Please refer to the applicable 
     Info: agreement for further details.
-    Info: Processing started: Wed Nov 15 16:48:00 2017
+    Info: Processing started: Tue Nov 21 17:19:22 2017
 Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="H:/ece 370/ece 370 github/lab 8/task 1/simulation/qsim/" lab8_task1 -c super_reg_nbit
 Info (119006): Selected device EP4CE115F29C7 for design "super_reg_nbit"
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (204019): Generated file super_reg_nbit.vho in folder "H:/ece 370/ece 370 github/lab 8/task 1/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 542 megabytes
-    Info: Processing ended: Wed Nov 15 16:48:02 2017
+    Info: Peak virtual memory: 513 megabytes
+    Info: Processing ended: Tue Nov 21 17:19:24 2017
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
 
@@ -79,15 +79,18 @@ c:/altera17/modelsim_ase/win32aloem//vsim -c -do lab8_task1.do
 
 Reading C:/altera17/modelsim_ase/tcl/vsim/pref.tcl
 
+
 # 10.5b
 
 
 # do lab8_task1.do
+
 # ** Warning: (vlib-34) Library already exists at "work".
 
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:48:03 on Nov 15,2017
+# Start time: 17:19:30 on Nov 21,2017
 # vcom -work work super_reg_nbit.vho 
+
 # -- Loading package STANDARD
 
 # -- Loading package TEXTIO
@@ -96,29 +99,31 @@ Reading C:/altera17/modelsim_ase/tcl/vsim/pref.tcl
 # -- Loading package VITAL_Primitives
 # -- Loading package dffeas_pack
 # -- Loading package altera_primitives_components
+
 # -- Loading package cycloneive_atom_pack
 # -- Loading package cycloneive_components
 # -- Compiling entity super_reg_nbit
 # -- Compiling architecture structure of super_reg_nbit
 
-# End time: 16:48:04 on Nov 15,2017, Elapsed time: 0:00:01
+# End time: 17:19:31 on Nov 21,2017, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
+
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:48:04 on Nov 15,2017
+# Start time: 17:19:31 on Nov 21,2017
 # vcom -work work Waveform.vwf.vht 
 
 # -- Loading package STANDARD
+
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity super_reg_nbit_vhd_vec_tst
-
 # -- Compiling architecture super_reg_nbit_arch of super_reg_nbit_vhd_vec_tst
 
-# End time: 16:48:04 on Nov 15,2017, Elapsed time: 0:00:00
+# End time: 17:19:32 on Nov 21,2017, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 
 # vsim -novopt -c -t 1ps -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.super_reg_nbit_vhd_vec_tst 
-# Start time: 16:48:04 on Nov 15,2017
+# Start time: 17:19:32 on Nov 21,2017
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -135,9 +140,10 @@ Reading C:/altera17/modelsim_ase/tcl/vsim/pref.tcl
 # Loading cycloneive.cycloneive_io_ibuf(arch)
 # Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)
 # Loading altera.dffeas(vital_dffeas)
+
 # after#33
 
-# End time: 16:48:05 on Nov 15,2017, Elapsed time: 0:00:01
+# End time: 17:19:34 on Nov 21,2017, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 0
 
 Completed successfully. 
@@ -150,7 +156,7 @@ Reading H:/ece 370/ece 370 github/lab 8/task 1/simulation/qsim/lab8_task1.msim.v
 
 Processing channel transitions... 
 
-Writing the resulting VWF to H:/ece 370/ece 370 github/lab 8/task 1/simulation/qsim/lab8_task1_20171115164805.sim.vwf
+Writing the resulting VWF to H:/ece 370/ece 370 github/lab 8/task 1/simulation/qsim/lab8_task1_20171121171935.sim.vwf
 
 Finished VCD to VWF conversion.
 
