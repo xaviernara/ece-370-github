@@ -19,7 +19,7 @@
 #
 # Quartus Prime
 # Version 17.0.0 Build 595 04/25/2017 SJ Standard Edition
-# Date created = 09:59:07  November 29, 2017
+# Date created = 16:32:35  November 29, 2017
 #
 # -------------------------------------------------------------------------- #
 #
@@ -41,6 +41,6 @@ set_global_assignment -name FAMILY "Cyclone IV E"
 set_global_assignment -name DEVICE AUTO
 set_global_assignment -name TOP_LEVEL_ENTITY arbite
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 17.0.0
-set_global_assignment -name PROJECT_CREATION_TIME_DATE "09:59:07  NOVEMBER 29, 2017"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "16:32:35  NOVEMBER 29, 2017"
 set_global_assignment -name LAST_QUARTUS_VERSION "17.0.0 Standard Edition"
-set_global_assignment -name VHDL_FILE arbiter_controller.vhd
+set_global_assignment -name VHDL_FILE arbite.vhd
