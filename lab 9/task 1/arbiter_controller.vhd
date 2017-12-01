@@ -23,8 +23,7 @@ architecture behavior of arbiter_controlleris
 begin
 
 	-- Logic to advance to the next state
-arbiter_controller:process (clk, rst)
-	begin
+arbiter_controller:process (clk, rst) is begin
 	
 		if rst = '1' then
 		elsif (rising_edge(clk)) then
