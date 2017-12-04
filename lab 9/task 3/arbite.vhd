@@ -1,0 +1,71 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity arbite is
+
+	port(
+		clk : in	std_logic;  --Asynchronous reset
+		R	 : in	std_logic_VECTOR(0 TO 2); --Synchronizing clock signa
+		rst : in	std_logic; --Device request signals
+		G	 : out std_logic_vector(0 to 2) --Device grant signals
+	);
+
+end entity;
+--Use coding style Dual-Segment-Style 2 for this implementation. 
+ 
+architecture behavior of arbite is
+
+	-- Build an enumerated type for the state machine
+	--These names represent the states of the bus arbiter state diagram
+	type StateType is (IDLE,GNT_DEV0 , GNT_DEV1,GNT_DEV2) ;
+	signal presentState, nextState : StateType;
+	
+begin
+--Utilize  a concurrent  sensitivity-list process statement to model the  combined combinational logic(next state logic + output logic)
+--of  the  bus  arbiter  controller.  Which  signal(s)  belong  in  the sensitivity list? Name/label this process statement next_state_logic
+--	Consider using default valuesfor the next state signal and the external grant input signals.
+	-- Logic to advance to the next state
+	
+combo_logic:process (R, presentState) is begin
+			case presentState is
+				when IDLE=>
+					G <= "000"
+					if R(0) = '1' then nextState <= GNT_DEV0; 
+					elsif R(1) ='1' then nextState <= GNT_DEV1;
+					elsif R(2) ='1' then nextState <= GNT_DEV2;					
+					else	nextState <= IDLE;
+					end if;					
+				when GNT_DEV0 => 
+					G<= "100"
+					if R = "000"  then nextState <= IDLE;
+					elSif R(0 TO 1) ="01" then nextState <= GNT_DEV1;
+					elsif R ="001" then nextState <= GNT_DEV2;
+					else	nextState <= GNT_DEV0;
+					end if;	
+				when GNT_DEV1 =>
+					G<= "010"
+					if R(1 TO 2) = "01" then nextState <= GNT_DEV2;
+					elsif R(1 TO 2) ="00" then nextState <= IDLE;
+					elsif R(1) ='1' then nextState <= GNT_DEV1 ;
+					else	nextState <= GNT_DEV1 ;
+					end if;	
+				when GNT_DEV2 =>
+					G<= "001"
+					if R(2) = '0' then nextState <= IDLE;
+					--elsif R(2) ='1' then presentState <= GNT_DEV2 ;
+					else	nextState <= GNT_DEV2 ;
+					end if;
+				when others=> nextState <=IDLE; G<="000";
+			end case;
+	end process combo_logic;
+	
+	
+--Utilize another concurrent sensitivity-list process statement to model the state register of the bus arbiter controller.  
+--Which signal(s) belong in the sensitivity list? Name/label this process statement state_reg.
+	state_registar: process(clk,rst) is begin 
+		if rst = '1' then presentState <= IDLE;
+			elsif rising_edge(clk) then presentState <= nextState;
+		end if;
+	end process state_registar;
+	
+end architecture behavior;
