@@ -1,0 +1,34 @@
+|arbiter_controller
+clk => presentState~1.DATAIN
+R[2] => presentState.DATAA
+R[2] => Selector3.IN3
+R[2] => presentState.DATAA
+R[2] => Selector0.IN0
+R[2] => Equal0.IN2
+R[2] => Equal2.IN2
+R[2] => Equal3.IN1
+R[2] => Equal4.IN1
+R[1] => presentState.OUTPUTSELECT
+R[1] => presentState.OUTPUTSELECT
+R[1] => presentState.DATAA
+R[1] => Equal0.IN1
+R[1] => Equal1.IN1
+R[1] => Equal2.IN1
+R[1] => Equal3.IN0
+R[1] => Equal4.IN0
+R[0] => presentState.OUTPUTSELECT
+R[0] => presentState.OUTPUTSELECT
+R[0] => presentState.OUTPUTSELECT
+R[0] => Selector1.IN3
+R[0] => Equal0.IN0
+R[0] => Equal1.IN0
+R[0] => Equal2.IN0
+rst => presentState.GNT_DEV2.OUTPUTSELECT
+rst => presentState.GNT_DEV1.OUTPUTSELECT
+rst => presentState.GNT_DEV0.OUTPUTSELECT
+rst => presentState.IDLE.OUTPUTSELECT
+G[2] <= G.DB_MAX_OUTPUT_PORT_TYPE
+G[1] <= G.DB_MAX_OUTPUT_PORT_TYPE
+G[0] <= G.DB_MAX_OUTPUT_PORT_TYPE
+
+

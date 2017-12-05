@@ -1,0 +1,7 @@
+
+State Machine - |arbiter_controller|presentState
+Name presentState.GNT_DEV2 presentState.GNT_DEV1 presentState.GNT_DEV0 presentState.IDLE 
+presentState.IDLE 0 0 0 0 
+presentState.GNT_DEV0 0 0 1 1 
+presentState.GNT_DEV1 0 1 0 1 
+presentState.GNT_DEV2 1 0 0 1 

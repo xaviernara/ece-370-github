@@ -1,8 +1,6 @@
 library ieee;
 use ieee.std_logic_1164.all;
-
 entity arbiter_controller is
-
 	port(
 		clk : in	std_logic;  --Asynchronous reset
 		R	 : in	std_logic_VECTOR(0 TO 2); --Synchronizing clock signa
@@ -11,17 +9,13 @@ entity arbiter_controller is
 	);
 
 end entity;
-
-architecture behavior of arbiter_controlleris
+architecture behavior of arbiter_controller is
 
 	-- Build an enumerated type for the state machine
 	--These names represent the states of the bus arbiter state diagram
 	type StateType is (IDLE,GNT_DEV0 , GNT_DEV1,GNT_DEV2) ;
 	signal presentState : StateType;
-
-
 begin
-
 	-- Logic to advance to the next state
 arbiter_controller:process (clk, rst) is begin
 	
@@ -69,21 +63,12 @@ arbiter_controller:process (clk, rst) is begin
 					
 			end case;
 		end if;
-	end process arbiter_controller;
-	
-	
+	end process arbiter_controller;	
 --Utilize a single concurrent conditional signal assignment (CCSA) 
 --statement to model the combinational output logic of the bus arbiter controller
-
-G <= "000" when presentState = IDLE 
-	  "100" when presentState = GNT_DEV0 
-	  "010" when presentState = GNT_DEV1 
-      ELSE "001";
+Mealy : G <= "000" when presentState = IDLE else 
+		  "100" when presentState = GNT_DEV0 else
+		  "010" when presentState = GNT_DEV1 
+			ELSE "001";
      --"100" when (R = "000" and (presentState = IDLE)
-   
-
-
-	
-	
-
 end architecture behavior;

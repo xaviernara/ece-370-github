@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dH:/ece 370/ece 370 github/lab 9/task 2/simulation/qsim
 Earbite
-Z1 w1512398017
+Z1 w1512509932
 Z2 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 e`^h93R^CdmMEVe0e1VU_3
 Z3 DPx10 cycloneive 21 cycloneive_components 0 22 Q;lLU[K?fTJPSa^YaZf>B3
 Z4 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
@@ -27,9 +27,9 @@ VR;5lAECFfCX_NKJNA_ESY0
 !s100 Nfh;_6KzhjU]60=jIOPAh0
 Z12 OV;C;10.5b;63
 32
-Z13 !s110 1512398028
+Z13 !s110 1512509939
 !i10b 1
-Z14 !s108 1512398027.000000
+Z14 !s108 1512509938.000000
 Z15 !s90 -work|work|arbite.vho|
 Z16 !s107 arbite.vho|
 !i113 1
@@ -60,7 +60,7 @@ R16
 R17
 R18
 Earbite_vhd_vec_tst
-Z19 w1512398011
+Z19 w1512509926
 R7
 R8
 R0
@@ -72,9 +72,9 @@ VdRcO8]2D1>@FVfFZWW^[R1
 !s100 WSAH_k]PAM=0eZh:ANhHS1
 R12
 32
-Z22 !s110 1512398030
+Z22 !s110 1512509940
 !i10b 1
-Z23 !s108 1512398029.000000
+Z23 !s108 1512509939.000000
 Z24 !s90 -work|work|Waveform.vwf.vht|
 Z25 !s107 Waveform.vwf.vht|
 !i113 1
@@ -86,8 +86,8 @@ R8
 Z26 DEx4 work 18 arbite_vhd_vec_tst 0 22 dRcO8]2D1>@FVfFZWW^[R1
 l49
 L34
-VUlDeIB1`QbH>1Xz:1n^Xh3
-!s100 ^`3^5^7ma1<=<UGSNIHaY0
+Z27 VUlDeIB1`QbH>1Xz:1n^Xh3
+Z28 !s100 ^`3^5^7ma1<=<UGSNIHaY0
 R12
 32
 R22

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for arbite
-Mon Dec 04 14:27:05 2017
+Tue Dec 05 15:14:51 2017
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Standard Edition
 
 
@@ -10,7 +10,15 @@ Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Standard Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |arbiter_controller|presentState
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Post-Synthesis Netlist Statistics for Top Partition
+ 12. Elapsed Time Per Partition
+ 13. Analysis & Synthesis Messages
 
 
 
@@ -37,20 +45,20 @@ agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Mon Dec 04 14:27:05 2017               ;
+; Analysis & Synthesis Status        ; Successful - Tue Dec 05 15:14:50 2017           ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Standard Edition ;
 ; Revision Name                      ; arbite                                          ;
 ; Top-level Entity Name              ; arbiter_controller                              ;
 ; Family                             ; Cyclone IV E                                    ;
-; Total logic elements               ; N/A until Partition Merge                       ;
-;     Total combinational functions  ; N/A until Partition Merge                       ;
-;     Dedicated logic registers      ; N/A until Partition Merge                       ;
-; Total registers                    ; N/A until Partition Merge                       ;
-; Total pins                         ; N/A until Partition Merge                       ;
-; Total virtual pins                 ; N/A until Partition Merge                       ;
-; Total memory bits                  ; N/A until Partition Merge                       ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                       ;
-; Total PLLs                         ; N/A until Partition Merge                       ;
+; Total logic elements               ; 7                                               ;
+;     Total combinational functions  ; 7                                               ;
+;     Dedicated logic registers      ; 4                                               ;
+; Total registers                    ; 4                                               ;
+; Total pins                         ; 8                                               ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
 +------------------------------------+-------------------------------------------------+
 
 
@@ -148,11 +156,128 @@ agreement for further details.
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                         ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                  ; Library ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------+---------+
+; arbiter_controller.vhd           ; yes             ; User VHDL File  ; H:/ece 370/ece 370 github/lab 9/task 1/arbiter_controller.vhd ;         ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                         ;
++---------------------------------------------+-----------------------+
+; Resource                                    ; Usage                 ;
++---------------------------------------------+-----------------------+
+; Estimated Total logic elements              ; 7                     ;
+;                                             ;                       ;
+; Total combinational functions               ; 7                     ;
+; Logic element usage by number of LUT inputs ;                       ;
+;     -- 4 input functions                    ; 2                     ;
+;     -- 3 input functions                    ; 5                     ;
+;     -- <=2 input functions                  ; 0                     ;
+;                                             ;                       ;
+; Logic elements by mode                      ;                       ;
+;     -- normal mode                          ; 7                     ;
+;     -- arithmetic mode                      ; 0                     ;
+;                                             ;                       ;
+; Total registers                             ; 4                     ;
+;     -- Dedicated logic registers            ; 4                     ;
+;     -- I/O registers                        ; 0                     ;
+;                                             ;                       ;
+; I/O pins                                    ; 8                     ;
+;                                             ;                       ;
+; Embedded Multiplier 9-bit elements          ; 0                     ;
+;                                             ;                       ;
+; Maximum fan-out node                        ; presentState.GNT_DEV1 ;
+; Maximum fan-out                             ; 4                     ;
+; Total fan-out                               ; 46                    ;
+; Average fan-out                             ; 1.70                  ;
++---------------------------------------------+-----------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                             ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name        ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------------+--------------+
+; |arbiter_controller        ; 7 (7)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 8    ; 0            ; |arbiter_controller ; arbiter_controller ; work         ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------------------------------------+
+; State Machine - |arbiter_controller|presentState                                                                  ;
++-----------------------+-----------------------+-----------------------+-----------------------+-------------------+
+; Name                  ; presentState.GNT_DEV2 ; presentState.GNT_DEV1 ; presentState.GNT_DEV0 ; presentState.IDLE ;
++-----------------------+-----------------------+-----------------------+-----------------------+-------------------+
+; presentState.IDLE     ; 0                     ; 0                     ; 0                     ; 0                 ;
+; presentState.GNT_DEV0 ; 0                     ; 0                     ; 1                     ; 1                 ;
+; presentState.GNT_DEV1 ; 0                     ; 1                     ; 0                     ; 1                 ;
+; presentState.GNT_DEV2 ; 1                     ; 0                     ; 0                     ; 1                 ;
++-----------------------+-----------------------+-----------------------+-----------------------+-------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 4     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 4     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |arbiter_controller|G      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 8                           ;
+; cycloneiii_ff         ; 4                           ;
+;     ENA               ; 4                           ;
+; cycloneiii_lcell_comb ; 8                           ;
+;     normal            ; 8                           ;
+;         1 data inputs ; 1                           ;
+;         3 data inputs ; 5                           ;
+;         4 data inputs ; 2                           ;
+;                       ;                             ;
+; Max LUT depth         ; 2.00                        ;
+; Average LUT depth     ; 1.65                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
 
 
 +-------------------------------+
@@ -161,16 +286,25 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Standard Edition
-    Info: Processing started: Mon Dec 04 14:26:43 2017
+    Info: Processing started: Tue Dec 05 15:14:24 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lab9_task1 -c arbite
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Error (10500): VHDL syntax error at arbiter_controller.vhd(19) near text "type";  expecting "is" File: H:/ece 370/ece 370 github/lab 9/task 1/arbiter_controller.vhd Line: 19
-Info (12021): Found 0 design units, including 0 entities, in source file arbiter_controller.vhd
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 1 warning
-    Error: Peak virtual memory: 641 megabytes
-    Error: Processing ended: Mon Dec 04 14:27:05 2017
-    Error: Elapsed time: 00:00:22
-    Error: Total CPU time (on all processors): 00:00:21
+Info (12021): Found 2 design units, including 1 entities, in source file arbiter_controller.vhd
+    Info (12022): Found design unit 1: arbiter_controller-behavior File: H:/ece 370/ece 370 github/lab 9/task 1/arbiter_controller.vhd Line: 15
+    Info (12023): Found entity 1: arbiter_controller File: H:/ece 370/ece 370 github/lab 9/task 1/arbiter_controller.vhd Line: 4
+Info (12127): Elaborating entity "arbiter_controller" for the top level hierarchy
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 15 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 5 input pins
+    Info (21059): Implemented 3 output pins
+    Info (21061): Implemented 7 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 660 megabytes
+    Info: Processing ended: Tue Dec 05 15:14:51 2017
+    Info: Elapsed time: 00:00:27
+    Info: Total CPU time (on all processors): 00:00:21
 
 

@@ -20,6 +20,7 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
+
 </modelsim_script>
 <modelsim_script_timing>onerror {exit -code 1}
 vlib work
@@ -38,6 +39,7 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
+
 </modelsim_script_timing>
 <hdl_lang>vhdl</hdl_lang>
 </simulation_settings>*/
@@ -176,6 +178,26 @@ SIGNAL("rst")
 	PARENT = "";
 }
 
+SIGNAL("presentState.GNT_DEV0")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = REGISTERED;
+	PARENT = "";
+}
+
+SIGNAL("presentState.GNT_DEV1")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = REGISTERED;
+	PARENT = "";
+}
+
 SIGNAL("presentState.GNT_DEV2")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
@@ -196,9 +218,9 @@ SIGNAL("presentState.IDLE")
 	PARENT = "";
 }
 
-GROUP("currentState")
+GROUP("currenState")
 {
-	MEMBERS = "presentState.GNT_DEV2", "presentState.IDLE";
+	MEMBERS = "presentState.GNT_DEV0", "presentState.GNT_DEV1", "presentState.GNT_DEV2", "presentState.IDLE";
 }
 
 TRANSITION_LIST("clk")
@@ -416,6 +438,24 @@ TRANSITION_LIST("rst")
 	}
 }
 
+TRANSITION_LIST("presentState.GNT_DEV0")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL U FOR 4000.0;
+	}
+}
+
+TRANSITION_LIST("presentState.GNT_DEV1")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL U FOR 4000.0;
+	}
+}
+
 TRANSITION_LIST("presentState.GNT_DEV2")
 {
 	NODE
@@ -534,17 +574,17 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "currentState";
+	CHANNEL = "currenState";
 	EXPAND_STATUS = EXPANDED;
 	RADIX = Binary;
 	TREE_INDEX = 10;
 	TREE_LEVEL = 0;
-	CHILDREN = 11, 12;
+	CHILDREN = 11, 12, 13, 14;
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "presentState.GNT_DEV2";
+	CHANNEL = "presentState.GNT_DEV0";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 11;
@@ -554,10 +594,30 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "presentState.IDLE";
+	CHANNEL = "presentState.GNT_DEV1";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 12;
+	TREE_LEVEL = 1;
+	PARENT = 10;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "presentState.GNT_DEV2";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 13;
+	TREE_LEVEL = 1;
+	PARENT = 10;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "presentState.IDLE";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 14;
 	TREE_LEVEL = 1;
 	PARENT = 10;
 }
