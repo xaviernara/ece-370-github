@@ -75,8 +75,10 @@ arbiter_controller:process (clk, rst) is begin
 --Utilize a single concurrent conditional signal assignment (CCSA) 
 --statement to model the combinational output logic of the bus arbiter controller
 
-G <= "000" when (R = "000" and (presentState = IDLE or presentState = GNT_DEV0 OR presentState = GNT_DEV1 OR presentState = GNT_DEV2)
-      ELSE "100";
+G <= "000" when presentState = IDLE 
+	  "100" when presentState = GNT_DEV0 
+	  "010" when presentState = GNT_DEV1 
+      ELSE "001";
      --"100" when (R = "000" and (presentState = IDLE)
    
 

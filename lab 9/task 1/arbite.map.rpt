@@ -1,5 +1,5 @@
 Analysis & Synthesis report for arbite
-Wed Nov 29 16:21:31 2017
+Mon Dec 04 14:27:05 2017
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Standard Edition
 
 
@@ -37,7 +37,7 @@ agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Wed Nov 29 16:21:31 2017               ;
+; Analysis & Synthesis Status        ; Failed - Mon Dec 04 14:27:05 2017               ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Standard Edition ;
 ; Revision Name                      ; arbite                                          ;
 ; Top-level Entity Name              ; arbiter_controller                              ;
@@ -161,16 +161,16 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Standard Edition
-    Info: Processing started: Wed Nov 29 16:21:09 2017
+    Info: Processing started: Mon Dec 04 14:26:43 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lab9_task1 -c arbite
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Error (10500): VHDL syntax error at arbiter_controller.vhd(19) near text "type";  expecting "is" File: H:/ece 370/ece 370 github/New folder/arbiter_controller.vhd Line: 19
+Error (10500): VHDL syntax error at arbiter_controller.vhd(19) near text "type";  expecting "is" File: H:/ece 370/ece 370 github/lab 9/task 1/arbiter_controller.vhd Line: 19
 Info (12021): Found 0 design units, including 0 entities, in source file arbiter_controller.vhd
 Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 1 warning
-    Error: Peak virtual memory: 642 megabytes
-    Error: Processing ended: Wed Nov 29 16:21:32 2017
-    Error: Elapsed time: 00:00:23
+    Error: Peak virtual memory: 641 megabytes
+    Error: Processing ended: Mon Dec 04 14:27:05 2017
+    Error: Elapsed time: 00:00:22
     Error: Total CPU time (on all processors): 00:00:21
 
 
