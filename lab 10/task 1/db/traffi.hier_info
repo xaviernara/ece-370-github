@@ -1,0 +1,15 @@
+|traffi
+rst => present_state~3.DATAIN
+clk => present_state~1.DATAIN
+car_ew => next_state.YELLOW_NS.DATAB
+car_ew => Selector0.IN2
+car_ns => Selector2.IN3
+car_ns => Selector1.IN2
+ryg_ew[0] <= ryg_ew.DB_MAX_OUTPUT_PORT_TYPE
+ryg_ew[1] <= ryg_ew.DB_MAX_OUTPUT_PORT_TYPE
+ryg_ew[2] <= ryg_ew.DB_MAX_OUTPUT_PORT_TYPE
+ryg_ns[0] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+ryg_ns[1] <= WideNor0.DB_MAX_OUTPUT_PORT_TYPE
+ryg_ns[2] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+
+

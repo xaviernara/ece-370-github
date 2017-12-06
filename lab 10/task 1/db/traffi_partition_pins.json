@@ -1,0 +1,49 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "ryg_ew[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ryg_ew[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ryg_ew[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ryg_ns[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ryg_ns[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ryg_ns[2]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "rst",
+					"strict" : false
+				},
+				{
+					"name" : "car_ns",
+					"strict" : false
+				},
+				{
+					"name" : "car_ew",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
