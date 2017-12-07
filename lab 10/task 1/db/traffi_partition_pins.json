@@ -28,15 +28,15 @@
 					"strict" : false
 				},
 				{
+					"name" : "car_ns",
+					"strict" : false
+				},
+				{
 					"name" : "clk",
 					"strict" : false
 				},
 				{
 					"name" : "rst",
-					"strict" : false
-				},
-				{
-					"name" : "car_ns",
 					"strict" : false
 				},
 				{

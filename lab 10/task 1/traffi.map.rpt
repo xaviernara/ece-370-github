@@ -1,5 +1,5 @@
 Analysis & Synthesis report for traffi
-Wed Dec 06 10:48:07 2017
+Thu Dec 07 14:08:55 2017
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Standard Edition
 
 
@@ -14,11 +14,13 @@ Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Standard Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. State Machine - |traffi|present_state
-  9. Registers Removed During Synthesis
- 10. General Register Statistics
- 11. Post-Synthesis Netlist Statistics for Top Partition
- 12. Elapsed Time Per Partition
- 13. Analysis & Synthesis Messages
+  9. Registers Protected by Synthesis
+ 10. Registers Removed During Synthesis
+ 11. General Register Statistics
+ 12. Source assignments for Top-level Entity: |traffi
+ 13. Post-Synthesis Netlist Statistics for Top Partition
+ 14. Elapsed Time Per Partition
+ 15. Analysis & Synthesis Messages
 
 
 
@@ -45,13 +47,13 @@ agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Dec 06 10:48:07 2017           ;
+; Analysis & Synthesis Status        ; Successful - Thu Dec 07 14:08:55 2017           ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Standard Edition ;
 ; Revision Name                      ; traffi                                          ;
 ; Top-level Entity Name              ; traffi                                          ;
 ; Family                             ; Cyclone IV E                                    ;
-; Total logic elements               ; 15                                              ;
-;     Total combinational functions  ; 11                                              ;
+; Total logic elements               ; 27                                              ;
+;     Total combinational functions  ; 27                                              ;
 ;     Dedicated logic registers      ; 10                                              ;
 ; Total registers                    ; 10                                              ;
 ; Total pins                         ; 10                                              ;
@@ -152,7 +154,7 @@ agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
+; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
@@ -173,36 +175,36 @@ agreement for further details.
 +----------------------------------+-----------------+-----------------+----------------------------------------------------+---------+
 
 
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 15        ;
-;                                             ;           ;
-; Total combinational functions               ; 11        ;
-; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 3         ;
-;     -- 3 input functions                    ; 3         ;
-;     -- <=2 input functions                  ; 5         ;
-;                                             ;           ;
-; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 11        ;
-;     -- arithmetic mode                      ; 0         ;
-;                                             ;           ;
-; Total registers                             ; 10        ;
-;     -- Dedicated logic registers            ; 10        ;
-;     -- I/O registers                        ; 0         ;
-;                                             ;           ;
-; I/O pins                                    ; 10        ;
-;                                             ;           ;
-; Embedded Multiplier 9-bit elements          ; 0         ;
-;                                             ;           ;
-; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 10        ;
-; Total fan-out                               ; 75        ;
-; Average fan-out                             ; 1.83      ;
-+---------------------------------------------+-----------+
++-------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                             ;
++---------------------------------------------+---------------------------+
+; Resource                                    ; Usage                     ;
++---------------------------------------------+---------------------------+
+; Estimated Total logic elements              ; 27                        ;
+;                                             ;                           ;
+; Total combinational functions               ; 27                        ;
+; Logic element usage by number of LUT inputs ;                           ;
+;     -- 4 input functions                    ; 19                        ;
+;     -- 3 input functions                    ; 5                         ;
+;     -- <=2 input functions                  ; 3                         ;
+;                                             ;                           ;
+; Logic elements by mode                      ;                           ;
+;     -- normal mode                          ; 27                        ;
+;     -- arithmetic mode                      ; 0                         ;
+;                                             ;                           ;
+; Total registers                             ; 10                        ;
+;     -- Dedicated logic registers            ; 10                        ;
+;     -- I/O registers                        ; 0                         ;
+;                                             ;                           ;
+; I/O pins                                    ; 10                        ;
+;                                             ;                           ;
+; Embedded Multiplier 9-bit elements          ; 0                         ;
+;                                             ;                           ;
+; Maximum fan-out node                        ; present_state.GREEN_NS0~3 ;
+; Maximum fan-out                             ; 10                        ;
+; Total fan-out                               ; 143                       ;
+; Average fan-out                             ; 2.51                      ;
++---------------------------------------------+---------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -210,12 +212,12 @@ agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; |traffi                    ; 11 (11)             ; 10 (10)                   ; 0           ; 0            ; 0       ; 0         ; 10   ; 0            ; |traffi             ; traffi      ; work         ;
+; |traffi                    ; 27 (27)             ; 10 (10)                   ; 0           ; 0            ; 0       ; 0         ; 10   ; 0            ; |traffi             ; traffi      ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-Encoding Type:  One-Hot
+Encoding Type: Safe One-Hot
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; State Machine - |traffi|present_state                                                                                                                                                                                                                                                                                 ;
 +-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+
@@ -233,6 +235,25 @@ Encoding Type:  One-Hot
 ; present_state.YELLOW_EW ; 0                       ; 1                       ; 0                       ; 0                       ; 0                       ; 0                       ; 0                       ; 0                       ; 0                       ; 0                       ; 1                       ;
 ; present_state.YELLOW_NS ; 1                       ; 0                       ; 0                       ; 0                       ; 0                       ; 0                       ; 0                       ; 0                       ; 0                       ; 0                       ; 1                       ;
 +-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Protected by Synthesis                                                                                                                          ;
++-------------------------------------------+------------------------------------------------------------------+--------------------------------------------+
+; Register Name                             ; Protected by Synthesis Attribute or Preserve Register Assignment ; Not to be Touched by Netlist Optimizations ;
++-------------------------------------------+------------------------------------------------------------------+--------------------------------------------+
+; present_state.GREEN_EW0                   ; no                                                               ; yes                                        ;
+; present_state.GREEN_EW1                   ; no                                                               ; yes                                        ;
+; present_state.GREEN_EW2                   ; no                                                               ; yes                                        ;
+; present_state.YELLOW_EW                   ; no                                                               ; yes                                        ;
+; present_state.GREEN_NS0                   ; no                                                               ; yes                                        ;
+; present_state.GREEN_NS1                   ; no                                                               ; yes                                        ;
+; present_state.GREEN_NS2                   ; no                                                               ; yes                                        ;
+; present_state.GREEN_NS3                   ; no                                                               ; yes                                        ;
+; present_state.GREEN_NS4                   ; no                                                               ; yes                                        ;
+; present_state.YELLOW_NS                   ; no                                                               ; yes                                        ;
+; Total number of protected registers is 10 ;                                                                  ;                                            ;
++-------------------------------------------+------------------------------------------------------------------+--------------------------------------------+
 
 
 +--------------------------------------------------------------------------------+
@@ -260,6 +281,16 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 
 
++---------------------------------------------------------+
+; Source assignments for Top-level Entity: |traffi        ;
++--------------------------+-------+------+---------------+
+; Assignment               ; Value ; From ; To            ;
++--------------------------+-------+------+---------------+
+; SAFE_STATE_MACHINE       ; on    ; -    ; present_state ;
+; STATE_MACHINE_PROCESSING ; AUTO  ; -    ; present_state ;
++--------------------------+-------+------+---------------+
+
+
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
@@ -268,15 +299,15 @@ Encoding Type:  One-Hot
 ; boundary_port         ; 10                          ;
 ; cycloneiii_ff         ; 10                          ;
 ;     CLR               ; 10                          ;
-; cycloneiii_lcell_comb ; 15                          ;
-;     normal            ; 15                          ;
-;         1 data inputs ; 6                           ;
+; cycloneiii_lcell_comb ; 31                          ;
+;     normal            ; 31                          ;
+;         1 data inputs ; 4                           ;
 ;         2 data inputs ; 3                           ;
-;         3 data inputs ; 3                           ;
-;         4 data inputs ; 3                           ;
+;         3 data inputs ; 5                           ;
+;         4 data inputs ; 19                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 3.00                        ;
-; Average LUT depth     ; 1.72                        ;
+; Average LUT depth     ; 2.60                        ;
 +-----------------------+-----------------------------+
 
 
@@ -285,7 +316,7 @@ Encoding Type:  One-Hot
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -295,25 +326,26 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Standard Edition
-    Info: Processing started: Wed Dec 06 10:47:39 2017
+    Info: Processing started: Thu Dec 07 14:08:42 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lab10_task1 -c traffi
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file traffi.vhd
-    Info (12022): Found design unit 1: traffi-BEHAVIOR File: H:/ece 370/ece 370 github/lab 10/task 1/traffi.vhd Line: 18
+    Info (12022): Found design unit 1: traffi-BEHAVIOR File: H:/ece 370/ece 370 github/lab 10/task 1/traffi.vhd Line: 17
     Info (12023): Found entity 1: traffi File: H:/ece 370/ece 370 github/lab 10/task 1/traffi.vhd Line: 4
 Info (12127): Elaborating entity "traffi" for the top level hierarchy
+Info (284007): State machine "|traffi|present_state" will be implemented as a safe state machine. File: H:/ece 370/ece 370 github/lab 10/task 1/traffi.vhd Line: 21
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 25 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 37 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 4 input pins
     Info (21059): Implemented 6 output pins
-    Info (21061): Implemented 15 logic cells
+    Info (21061): Implemented 27 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 664 megabytes
-    Info: Processing ended: Wed Dec 06 10:48:07 2017
-    Info: Elapsed time: 00:00:28
+    Info: Peak virtual memory: 682 megabytes
+    Info: Processing ended: Thu Dec 07 14:08:55 2017
+    Info: Elapsed time: 00:00:13
     Info: Total CPU time (on all processors): 00:00:23
 
 

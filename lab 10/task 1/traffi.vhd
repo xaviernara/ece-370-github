@@ -19,6 +19,15 @@ architecture BEHAVIOR of traffi is
 	-- Build an enumerated type for the state machine
 	type StateType is (GREEN_NS0,GREEN_NS1,GREEN_NS2,GREEN_NS3,GREEN_NS4,GREEN_EW0,GREEN_EW1,GREEN_EW2,GREEN_EW3,YELLOW_EW,YELLOW_NS);
 	signal present_state, next_state	: StateType;
+	
+	--declare syn_encoding attrib. of type string
+	attribute syn_encoding : string;
+	
+	--associate syn_encoding attribute to StateType enum. type
+	
+	attribute syn_encoding of StateType :
+	type is "0000000 0000001 0000010 0000100 0001000 0010000 0100000 1000000, safe";
+
 
 begin
 
@@ -63,6 +72,7 @@ next_state_logic : process (present_state,car_ns,car_ew) is begin
 		end if;
 	end process state_req;
 	
+	--since theres dont cares in the inputs no need to specify them in CSSA
 	moore : WITH present_state select
 				ryg_ns <= "110" when GREEN_NS0 | GREEN_NS1 | GREEN_NS2 | GREEN_NS3 |GREEN_NS4,  
 							  "011" when GREEN_EW0 | GREEN_EW1 | GREEN_EW2 | GREEN_EW3 |YELLOW_EW,  
