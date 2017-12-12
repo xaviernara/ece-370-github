@@ -1,0 +1,14 @@
+
+State Machine - |traffi|present_state
+Name present_state.YELLOW_NS present_state.YELLOW_EW present_state.GREEN_EW3 present_state.GREEN_EW2 present_state.GREEN_EW1 present_state.GREEN_EW0 present_state.GREEN_NS4 present_state.GREEN_NS3 present_state.GREEN_NS2 present_state.GREEN_NS1 present_state.GREEN_NS0 
+present_state.GREEN_NS0 0 0 0 0 0 0 0 0 0 0 0 
+present_state.GREEN_NS1 0 0 0 0 0 0 0 0 0 1 1 
+present_state.GREEN_NS2 0 0 0 0 0 0 0 0 1 0 1 
+present_state.GREEN_NS3 0 0 0 0 0 0 0 1 0 0 1 
+present_state.GREEN_NS4 0 0 0 0 0 0 1 0 0 0 1 
+present_state.GREEN_EW0 0 0 0 0 0 1 0 0 0 0 1 
+present_state.GREEN_EW1 0 0 0 0 1 0 0 0 0 0 1 
+present_state.GREEN_EW2 0 0 0 1 0 0 0 0 0 0 1 
+present_state.GREEN_EW3 0 0 1 0 0 0 0 0 0 0 1 
+present_state.YELLOW_EW 0 1 0 0 0 0 0 0 0 0 1 
+present_state.YELLOW_NS 1 0 0 0 0 0 0 0 0 0 1 

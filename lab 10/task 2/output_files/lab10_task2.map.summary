@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Tue Dec 12 12:18:14 2017
+Quartus Prime Version : 17.0.0 Build 595 04/25/2017 SJ Standard Edition
+Revision Name : lab10_task2
+Top-level Entity Name : traffic_controller
+Family : Cyclone IV E
+Total logic elements : 24
+    Total combinational functions : 24
+    Dedicated logic registers : 10
+Total registers : 10
+Total pins : 10
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

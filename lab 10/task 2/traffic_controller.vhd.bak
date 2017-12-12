@@ -11,6 +11,7 @@ entity traffic_controller is
 		ryg_ew  : out std_logic_vector(2 downto 0); --East-West traffic lights
 		ryg_ns  : out std_logic_vector(2 downto 0) --North-South traffic lights
 	);
+
 end entity;
 
 architecture BEHAVIOR of traffic_controller is
@@ -23,20 +24,16 @@ architecture BEHAVIOR of traffic_controller is
 	attribute syn_encoding : string;
 	
 	--associate syn_encoding attribute to StateType enum. type
-	attribute syn_encoding of StateType :
-	type is "0000000 0000001 0000010 0000100 0001000 0010000 0100000 1000000, safe";
 	
+	--attribute syn_encoding of StateType :
+	--type is "0000000 0000001 0000010 0000100 0001000 0010000 0100000 1000000, safe";
+
+
 begin
 
 -- Dual-Segment Coding Style I
 
---Model the custom state register logic according to the following specification:
-
---Utilize a concurrent sensitivity-list process statement in combination with
---sequential case statements, sequential if statements, and the function
---rising_edge(). Which signal(s) belong in the sensitivity list?
-
-custom_state_reg : process (clk,rst) is begin
+custom_state_ reg : process (clk,rst) is begin
 		   if rst = '1' then present_state <= GREEN_NS0;
 			elsif rising_edge(clk) then
 				case present_state is 
@@ -69,52 +66,29 @@ custom_state_reg : process (clk,rst) is begin
 						
 					when YELLOW_NS => present_state <= GREEN_EW0;
 			end case;
-		end if;
-	end process custom_state_reg;
+	end process;
 
---Model the combinational output logic according to the following specification:	
---	Utilize a single process statement in combination with sequential case
---and/or if statements to model the logic associated with both output port
---signals ryg_es and ryg_ns. 
 	
-	Moore: process(present_state, rst) is begin
-		 if rst ='1' then ryg_ew <= "011";
-								ryg_ns <= "110";
-		 else
-			case present_state is 
-				when GREEN_NS0  => ryg_ew <= "011";
-										 ryg_ns <= "110";
-										 
-				when GREEN_NS1  => ryg_ew <= "011";
-										 ryg_ns <= "110";
-										 
-				when GREEN_NS2  => ryg_ew <= "011";
-										 ryg_ns <= "110";
-										 
-				when GREEN_NS3  => ryg_ew <= "011";
-										 ryg_ns <= "110";
-				
-				when GREEN_NS4  => ryg_ew <= "011";
-										 ryg_ns <= "110";
-										 
-				when YELLOW_NS  => ryg_ew <= "011";
-										 ryg_ns <= "101";
-										 
-				when GREEN_EW0  => ryg_ew <= "011";
-										 ryg_ns <= "110";
-				
-				when GREEN_EW1  => ryg_ew <= "011";
-										 ryg_ns <= "110";
-				
-				when GREEN_EW2  => ryg_ew <= "011";
-										 ryg_ns <= "110";	
-								
-				when GREEN_EW3  => ryg_ew <= "011";
-										 ryg_ns <= "110";	
-										
-				when YELLOW_EW  => ryg_ew <= "101";
-										 ryg_ns <= "011";	
-			END case;
+	state_req : process (clk,rst) is begin
+		if rst = '1' then present_state <= GREEN_NS0;
+		elsif rising_edge(clk) then  present_state <= present_state;
 		end if;
-	end process Moore;
+	end process state_req;
+	
+	--since theres dont cares in the inputs no need to specify them in CSSA
+	moore : WITH present_state select
+				ryg_ns <= "110" when GREEN_NS0 | GREEN_NS1 | GREEN_NS2 | GREEN_NS3 |GREEN_NS4,  
+							  "011" when GREEN_EW0 | GREEN_EW1 | GREEN_EW2 | GREEN_EW3 |YELLOW_EW,  
+							  "101" WHEN OTHERS;
+							  
+	--not a mealy outout so no need for inputs included in CCSA						  
+	 ryg_ew <= "011" when (present_state = GREEN_NS0 or present_state = GREEN_NS1 or present_state = GREEN_NS2 or present_state = GREEN_NS3 or present_state = GREEN_NS4 or present_state = YELLOW_NS) else
+				  "110" when (present_state = GREEN_EW0 or present_state = GREEN_EW1 or present_state = GREEN_EW2 or present_state = GREEN_EW3)
+					else "101";
+
+
+	
+	
+	
+
 end architecture BEHAVIOR;
