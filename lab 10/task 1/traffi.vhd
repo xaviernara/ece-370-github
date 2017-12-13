@@ -21,12 +21,12 @@ architecture BEHAVIOR of traffi is
 	signal present_state, next_state	: StateType;
 	
 	--declare syn_encoding attrib. of type string
-	attribute syn_encoding : string;
+	--attribute syn_encoding : string;
 	
 	--associate syn_encoding attribute to StateType enum. type
 	
-	attribute syn_encoding of StateType :
-	type is "0000000 0000001 0000010 0000100 0001000 0010000 0100000 1000000, safe";
+	--attribute syn_encoding of StateType :
+	--type is "0000000 0000001 0000010 0000100 0001000 0010000 0100000 1000000, safe";
 
 
 begin
