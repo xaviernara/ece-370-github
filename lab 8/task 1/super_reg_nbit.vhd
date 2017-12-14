@@ -22,12 +22,18 @@ entity  super_reg_nbit is
 end entity;
 
 architecture behavior of super_reg_nbit is
+
 	signal Qtemp: unsigned (N-1 downto 0); -- present state of the N-bit super register
 	constant max : unsigned (N-1 downto 0):= (others=>'1');
 	constant min : unsigned (N-1 downto 0):= (others=>'0');	
 
 begin
 
+
+
+
+--Detect  for  synchronous  enable  and  synchronous  load 
+--operations  of  the  N-bit super register using a sequentialifstatement.
 	registers:process (clk, rst)
 	begin
 		--if (rising_edge(clk)) then
@@ -43,6 +49,9 @@ begin
 					when "011" => Qtemp <= ('1' & Qtemp(N-2 downto 0));
 					when "100" => Qtemp <= (Qtemp(N-2 downto 0) & Qtemp(N-1));
 					when "101" => Qtemp <= (Qtemp(0) & Qtemp(N-1 downto 1));
+					
+--Behaviorally  model countingoperations  using integer  literals and  the +operator defined for unsigned types within the numeric_std package.
+					
 					when "110" => Qtemp <= (Qtemp+1);
 					when "111" => Qtemp <= (Qtemp-1);
 					when others => Qtemp <=Qtemp;
@@ -51,7 +60,9 @@ begin
 			end if; 
 		end if;		
 	end process registers;
-		
+
+--Assign port signal TC using a single concurrent conditional signal assignment (CCSA)statement.
+--Note, the TC signal should only be enabled (but not necessarily a logic 1) when the N-bit super register is counting (up or down), otherwise it should be disabled (i.e. a logic 0). 
 TC<= '1' WHEN op ="110" and Qtemp = max else
 	  '1' WHEN op ="111" and Qtemp = min else
 	  '0';

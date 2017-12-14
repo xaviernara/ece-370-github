@@ -16,7 +16,12 @@ architecture behavior of arbiter_controller is
 	type StateType is (IDLE,GNT_DEV0 , GNT_DEV1,GNT_DEV2) ;
 	signal presentState : StateType;
 begin
-	-- Logic to advance to the next state
+
+
+-- Dual-Segment-Style-I
+
+--Utilize a concurrent sensitivity-list process statement to model the combined next state combinational 
+--logic and state register of the bus arbiter controller. Which signal(s) belong in the sensitivity list?Within the concurrent sensitivity-list process statement, perform the following:
 arbiter_controller:process (clk, rst) is begin
 	
 		if rst = '1' then
@@ -63,7 +68,8 @@ arbiter_controller:process (clk, rst) is begin
 					
 			end case;
 		end if;
-	end process arbiter_controller;	
+	end process arbiter_controller;
+	
 --Utilize a single concurrent conditional signal assignment (CCSA) 
 --statement to model the combinational output logic of the bus arbiter controller
 Mealy : G <= "000" when presentState = IDLE else 

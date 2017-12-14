@@ -22,9 +22,10 @@ signal clk_1hz : std_logic;
 
 begin 
 
-traffic_ctrl: component traffic_controller
-port map(rst=> rst, clk=>clk_1hz, car_ew=>car_ew, car_ns=>car_ns, ryg_ew=>ryg_ew, ryg_ns=>ryg_ns);
+	traffic_ctrl: component traffi
+	port map(rst=> rst, clk=>clk_1hz, car_ew=>car_ew, car_ns=>car_ns, ryg_ew=>ryg_ew, ryg_ns=>ryg_ns);
 
-clk_div: component clock_divider
-port map (rst, clk, clk_1hz);
+	clk_div: component clock_divider
+	port map (rst, clk, clk_1hz);
 
+end architecture structure;

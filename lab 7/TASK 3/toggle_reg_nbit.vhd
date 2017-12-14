@@ -25,7 +25,11 @@ begin
 
 	Tflop : process(clk, Qtemp) is begin 
 	
---sequential if statement to  model the asynchronous initialization and active CLK edge detection logic.  
+--sequential if statement to  model the asynchronous initialization and active CLK edge detection logic
+--and the synchronous updates to the toggle register
+
+’
+s present state during active CLK edges.  
 	
 	if(rising_edge(clk)) then
 		if( SET = '1') then Qtemp <= (others=> '1');

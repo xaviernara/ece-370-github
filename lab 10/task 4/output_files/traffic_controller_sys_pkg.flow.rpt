@@ -1,5 +1,5 @@
 Flow report for traffic_controller_sys_pkg
-Wed Dec 13 13:14:55 2017
+Wed Dec 13 16:14:50 2017
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Standard Edition
 
 
@@ -41,22 +41,22 @@ agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Flow Failed - Wed Dec 13 13:14:55 2017          ;
+; Flow Status                        ; Successful - Wed Dec 13 16:14:23 2017           ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Standard Edition ;
 ; Revision Name                      ; traffic_controller_sys_pkg                      ;
-; Top-level Entity Name              ; traffic_controller_sys_pkg                      ;
+; Top-level Entity Name              ; traffic_controller_sys                          ;
 ; Family                             ; Cyclone IV E                                    ;
 ; Device                             ; EP4CE115F29C7                                   ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; N/A until Partition Merge                       ;
-;     Total combinational functions  ; N/A until Partition Merge                       ;
-;     Dedicated logic registers      ; N/A until Partition Merge                       ;
-; Total registers                    ; N/A until Partition Merge                       ;
-; Total pins                         ; N/A until Partition Merge                       ;
-; Total virtual pins                 ; N/A until Partition Merge                       ;
-; Total memory bits                  ; N/A until Partition Merge                       ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                       ;
-; Total PLLs                         ; N/A until Partition Merge                       ;
+; Total logic elements               ; 51 / 114,480 ( < 1 % )                          ;
+;     Total combinational functions  ; 42 / 114,480 ( < 1 % )                          ;
+;     Dedicated logic registers      ; 40 / 114,480 ( < 1 % )                          ;
+; Total registers                    ; 40                                              ;
+; Total pins                         ; 10 / 529 ( 2 % )                                ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0 / 3,981,312 ( 0 % )                           ;
+; Embedded Multiplier 9-bit elements ; 0 / 532 ( 0 % )                                 ;
+; Total PLLs                         ; 0 / 4 ( 0 % )                                   ;
 +------------------------------------+-------------------------------------------------+
 
 
@@ -65,51 +65,63 @@ agreement for further details.
 +-------------------+----------------------------+
 ; Option            ; Setting                    ;
 +-------------------+----------------------------+
-; Start date & time ; 12/13/2017 13:14:42        ;
+; Start date & time ; 12/13/2017 16:13:02        ;
 ; Main task         ; Compilation                ;
 ; Revision Name     ; traffic_controller_sys_pkg ;
 +-------------------+----------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                        ;
-+-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
-+-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 260248567038072.151319248211292        ; --            ; --          ; --         ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
-; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                                   ; --            ; --          ; --         ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --          ; --         ;
-+-------------------------------------+----------------------------------------+---------------+-------------+------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                ;
++-------------------------------------+----------------------------------------+----------------------------+------------------------+------------+
+; Assignment Name                     ; Value                                  ; Default Value              ; Entity Name            ; Section Id ;
++-------------------------------------+----------------------------------------+----------------------------+------------------------+------------+
+; COMPILER_SIGNATURE_ID               ; 167746770073753.151320318205360        ; --                         ; --                     ; --         ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --                         ; --                     ; --         ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --                         ; --                     ; --         ;
+; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                                   ; --                         ; --                     ; --         ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --                         ; traffic_controller_sys ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --                         ; traffic_controller_sys ; Top        ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --                         ; traffic_controller_sys ; Top        ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --                         ; --                     ; --         ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --                         ; --                     ; --         ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --                         ; --                     ; --         ;
+; TOP_LEVEL_ENTITY                    ; traffic_controller_sys                 ; traffic_controller_sys_pkg ; --                     ; --         ;
++-------------------------------------+----------------------------------------+----------------------------+------------------------+------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------+
-; Flow Elapsed Time                                                                                                        ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:14     ; 1.0                     ; 674 MB              ; 00:00:26                           ;
-; Total                ; 00:00:14     ; --                      ; --                  ; 00:00:26                           ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                             ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis      ; 00:00:26     ; 1.0                     ; 669 MB              ; 00:00:21                           ;
+; Fitter                    ; 00:00:30     ; 1.0                     ; 1558 MB             ; 00:00:16                           ;
+; Assembler                 ; 00:00:09     ; 1.0                     ; 549 MB              ; 00:00:03                           ;
+; TimeQuest Timing Analyzer ; 00:00:20     ; 1.0                     ; 702 MB              ; 00:00:03                           ;
+; Total                     ; 00:01:25     ; --                      ; --                  ; 00:00:43                           ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                    ;
-+----------------------+------------------+------------+------------+----------------+
-; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
-+----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; SUL200R2S3       ; Windows 10 ; 10.0       ; x86_64         ;
-+----------------------+------------------+------------+------------+----------------+
++----------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                        ;
++---------------------------+------------------+-----------+------------+----------------+
+; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
++---------------------------+------------------+-----------+------------+----------------+
+; Analysis & Synthesis      ; P208-05081       ; Windows 7 ; 6.1        ; x86_64         ;
+; Fitter                    ; P208-05081       ; Windows 7 ; 6.1        ; x86_64         ;
+; Assembler                 ; P208-05081       ; Windows 7 ; 6.1        ; x86_64         ;
+; TimeQuest Timing Analyzer ; P208-05081       ; Windows 7 ; 6.1        ; x86_64         ;
++---------------------------+------------------+-----------+------------+----------------+
 
 
 ------------
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off lab10_task4 -c traffic_controller_sys_pkg
+quartus_fit --read_settings_files=off --write_settings_files=off lab10_task4 -c traffic_controller_sys_pkg
+quartus_asm --read_settings_files=off --write_settings_files=off lab10_task4 -c traffic_controller_sys_pkg
+quartus_sta lab10_task4 -c traffic_controller_sys_pkg
 
 
 
